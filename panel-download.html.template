@@ -1,0 +1,221 @@
+<h2>Latest release: Electrum-##VERSION##</h2>
+
+<a href="https://github.com/spesmilo/electrum/blob/master/RELEASE-NOTES">Release notes</a> - 
+<a href="https://download.electrum.org">Previous releases</a><br/>
+
+<div style="font-size:small">
+Sources and executables are signed by <a href="http://keys.gnupg.net/pks/lookup?search=0x6694D8DE7BE8EE5631BED9502BD5824B7F9470E6&fingerprint=on&op=index">ThomasV</a>. <br/>
+Windows builds are reproducible, and signed by several developers. See the list <a href="https://github.com/spesmilo/electrum-signatures/tree/master/##VERSION##/">here</a><br/>
+Note: Old versions of Windows might need to install the KB2999226 Windows update.
+</div>
+
+
+<h3>Sources and Binaries</h3>
+
+<!--
+<div style="font-size:small">
+Note: All the files can be downloaded via <a href="https://download.electrum.org/Electrum-2.0.torrent">Bittorrent</a>
+</div>
+-->
+<table class="downloads">
+  <tr>
+
+    <td rowspan="2">
+      <img src="icons/tar-gz.png" width=32/>Sources<br/>
+    </td>
+    <td>
+      <a href="##link_tgz##">Electrum-##VERSION##.tar.gz</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="##link_tgz##.asc">signature</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="##link_zip##">Electrum-##VERSION##.zip</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="##link_zip##.asc">signature</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="icons/os_linux.gif" class="os-linux"/>Linux
+    </td>
+    <td>
+      <a href="##link_appimage##">Appimage</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="##link_appimage##.asc">signature</a></span>
+    </td>
+    </tr>
+    <tr>
+      <td rowspan="3">
+	<img src="icons/os_windows.gif"/>Windows
+      </td>
+      <td>
+	<a href="##link_win##">Standalone Executable</a>
+      </td>
+      <td>
+	<span style="font-size:80%"><a href="##link_win##.asc">signature</a></span>
+      </td>
+    </tr>
+  <tr>
+    <td>
+      <a href="##link_win_setup##">Windows Installer</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="##link_win_setup##.asc">signature</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="##link_win_portable##">Portable version</a>
+      <span style="font-size:80%">(<a href="https://bitcointalk.org/index.php?topic=154451.0">security advice</a>)</span>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="##link_win_portable##.asc">signature</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="icons/os_apple.png"> OSX<br/>
+    </td>
+    <td>
+      <a href="##link_mac##">Executable for OS X</a>
+    </td>
+    <td>
+      <span id="mac" style="font-size:80%"><a href="##link_mac##.asc">signature</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="icons/android_icon.png" width=30/>Android
+    </td>
+    <td>
+      <a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-release.apk">APK</a>, also available on 
+      <a href="https://play.google.com/store/apps/details?id=org.electrum.electrum">Google Play</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-release.apk.asc">signature</a></span>
+    </td>
+  </tr>
+</table>
+
+
+<h3>Installation from Python sources</h3>
+<table class="downloads">
+    <tr>
+      <td rowspan="5">
+	<img src="icons/os_linux.gif"/>Linux
+      </td>
+      <td>
+	Install dependencies:
+      </td>
+      <td>
+	<code>sudo apt-get install python3-pyqt5</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	Download package:
+      </td>
+      <td>
+	<code>wget ##link_tgz##</code><br/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	Verify signature:
+      </td>
+      <td>
+	<code>wget ##link_tgz##.asc</code><br/>
+	<code>gpg --verify Electrum-##VERSION##.tar.gz.asc</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	Run without installing:
+      </td>
+      <td>
+	<code>tar -xvf Electrum-##VERSION##.tar.gz</code><br/>
+	<code>python3 Electrum-##VERSION##/run_electrum</code></br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	Install with PIP:
+      </td>
+      <td>
+	<code>sudo apt-get install python3-setuptools python3-pip</code><br/>
+	<code>python3 -m pip install --user Electrum-##VERSION##.tar.gz[fast]</code>
+      </td>
+    </tr>
+    <tr>
+	<td>
+	    <img src="icons/os_windows.gif"/>Windows<br/>
+	</td>
+	<td colspan="2">
+	    Install <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download5">PyQt5</a><br/>
+	    Install <a href="##link_zip##">Electrum-##VERSION##.zip</a><br/>
+	    In the electrum directory, run <code>'python3 run_electrum'</code>
+	</td>
+    </tr>
+    <tr>
+	<td>
+	    <img src="icons/os_apple.png"/> OSX<br/>
+	</td>
+	<td colspan="2">
+	    Install <a href="https://github.com/mxcl/homebrew">Homebrew</a><br/>
+	    Install dependencies <code>'brew install qt5 pyqt5 gettext'</code><br/>
+	    Install <a href="##link_zip##">Electrum-##VERSION##.zip</a> <br/>
+	    In the electrum directory, run <code>'python3 run_electrum'</code><br/>
+	</td>
+    </tr>
+</table>
+
+<h3>How to verify GPG signatures</h3>
+
+<div class="downloads" style="padding:5px">
+  <p>
+    GPG signatures are a proof that distributed files have been signed
+    by the owner of the signing key. For example, if this website was
+    compromised and the original Electrum files had been replaced,
+    signature verification would fail, because the attacker would not
+    be able to create valid signatures. (Note that an attacker would be
+    able to create valid hashes, this is why we do not publish hashes
+    of our binaries here, it does not bring any security).
+  </p>
+  <p>
+    In order to be able to verify GPG signatures, you need to import
+    the public key of the signer. Electrum binaries are signed with
+    ThomasV's <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">public
+    key</a>. On Linux, you can import that key using the following
+    command: <code>gpg --import ThomasV.asc</code>. Here are tutorials for
+    <a href="https://bitzuma.com/posts/how-to-verify-an-electrum-download-on-windows/">Windows</a>
+    and <a href="https://bitzuma.com/posts/how-to-verify-an-electrum-download-on-mac/">MacOS</a>.
+    When you import a key, you should check its fingerprint using
+    independent sources, such
+    as <a href="https://www.youtube.com/watch?v=hjYCXOyDy7Y">here</a>,
+    or use
+    the <a href="https://en.wikipedia.org/wiki/Web_of_trust">Web of
+    Trust</a>.
+  </p>
+  <p>
+    Note for Windows users: Electrum binaries are often flagged by
+    various anti-virus software. There is nothing we can do about it,
+    so please stop reporting that to us. Anti-virus software uses
+    heuristics in order to determine if a program is malware, and that
+    often results in false positives. If you trust the developers of
+    the project, you can verify the GPG signature of Electrum
+    binaries, and safely ignore any anti-virus warnings. If you do not
+    trust the developers of the project, you should build the binaries
+    yourself, or run the software from source. Finally, if you are
+    really concerned about malware, you should not use an operating
+    system that relies on anti-virus software.
+  </p>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+    window.scrollTo(0,0);
+</script>

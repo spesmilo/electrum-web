@@ -1,0 +1,41 @@
+<h2>Electrum releases version 2.0 with two-factor authentication</h2>
+
+<p>
+Electrum is one of the first Bitcoin wallets to use deterministic
+key generation.  Deterministic wallets can be restored from a secret
+phrase, called the "seed". This protects users against computer
+failures, and makes the wallet very easy to backup; only the seed
+phrase needs to be written on paper.
+</p>
+<p>
+The new release of Electrum introduces multi-signature deterministic
+wallets, and various extensions that facilitate their use.
+</p>
+<p>
+Probably the easiest way to use a multi-signature wallet with Electrum
+is the two-factor authentication service proposed by <a href="http://trustedcoin.com">Trustedcoin
+</a>. A wallet protected by Trustedcoin will require two passwords in
+order to spend funds: the usual wallet password, and an additional
+one-time password, provided by a smartphone application (Google
+Authenticator). Since this wallet is fully deterministic, it will
+always be possible to restore the wallet from its seed, even if
+Trustedcoin's servers stop to be available. This is a unique feature
+of Electrum, and an important consideration when choosing a cosigning
+service.
+</p>
+<p>
+Electrum 2.0 also includes support for hardware wallets, which offer a
+good protection against malware. Two hardware wallets are supported:
+the Trezor by Satoshilabs, and the Btchip/HW1 by Ledger.
+</p>
+<p>
+Finally, an important new feature in version 2.0 is the support for
+the Payment Protocol (BIP70) with payment requests. Payment requests
+are easier to use than Bitcoin adresses, and they provide better
+consumer protection, because a signed request is a proof that a
+website requested a payment from a consumer.
+</p>
+<p>
+The complete list of new features in Electrum 2.0 can be found in the official
+<a href="https://github.com/spesmilo/electrum/blob/master/RELEASE-NOTES">Release notes</a>
+</p>

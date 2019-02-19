@@ -1,0 +1,73 @@
+<h2>Frequently Asked Questions</h2>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#How_does_Electrum_work.3F"><span class="tocnumber">1</span> <span class="toctext">How does Electrum work?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#What_is_the_Seed.3F"><span class="tocnumber">2</span> <span class="toctext">What is the Seed?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#What_is_the_gap_limit.3F"><span class="tocnumber">3</span> <span class="toctext">What is the gap limit?</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#What_does_it_mean_to_.22Freeze.22_an_address_in_Electrum.3F"><span class="tocnumber">4</span> <span class="toctext">What does it mean to "Freeze" an address in Electrum?</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#What_encryption_is_used_for_wallets.3F"><span class="tocnumber">5</span> <span class="toctext">What encryption is used for wallets?</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Does_Electrum_support_cold_wallets.3F"><span class="tocnumber">6</span> <span class="toctext">Does Electrum support cold wallets?</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Can_I_import_addresses_from_other_Bitcoin_clients.3F"><span class="tocnumber">7</span> <span class="toctext">Can I import addresses from other Bitcoin clients?</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Where_is_my_wallet_file_located.3F"><span class="tocnumber">8</span> <span class="toctext">Where is my wallet file located?</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Can_I_do_bulk_payments_with_Electrum.3F"><span class="tocnumber">9</span> <span class="toctext">Can I do bulk payments with Electrum?</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Does_Electrum_support_sending_to_multi-signature_addresses.3F"><span class="tocnumber">10</span> <span class="toctext">Does Electrum support sending to multi-signature addresses?</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Can_Electrum_create_and_sign_raw_transactions.3F"><span class="tocnumber">11</span> <span class="toctext">Can Electrum create and sign raw transactions?</span></a></li>
+</ul>
+</div>
+
+<h3><span class="mw-headline" id="How_does_Electrum_work.3F">How does Electrum work?</span></h3>
+<p>Electrum's focus is speed, with low resource usage and simplifying Bitcoin. Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the Bitcoin system.
+</p>
+<h3><span class="mw-headline" id="What_is_the_Seed.3F">What is the Seed?</span></h3>
+<p>Electrum uses a 128-bits random seed to generate your private keys. The seed can be represented as a 12-words mnemonic code. You do not need to perform regular backups, because your wallet can be recovered from the seed that you can memorize or write on paper.
+</p><p>Example:
+</p>
+<pre>   hexadecimal: 431a62f1c86555d3c45e5c4d9e10c8c7
+   mnemonic: "constant forest adore false green weave stop guy fur freeze giggle clock"
+</pre>
+<p>There are 2128 possible seeds for a deterministic wallet in Electrum. For comparison, the total number of Bitcoin addresses is 2160.
+</p>
+<h3><span class="mw-headline" id="What_is_the_gap_limit.3F">What is the gap limit?</span></h3>
+<p>The gap limit is the maximum number of consecutive unused addresses in your deterministic sequence of addresses. Electrum uses a gap limit to stop looking for addresses, it is set to 5 by default, so the client get all addresses until 5 unused addresses are found.
+</p>
+<h3><span class="mw-headline" id="What_does_it_mean_to_.22Freeze.22_an_address_in_Electrum.3F">What does it mean to "Freeze" an address in Electrum?</span></h3>
+<p>When you freeze an address, the funds in that address will not be used for sending bitcoins. You can not send Bitcoins if you don't have enough funds in the non-frozen addresses.
+</p>
+<h3><span class="mw-headline" id="What_encryption_is_used_for_wallets.3F">What encryption is used for wallets?</span></h3>
+<p>Electrum uses AES-256-CBC to encrypt the seed and private keys in the wallet.
+</p>
+<h3><span class="mw-headline" id="Does_Electrum_support_cold_wallets.3F">Does Electrum support cold wallets?</span></h3>
+<p>Yes. It also supports an easy and safe way to spend your coins in cold storage from an online computer using the Master Public Key.
+</p>
+<h3><span class="mw-headline" id="Can_I_import_addresses_from_other_Bitcoin_clients.3F">Can I import addresses from other Bitcoin clients?</span></h3>
+<p>Yes, you could import the private keys from other clients, but you will have to keep a backup of those keys separately as they won't become part of your Electrum seed.
+</p>
+<h3><span class="mw-headline" id="Where_is_my_wallet_file_located.3F">Where is my wallet file located?</span></h3>
+<p>The default wallet file is called default_wallet which is created when you first run the application and located under the /wallets folder.
+</p><p>On Windows
+</p>
+<pre>   Show hidden files
+   Go to \Users\YourUserName\AppData\Roaming\Local\Electrum
+</pre>
+<p>On Mac
+</p>
+<pre>   Open Finder
+   Go &gt; Go to folder (shift+cmd+G) and type ~/.electrum
+</pre>
+<p>On Linux
+</p>
+<pre>   Home Folder
+   Go &gt; Location and type ~/.electrum
+</pre>
+<h3><span class="mw-headline" id="Can_I_do_bulk_payments_with_Electrum.3F">Can I do bulk payments with Electrum?</span></h3>
+<p>You can use the CSV import feature to make bulk payments. It can accept either a CSV file or CSV entered into a text box. The rough format is:
+</p>
+<pre>   "ADDRESS","AMOUNT"
+   "ADDRESS","AMOUNT"
+</pre>
+<h3><span class="mw-headline" id="Does_Electrum_support_sending_to_multi-signature_addresses.3F">Does Electrum support sending to multi-signature addresses?</span></h3>
+<pre>   Yes Electrum does support sending to multisig addresses or P2SH addresses (addresses starting with '3').
+</pre>
+<h3><span class="mw-headline" id="Can_Electrum_create_and_sign_raw_transactions.3F">Can Electrum create and sign raw transactions?</span></h3>
+<pre>   Electrum lets you create and sign raw transactions right from the user interface using a form.
+</pre>
