@@ -1,0 +1,56 @@
+Recommendation on how to redeem Bitcoin Cash
+============================================
+
+July 31st, 2017.
+
+Electrum is a Bitcoin wallet created by Thomas Voegtlin in 2011.
+Electrum is distributed by Electrum Technologies GmbH, a company
+registered in Germany, using the website https://electrum.org
+
+
+Electrum users who are not interested in Bitcoin Cash do not need to
+worry nor to take any particular action. The following note is only
+for users who want to access their Bitcoin Cash (BCC).
+
+"Electron Cash" is a fork of Electrum for Bitcoin Cash. Electron Cash
+is not endorsed by Electrum. It is open source, and binaries
+(executables files) are available for Windows, OSX and
+Android. However, when you run binaries instead of source code, you
+have no guarantee that they match the source code. This is why wallet
+binaries are usually signed by developers. A digital signature engages
+the responsability of the person who signs.
+
+The person who distributes the Electron Cash binaries has decided to
+remain anonymous, and uses the fake name "Jonald Fyookball" in order
+to sign Electron Cash binaries. Thus, if these binaries contain code
+that is designed to steal your bitcoins, the author of the theft will
+be anonymous and walk away safely with your funds.
+
+This danger is exacerbated by the fact that the default behaviour of
+Electron Cash is to silently copy all your Electrum wallets into its
+own directory. Thus, if you run Electron Cash on a machine where you
+previously used Electrum, all your pre-existing wallets will be
+available in Electron Cash, and you will only need to enter your
+password in order to expose your bitcoins to potential theft.
+
+Therefore, users who want to run the Electron Cash binaries should do
+it on a separate machine, that does not have their Bitcoin wallet. We
+recommend to proceed as follows:
+
+ 1. Install Electron Cash on a machine that does not have your
+ Electrum wallets.
+
+ 2. Wait until the BCC hard fork has taken place, and a few BCC blocks
+ have been mined.
+
+ 3. Move all your Electrum funds to a new Electrum wallet. This will
+ move only your BTC, and not your BCC, because the BCC blockchain has
+ replay protection. Wait until the transaction is confirmed.
+
+ 4. Enter the seed of your (now empty) old wallet or private keys in
+ Electron Cash. Since the BTC have been moved to a new wallet,
+ entering your old seed in Electron Cash will not put your BTC funds
+ at risk.
+
+Following these 4 easy steps you will be able to access your BCC
+without compromising your BTC.
