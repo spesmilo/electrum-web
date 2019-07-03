@@ -6,7 +6,7 @@
 <div style="font-size:small">
   Sources and executables are signed by
   <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a>.<br/>
-Windows builds are reproducible, and signed by several developers. See the list <a href="https://github.com/spesmilo/electrum-signatures/tree/master/##VERSION##/">here</a><br/>
+Linux and Windows builds are reproducible, and signed by several developers. See the list <a href="https://github.com/spesmilo/electrum-signatures/tree/master/##VERSION##/">here</a><br/>
 </div>
 
 
@@ -81,7 +81,8 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
   </tr>
   <tr>
     <td>
-      <img src="icons/os_apple.png"> OSX<br/>
+      <img src="icons/os_apple.png"> OSX
+
       <span style="font-size:80%">(10.11 and higher)</span>
     </td>
     <td>
