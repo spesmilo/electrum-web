@@ -84,16 +84,24 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </td>
   </tr>
   <tr>
-    <td>
+    <td rowspan="2">
       <img src="icons/android_icon.png" width=30/>Android
-      <span style="font-size:80%">(5.0 and higher)</span>
+      <span style="font-size:80%">(5.0 and higher)
+      <br/>(available on <a href="https://play.google.com/store/apps/details?id=org.electrum.electrum">Google Play)</a></span>
     </td>
     <td>
-      <a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-release.apk">APK</a>, also available on 
-      <a href="https://play.google.com/store/apps/details?id=org.electrum.electrum">Google Play</a>
+      <a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-arm64-v8a-release.apk">64 bit</a>
     </td>
     <td>
-      <span style="font-size:80%"><a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-release.apk.asc">signature</a></span>
+      <span style="font-size:80%"><a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-arm64-v8a-release.apk.asc">signature</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-armeabi-v7a-release.apk">32 bit</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-armeabi-v7a-release.apk.asc">signature</a></span>
     </td>
   </tr>
 </table>
