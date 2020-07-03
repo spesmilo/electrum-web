@@ -33,14 +33,6 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
   </tr>
   <tr>
     <td>
-      <a href="##link_zip##">Electrum-##VERSION##.zip</a>
-    </td>
-    <td>
-      <span style="font-size:80%"><a href="##link_zip##.asc">signature</a></span>
-    </td>
-  </tr>
-  <tr>
-    <td>
       <img src="icons/os_linux.gif" class="os-linux"/>Linux
     </td>
     <td>
@@ -162,7 +154,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
 	</td>
 	<td colspan="2">
 	    Install <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download5">PyQt5</a><br/>
-	    Install <a href="##link_zip##">Electrum-##VERSION##.zip</a><br/>
+	    Install <a href="##link_tgz##">Electrum-##VERSION##.tar.gz</a><br/>
 	    In the electrum directory, run <code>'python3 run_electrum'</code>
 	</td>
     </tr>
@@ -173,7 +165,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
 	<td colspan="2">
 	    Install <a href="https://github.com/mxcl/homebrew">Homebrew</a><br/>
 	    Install dependencies <code>'brew install qt5 pyqt5 gettext'</code><br/>
-	    Install <a href="##link_zip##">Electrum-##VERSION##.zip</a> <br/>
+	    Install <a href="##link_tgz##">Electrum-##VERSION##.tar.gz</a> <br/>
 	    In the electrum directory, run <code>'python3 run_electrum'</code><br/>
 	</td>
     </tr>
@@ -228,7 +220,3 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     Old versions of Windows might need to install the KB2999226 Windows update.
   </p>
 </div>
-
-<script type="text/javascript" charset="utf-8">
-    window.scrollTo(0,0);
-</script>
