@@ -14,11 +14,6 @@
             <a href="https://github.com/spesmilo/electrum/blob/master/RELEASE-NOTES" target="__blank">Release Notes</a> - 
             <a href="https://download.electrum.org/" target="__blank">Previous Releases</a>
         </p>
-        <div id="download_tab">
-            <a class="tablinks download Mobile defaultOpen" onclick="openTab(event, 'Mobile', 'download')" >MOBILE</a>
-            <a class="tablinks download Desktop" onclick="openTab(event, 'Desktop', 'download')">DESKTOP</a>
-            <a class="tablinks download CLI" onclick="openTab(event, 'CLI', 'download')">CLI</a>
-        </div>
         <!-- Tab content -->
 
         <div id="mobile_view_download">
@@ -34,9 +29,10 @@
             <p style="margin-top: 20%;">To see Desktop and CLI download options please visit this site on a tablet or desktop.</p>
         </div>
         <div id="Mobile" class="tab_content download">
+            <h2 class="download_type_header">MOBILE</h2>
             <table>
                 <tc>
-                    <th>
+                    <th id="android_header">
                         <img src="./icons/android_icon.svg" alt="android icon" class="android_icon"/>
                         <h3 class="download_platform_name">Android</h3>
                         <p>Available on <a href="https://play.google.com/store/apps/details?id=org.electrum.electrum" target="__blank">Google Play</a></p>
@@ -63,7 +59,8 @@
             </table>
         </div>
         
-        <div id="Desktop" class="tab_content download">							
+        <div id="Desktop" class="tab_content download">		
+            <h2 class="download_type_header">DESKTOP</h2>					
             <table>
                 <tr>
                     <tc>
@@ -155,6 +152,7 @@
         </div>
         
         <div id="CLI" class="tab_content download">
+            <h2 class="download_type_header">CLI</h2>
             <table id="cli_table">
                 <tr>
                     <th colspan="2" style="font-weight: 600; font-size: 1.3em;">Installation from Python sources (Linux)</th>

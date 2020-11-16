@@ -599,6 +599,15 @@ li {
         margin-right: 60%;
     }
 
+    .download_type_header {
+        padding: 0;
+        font-size: 2.5vw;
+        text-align: left;
+        font-weight: 700;
+        color: #0679FF;
+        margin-top: 5%;  
+    }    
+
     .download_platform_name {
         margin: 3% 0 0 0;
     }
@@ -611,12 +620,16 @@ li {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 100%;
+        width: 90%;
         text-align: center;
     }
     
     #mobile_view_download {
         display: none;
+    }
+
+    #Mobile, #Desktop, #CLI {
+        display: flex;
     }
 
     #signature {
@@ -635,6 +648,9 @@ li {
     th, td {
         padding: 40px 10px 4px 5px;
         text-align: left;
+    }
+    #android_header {
+        width: 18%;
     }
 
     .caption {
@@ -793,6 +809,10 @@ li {
     #download_tab {
         margin-right: 80%;
     }
+
+    .download_type_header {
+        font-size: 1.5vw; 
+    }    
 
     .download_set {
         width: 90%;
