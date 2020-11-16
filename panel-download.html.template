@@ -1,0 +1,233 @@
+<div class="panel" id="panel-download">
+    <div class="warning_text">
+        <p>
+            Electrum versions older than 3.3.4 are susceptible to 
+            <a href="https://github.com/spesmilo/electrum/issues/4968" target="__blank">phishing</a>. 
+            <Br/>Do not download Electrum from another source than
+            electrum.org, and learn to verify GPG signatures.
+        </p>
+    </div>							
+    <div class="panel_wrapper">
+        <h1 class="panel_title">Download</h1>
+        <h2 id="latest_release">Latest release Electrum-##VERSION##</h2>
+        <p id="release_links">
+            <a href="https://github.com/spesmilo/electrum/blob/master/RELEASE-NOTES" target="__blank">Release Notes</a> - 
+            <a href="https://download.electrum.org/" target="__blank">Previous Releases</a>
+        </p>
+        <div id="download_tab">
+            <a class="tablinks download Mobile defaultOpen" onclick="openTab(event, 'Mobile', 'download')" >MOBILE</a>
+            <a class="tablinks download Desktop" onclick="openTab(event, 'Desktop', 'download')">DESKTOP</a>
+            <a class="tablinks download CLI" onclick="openTab(event, 'CLI', 'download')">CLI</a>
+        </div>
+        <!-- Tab content -->
+
+        <div id="mobile_view_download">
+            <button class="btn" style="width: 100%;"> <a href="https://play.google.com/store/apps/details?id=org.electrum.electrum">Google Play</a></button>
+            <div id="mobile_view_download_set">
+                <button class="btn"> <a href="https://download.electrum.org/4.0.3/Electrum-4.0.3.0-armeabi-v7a-release.apk">32 BIT</a></button>
+                <a id="signature" style="color: white; align-self: center;" href="https://download.electrum.org/4.0.3/Electrum-4.0.3.0-armeabi-v7a-release.apk.asc">SIGNATURE</a>
+            </div>
+            <div id="mobile_view_download_set">
+                <button class="btn"> <a href="https://download.electrum.org/4.0.3/Electrum-4.0.3.0-arm64-v8a-release.apk">64 BIT </a></button>
+                <a id="signature" style="color: white; align-self: center;" href="https://download.electrum.org/4.0.3/Electrum-4.0.3.0-arm64-v8a-release.apk.asc">SIGNATURE</a>											
+            </div>
+            <p style="margin-top: 20%;">To see Desktop and CLI download options please visit this site on a tablet or desktop.</p>
+        </div>
+        <div id="Mobile" class="tab_content download">
+            <table>
+                <tc>
+                    <th>
+                        <img src="./icons/android_icon.svg" alt="android icon" class="android_icon"/>
+                        <h3 class="download_platform_name">Android</h3>
+                        <p>Available on <a href="https://play.google.com/store/apps/details?id=org.electrum.electrum" target="__blank">Google Play</a></p>
+                    </th>
+                </tc>
+                <tc>
+                    <th> 
+                        <div class="download_set">
+                            <h4 class="download_package_name">32 BIT</h4>
+                            <button class="btn"> <a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-armeabi-v7a-release.apk">DOWNLOAD</a></button>
+                            <a id="signature" href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-armeabi-v7a-release.apk.asc">SIGNATURE</a>
+                        </div>
+                    </th>
+                </tc>
+                <tc>
+                    <th> 
+                        <div class="download_set">
+                            <h4 class="download_package_name">64 BIT</h4>
+                            <button class="btn"><a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-arm64-v8a-release.apk">DOWNLOAD</a></button>
+                            <a id="signature" href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-arm64-v8a-release.apk.asc">SIGNATURE</a>											
+                        </div>
+                    </th>																	
+                </tc>
+            </table>
+        </div>
+        
+        <div id="Desktop" class="tab_content download">							
+            <table>
+                <tr>
+                    <tc>
+                        <th>
+                            <img src="./icons/python_icon.svg" alt="python icon" id="python_icon"/>
+                            <h3 class="download_platform_name">Python <br/><span class="caption">(3.6.1 and higher)</span></h3>
+                        </th>
+                    </tc>
+                    <tc>
+                        <th> 
+                            <div class="download_set">
+                                <h4 class="download_package_name">Electrum-##VERSION##.tar.gz</h4>
+                                <button class="btn"><a href="##link_tgz##">DOWNLOAD</a></button>
+                                <a id="signature" href="##link_tgz##.asc">SIGNATURE</a>
+                            </div>
+                        </th>
+                    </tc>
+                </tr>
+                <tr>
+                    <tc>
+                        <th>
+                            <img src="./icons/linux_icon.svg" alt="linux icon" id="linux_icon"/>
+                            <h3 class="download_platform_name">Linux</h3>
+                        </th>
+                    </tc>
+                    <tc>
+                        <th> 
+                            <div class="download_set">
+                                <h4 class="download_package_name">Appimage</h4>
+                                <button class="btn"> <a href="##link_appimage##">DOWNLOAD</a></button>
+                                <a id="signature" href="##link_appimage##.asc">SIGNATURE</a>
+                            </div>
+                        </th>
+                    </tc>
+                </tr>
+                <tr>
+                    <tc>
+                        <th>
+                            <img src="./icons/windows_icon.svg" alt="windows icon" id="windows_icon"/>
+                            <h3 class="download_platform_name">Windows <br/><span class="caption">(7 and higher)</span></h3>
+                        </th>
+                    </tc>
+                    <tc>
+                        <th> 
+                            <div class="download_set">
+                                <h4 class="download_package_name">Standalone <br/>Executable</h4>
+                                <button class="btn"> <a href="##link_win##">DOWNLOAD</a></button>
+                                <a id="signature" href="##link_win##.asc">SIGNATURE</a>
+                            </div>
+                        </th>
+                    </tc>
+                    <tc>
+                        <th> 
+                            <div class="download_set">
+                                <h4 class="download_package_name">Windows <br/>Installer</h4>
+                                <button class="btn"><a href="##link_win_setup##">DOWNLOAD</a></button>
+                                <a id="signature" href="##link_win_setup##.asc">SIGNATURE</a>
+                            </div>
+                        </th>
+                    </tc>
+                    <tc>
+                        <th> 
+                            <div class="download_set">
+                                <h4 class="download_package_name">Portable Version <br/><span class="caption"> <a href="https://bitcointalk.org/index.php?topic=154451.0">(Security Alert)</a></span></h4>
+                                <button class="btn"><a href="##link_win_portable##">DOWNLOAD</a></button>
+                                <a id="signature" href="##link_win_portable##.asc">SIGNATURE</a>
+                            </div>
+                        </th>
+                    </tc>																		
+                </tr>
+                <tr>
+                    <tc>
+                        <th>
+                            <img src="./icons/osx_icon.svg" alt="osx icon" id="osx_icon"/>
+                            <h3 class="download_platform_name">OSX <br/> <span class="caption">(10.3 and higher)</span></h3>
+                        </th>
+                    </tc>
+                    <tc>
+                        <th> 
+                            <div class="download_set">
+                                <h4 class="download_package_name">Executable for OS X</h4>
+                                <button class="btn"><a href="##link_mac##">DOWNLOAD</a></button>
+                                <a id="signature" href="##link_mac##.asc">SIGNATURE</a>
+                            </div>
+                        </th>
+                    </tc>
+                </tr>															
+            </table>
+        </div>
+        
+        <div id="CLI" class="tab_content download">
+            <table id="cli_table">
+                <tr>
+                    <th colspan="2" style="font-weight: 600; font-size: 1.3em;">Installation from Python sources (Linux)</th>
+                </tr>
+                <tr>
+                    <th>Install dependencies:</th>
+                    <td><code>sudo apt-get install python3-pyqt5 libsecp256k1-0 python3-cryptography</code></td>
+                </tr>
+                <tr>
+                    <th>Download package:</th>
+                    <td><code>wget ##link_tgz##</code></td>
+                </tr>
+                <tr>
+                    <th>Verify signature:</th>
+                    <td><code>wget ##link_tgz##.asc <br/> gpg --verify Electrum-##VERSION##.tar.gz.asc</code></td>
+                </tr>
+                <tr>
+                    <th>Run without installing:</th>
+                    <td><code>tar -xvf Electrum-##VERSION##.tar.gz<br/>python3 Electrum-##VERSION##/run_electrum</code></td>
+                </tr>								
+                <tr>
+                    <th>Install with PIP:</th>
+                    <td><code>sudo apt-get install python3-setuptools python3-pip <br/>python3 -m pip install --user Electrum-##VERSION##.tar.gz</code></td>
+                </tr>		
+            </table>
+        </div>
+    </div>	
+
+    <!-- Download Note-->
+    <div id="faq_note_wrapper" >
+        <div id="note_1">
+            <h2>Note for Windows Users</h2>
+            <p>
+                Electrum binaries are often flagged by various anti-virus software. 
+                There is nothing we can do about it, so please stop reporting that to us. 
+                Anti-virus software uses heuristics in order to determine if a program is malware,
+                and that often results in false positives. If you trust the developers of the project,
+                you can verify the GPG signature of Electrum binaries, and safely ignore any anti-virus warnings.
+                If you do not trust the developers of the project, you should build the binaries yourself,
+                or run the software from source. Finally, if you are really concerned about malware, 
+                you should not use an operating system that relies on anti-virus software.
+
+                Old versions of Windows might need to install the KB2999226 Windows update.							
+            </p>
+        </div>
+    </div>
+
+    <!-- Download FAQ-->
+    <div id="faq_note_wrapper" >
+        <div id="faq_1">
+            <h2>What are GPG Signatures?</h2>
+            <p>
+                GPG signatures are a proof that distributed files have been signed by the owner of the signing key.
+                For example, if this website was compromised and the original Electrum files had been replaced, 
+                signature verification would fail, because the attacker would not be able to create valid signatures.
+                (Note that an attacker would be able to create valid hashes, this is why we do not publish hashes of our 
+                binaries here, it does not bring any security).
+                <br/><br/>
+
+                Sources and executables are signed by <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a>.
+                Linux and Windows builds are reproducible, and signed by several developers. 
+                See the list <a href="https://github.com/spesmilo/electrum-signatures/tree/master/##VERSION##/">here</a>.
+
+                <br/><br/>
+                In order to be able to verify GPG signatures, you need to import the public key of the signer. 
+                Electrum binaries are signed with <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc" target="__blank">ThomasV's public key</a>.
+                On Linux, you can import that key using the following command: <code style="color:white; background-color:#001630;">gpg --import ThomasV.asc. </code>
+                Here are tutorials for <a href="https://bitzuma.com/posts/how-to-verify-an-electrum-download-on-windows/" target="__blank">Windows</a> and 
+                <a href="https://bitzuma.com/posts/how-to-verify-an-electrum-download-on-mac/">MacOS</a>. 
+                When you import a key, you should check its fingerprint using independent sources, such as 
+                <a href="https://www.youtube.com/watch?v=hjYCXOyDy7Y" target="__blank">here</a>,
+                or use the <a href="https://en.wikipedia.org/wiki/Web_of_trust">Web of Trust</a>.								
+            </p>
+        </div>
+    </div>
+</div> <!-- end of panel download-->
