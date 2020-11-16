@@ -44,12 +44,7 @@
 						<div class="title_subtext">
 							<h1>LIGHTWEIGHT BITCOIN WALLET</h1>
 							<h2>Securing Bitcoin payments since 2011</h2>
-							<div id="download_buttons_set">
-								<a href="#download" onclick="openTab(event, 'Mobile', 'download')"><button class="btn" id="mobile">MOBILE</button> </a>
-								<a href="#download" onclick="openTab(event, 'Desktop', 'download')"><button class="btn" id="desktop">DESKTOP</button></a>
-								<a href="#download" onclick="openTab(event, 'CLI', 'download')"><button class="btn" id="cli">CLI</button></a>
-								<a href="#download" onclick="openTab(event, 'Mobile', 'download')"><button class="btn" id="download_mobile">DOWNLOAD</button></a>
-							</div>
+							<a href="#download"><button class="btn" id="download_button">DOWNLOAD</button></a>
 						</div>	
 					</div>													
 					<div class="warning_text">
@@ -64,128 +59,117 @@
 					<div class="panel_wrapper">
 						<div class="home_panel_section">
 							<h1>Keep your bitcoins <span style="color: #0679FF">secure </span> with ELECTRUM</h1>
-							<div id="security_tab" class="tab_navigator">
-								<a class="tablinks security defaultOpen" onclick="openTab(event, 'ColdStorage', 'security')">COLD STORAGE</a>
-								<a class="tablinks security" onclick="openTab(event, 'tfa', 'security')">TWO FACTOR AUTH</a>
-								<a class="tablinks security" onclick="openTab(event, 'multisig', 'security')">MULTISIG</a>
-								<a class="tablinks security" onclick="openTab(event, 'hardware', 'security')">HARDWARE WALLETS</a>
-							</div>
 							<!-- Tab content -->
-							<div id="ColdStorage" class="tab_content security">
-								<h2 class="feature_header_for_mobile">COLD STORAGE</h2>
-								<p>
-									Sign transactions from a computer that
-									is always offline. Broadcast them from
-									a machine that does not have your keys.
-									<br/><br/>
-									Keep your private keys offline, and go online with a watching-only wallet.
-								</p>
-								<img src="./images/cold_storage.svg" alt="bitcoin igloo"/>
-							</div>
-							<div id="tfa" class="tab_content security">
-								<h2 class="feature_header_for_mobile">TWO FACTOR AUTHENTICATION</h2>
-								<p>
-									Be safe from malware.
-									<br/><br/>
-									Use two-factor authentication 
-									by Electrum and Trustedcoin.
-								</p>
-								<img src="./images/tfa.svg" alt="two factor authentication"/>
+							<div class="tab_content_wrapper">
+								<div id="ColdStorage" class="tab_content security">
+									<h2 class="feature_header">COLD STORAGE</h2>
+									<img src="./images/cold_storage.svg" alt="bitcoin igloo"/>
+									<p>
+										Sign transactions from a computer that
+										is always offline. Broadcast them from
+										a machine that does not have your keys.
+										<br/><br/>
+										Keep your private keys offline, and go online with a watching-only wallet.
+									</p>
+								</div>
+								<div id="tfa" class="tab_content security">
+									<h2 class="feature_header">TWO FACTOR AUTH</h2>
+									<img src="./images/tfa.svg" alt="two factor authentication"/>
+									<p>
+										Be safe from malware.
+										<br/><br/>
+										Use two-factor authentication 
+										by Electrum and Trustedcoin.
+									</p>
+								</div>	
+								<div id="multisig" class="tab_content security">
+									<h2 class="feature_header">MULTISIG</h2>
+									<img src="./images/multisig.svg" alt="multisig"/>
+									<p>
+										Split the permission 
+										to spend your bitcoins <br/>
+										between several wallets.
+									</p>
+								</div>	
+								<div id="hardware" class="tab_content security">
+									<h2 class="feature_header">HARDWARE WALLETS</h2>
+									<img src="./images/hardware.svg" alt="hardware wallets"/>
+									<p>
+										Electrum supports hardware wallets: <br/> <br/>
+										Ledger, Trezor, Keepkey
 
-							</div>	
-							<div id="multisig" class="tab_content security">
-								<h2 class="feature_header_for_mobile">MULTISIG</h2>
-								<p>
-									Split the permission 
-									to spend your bitcoins <br/>
-									between several wallets.
-								</p>
-								<img src="./images/multisig.svg" alt="multisig"/>
-							</div>	
-							<div id="hardware" class="tab_content security">
-								<h2 class="feature_header_for_mobile">HARDWARE WALLETS</h2>
-								<p>
-									Electrum supports hardware wallets: <br/> <br/>
-									Ledger, Trezor, Keepkey
+										<br/><br/>
 
-									<br/><br/>
-
-									<a href="https://www.ledger.com/" target="__blank">More information</a>
-								</p>
-								<img src="./images/hardware.svg" alt="hardware wallets"/>
+										<a href="https://www.ledger.com/" target="__blank">More information</a>
+									</p>
+								</div>
 							</div>																		
 						</div>						
 						<div class="home_panel_section">
 							<h1 id="financial_independence">Become financially <span style="color: #0679FF">independent</span> with ELECTRUM</h1>
-							<div id="independence_tab" class="tab_navigator">
-								<a class="tablinks independence defaultOpen" onclick="openTab(event, 'decentralized', 'independence')">FREE & DECENTRALIZED</a>
-								<a class="tablinks independence" onclick="openTab(event, 'verifiable', 'independence')">VERIFIABLE</a>
-								<a class="tablinks independence" onclick="openTab(event, 'lockin', 'independence')">NO LOCK-IN</a>
-							</div>
 							<!-- Tab content -->
-							<div id="decentralized" class="tab_content independence">
-								<h2 class="feature_header_for_mobile">DECENTRALIZED</h2>
-								<p>
-									Electrum is free software released under the MIT License.
-									<br/> <br/>
-									Anyone can run an Electrum server. <br/>
-									No single entity controls the network.
-								</p>
-								<img src="./images/decentralized.svg" alt="decentralized and free"/>
-							</div>
-							<div id="verifiable" class="tab_content independence">
-								<h2 class="feature_header_for_mobile">VERIFIABLE</h2>
-								<p>
-									Electrum verifies that your transactions
-									are in the Bitcoin blockchain.
-									Because Bitcoin is not about trust.
-									It is about freedom and independence.
-									<br/> <br/>
-									Electrum Wallet verifies all the
-									transactions in your history using SPV.
-									<br/><br/>	
-									<a href="https://electrum.readthedocs.io/en/latest/spv.html" target="__blank">More information</a>
-								</p>
-								<img src="./images/verifiable.svg" alt="verifiable"/>
+							<div class="tab_content_wrapper">
+								<div id="decentralized" class="tab_content independence">
+									<h2 class="feature_header">DECENTRALIZED</h2>
+									<img src="./images/decentralized.svg" alt="decentralized and free"/>
+									<p>
+										Electrum is free software released under the MIT License.
+										<br/> <br/>
+										Anyone can run an Electrum server. <br/>
+										No single entity controls the network.
+									</p>
+								</div>
+								<div id="verifiable" class="tab_content independence">
+									<h2 class="feature_header">VERIFIABLE</h2>
+									<img src="./images/verifiable.svg" alt="verifiable"/>
+									<p>
+										Electrum verifies that your transactions
+										are in the Bitcoin blockchain.
+										Because Bitcoin is not about trust.
+										It is about freedom and independence.
+										<br/> <br/>
+										Electrum Wallet verifies all the
+										transactions in your history using SPV.
+										<br/><br/>	
+										<a href="https://electrum.readthedocs.io/en/latest/spv.html" target="__blank">More information</a>
+									</p>
+								</div>	
+								<div id="lockin" class="tab_content independence">
+									<h2 class="feature_header">NO LOCK-IIN</h2>
+									<img src="./images/no_lockin.svg" alt="no lock-ins"/>
+									<p>
+										You can export your private keys and
+										use them in other Bitcoin clients.
+									</p>
+								</div>
 							</div>	
-							<div id="lockin" class="tab_content independence">
-								<h2 class="feature_header_for_mobile">NO LOCK-IIN</h2>
-								<p>
-									You can export your private keys and <br/>
-									use them in other Bitcoin clients.
-								</p>
-								<img src="./images/no_lockin.svg" alt="no lock-ins"/>
-							</div>		
 						</div>					
 						<div class="home_panel_section">
 							<h1>Enjoy <span style="color: #0679FF">quick and reliable</span> access with ELECTRUM</h1>
-							<div id="quickreliable_tab" class="tab_navigator">
-								<a class="tablinks quickreliable defaultOpen" onclick="openTab(event, 'downtime', 'quickreliable')">DOWNTIME RESISTANT</a>
-								<a class="tablinks quickreliable" onclick="openTab(event, 'fast', 'quickreliable')">FAST</a>
-								<a class="tablinks quickreliable" onclick="openTab(event, 'recoverable', 'quickreliable')">RECOVERABLE</a>
-							</div>
 							<!-- Tab content -->
-							<div id="downtime" class="tab_content quickreliable">
-								<h2 class="feature_header_for_mobile">DOWNTIME RESISTANT</h2>
-								<p>
-									Electrum servers are decentralized and redundant. <br/> <br/>
-									Your wallet is never down.
-								</p>
-								<img src="./images/24hours.svg" alt="redundant and never down"/>
-							</div>
-							<div id="fast" class="tab_content quickreliable">
-								<h2 class="feature_header_for_mobile">FAST</h2>
-								<p>
-									Electrum is fast, because it uses servers that index the Bitcoin blockchain.
-								</p>
-								<img src="./images/fast.svg" alt="servers never down"/>
-							</div>	
-							<div id="recoverable" class="tab_content quickreliable">
-								<h2 class="feature_header_for_mobile">RECOVERABLE</h2>
-								<p>
-									Your funds can be recovered from a secret phrase.
-								</p>
-								<img src="./images/forgiving.svg" alt="forgiving wallet seeds"/>
+							<div class="tab_content_wrapper">
+								<div id="downtime" class="tab_content quickreliable">
+									<h2 class="feature_header">DOWNTIME RESISTANT</h2>
+									<img src="./images/24hours.svg" alt="redundant and never down"/>
+									<p>
+										Electrum servers are decentralized and redundant. <br/> <br/>
+										Your wallet is never down.
+									</p>
+								</div>
+								<div id="fast" class="tab_content quickreliable">
+									<h2 class="feature_header">FAST</h2>
+									<img src="./images/fast.svg" alt="servers never down"/>
+									<p>
+										Electrum is fast, because it uses servers that index the Bitcoin blockchain.
+									</p>
+								</div>	
+								<div id="recoverable" class="tab_content quickreliable">
+									<h2 class="feature_header">RECOVERABLE</h2>
+									<img src="./images/forgiving.svg" alt="forgiving wallet seeds"/>
+									<p>
+										Your funds can be recovered from a secret phrase.
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>

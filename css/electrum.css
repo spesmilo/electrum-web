@@ -31,7 +31,7 @@ a {
     line-height: 130%;
     font-size: 0.8em;
     text-align: center;
-    padding: 0 2% 0 2%;
+    padding: 2% 2% 2% 2%;
 }
 
 #content {
@@ -156,6 +156,9 @@ li {
 }
 
 .title_subtext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 4%;
     text-align: center;
     letter-spacing: 0.1em;
@@ -172,29 +175,11 @@ li {
     font-size: 3.5vw;
 }
 
-#mobile, #desktop, #cli {
-    display: none;
-}
-
-#download_mobile {
-    display: block;
-}
-
-#download_buttons_set {
-    display: flex;
-    justify-content: center;
-    margin-top: 8%;
-}
-
-#download_buttons_set button {
+#download_button {
     width: 50vw;
 }
 
-.tab_navigator {
-    display: none;
-}
-
-.feature_header_for_mobile {
+.feature_header {
     margin: 0;
     padding: 10% 0 0 0;
     font-size: 5vw;
@@ -213,7 +198,7 @@ li {
 }
 
 .home_panel_section img {
-    margin: 8% 0 8% 0;
+    margin: 0% 0 8% 0;
 }
 
 #ColdStorage img {
@@ -438,8 +423,6 @@ li {
 }
 
 
-
-
 /* TABLET VIEW */
 @media only screen and (min-width: 768px) {
     /* General Styles */
@@ -496,39 +479,13 @@ li {
     }
 
     /* General Tab & Panel styles  */
-    .tablinks {
-        font-size: 1em;
-        font-weight: 400;
-        color: #ffffff;
-        cursor: pointer;
-        padding-bottom: 5px;
-    }
-
-    .underline_active {
-        border-bottom: 2px solid #0679FF;
-        width: fit-content;
-    }
-
-    .tab_content {
-        display: flex;
-        flex-direction: row;
-        margin: 3% 10% 0 5%;
-    }
-
-    .home_panel_section .tab_content p {
-        font-size: 0.9em;
-        line-height: 200%;
-        width: 65%;
-        font-weight: 300;
-    }
-
-    .panel_wrapper {
-        margin: 1% 0 0% 7%;
-    }
-
     .panel_title {
         font-size: 3em;
         font-weight: 600;
+    }
+
+    .panel_wrapper {
+        margin: 0% 0% 0% 7%;
     }
 
     /* Home Panel Styles */
@@ -540,122 +497,98 @@ li {
     #Electrum_title {
         margin: 15% 0 5% 0;
     }
-
-    .title_subtext {
-        margin-top: 1%;
-    }
-
+    
     .title_subtext h1 {
         font-size: 1.5em;
+        margin-bottom: 0;
     }
 
     .title_subtext h2 {
         font-size: 1em;
     }
 
-    #download_mobile {
-        display: none;
-    }
-
-    #mobile, #desktop, #cli {
-        display: block;
-    }
-
-    #download_buttons_set {
-        margin-top: 5%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #download_buttons_set button {
-        width: 17vw;
-    }
-
-    #Mobile p {
-        font-size: 0.9em;
-        font-weight: 500;
-        margin:0;
-    }
-
-    .tab_navigator {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }    
-
-    #independence_tab {
-        width: 75%;
-    }
-
-    #quickreliable_tab {
-        width: 70%;
-    }
-
     .home_panel_section {
-        margin: 10% 15% 5% 0;
+        margin: 10% 8% 20% 0%;
     }
 
     .home_panel_section h1 {
         font-size: 2.5em;
+        width: 80%;
+        margin-bottom: 10%;
+    }
+    .home_panel_section .tab_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50vh;
+        width: 40%;   
+    }
+
+    .home_panel_section .tab_content p {
+        font-size: 0.75em;
+        line-height: 130%;
+        font-weight: 400;
+        text-align: center;
+        align-content: center;
         width: 90%;
     }
 
-    .home_panel_section .tab_content {
-        justify-content: space-between;
-        align-items: center;
-        height: 35vh;
-        
+    .tab_content_wrapper {
+        display: flex;
+        flex-direction: row;
     }
 
-    #financial_independence {
-        width: 110%;
-    }
-
-    .feature_header_for_mobile {
-        display: none;
+    .feature_header {
+        padding: 0;
+        font-size: 1.5vw;
+        text-align: center;
+        font-weight: 700;
     }
 
     #ColdStorage img {
-        width: 20vw;
+        margin-top: 30%;
+        width: 15vw;
     }
 
     #tfa img {
-        width: 22vw;
+        margin-top: 20%;
+        width: 14vw;
     }
 
     #multisig img {
-        width: 25vw;
+        width: 17vw;
     }
 
-
     #hardware img {
-        width: 18vw;
-        padding-right: 10%;
+        margin-top: 23%;
+        width: 13vw;
     }
 
     #decentralized img {
-        width: 23vw;
+        margin-top: 17%;
+        width: 20vw;
     }
 
     #verifiable img {
-        width: 19vw;   
+        margin-top: 20%;
+        width: 14vw;   
     }
 
     #lockin img {
-        width: 13vw;   
-        padding-right: 5%;
+        width: 10vw;   
     }
 
-    .quickreliable img {
-        width: 15vw;
-        padding-right: 5%;
+    #downtime img {
+        margin-top: 10%;
+        width: 14vw;
     }
 
     #fast img {
-        width: 19vw;
+        margin-top: 10%;
+        width: 18vw;
     }
 
-    #forgiving img {
+    #recoverable img {
         width: 13vw;
     }
 
@@ -750,6 +683,7 @@ li {
     #documentation_buttons_set button {
         width: 70%;
         font-size: 1.7vw;
+        margin-bottom: 1%;
     }
 
     /* Community & About Panel Styles */
@@ -807,10 +741,7 @@ li {
         font-size: 0.8em;
         font-weight: 400;
     }
-
 }
-
-
 
 /* DESKTOP VIEW (1024) */
 @media only screen and (min-width: 1024px) {
@@ -819,10 +750,6 @@ li {
     .warning_text {
         padding: 5px 10px 5px 10px;
         font-size: 1.2vw;
-    }
-
-    .panel_wrapper {
-        margin: 1% 0 0% 10%;
     }
 
     #content {
@@ -839,35 +766,26 @@ li {
         margin: 11% 0 5% 0;
     }
 
-    #download_buttons_set button {
-        width: 10vw;
+    .title_subtext {
+        margin-top: 1%;
+    }
+
+    #download_button {
+        width: 20vw;
     }
 
     .home_panel_section h1 {
         font-size: 2.7em;
-        width: 50%;
-    }
-
-    #financial_independence {
         width: 65%;
     }
-
-    #security_tab {
-        width: 80%;
-    }
-    
-    #independence_tab {
-        width: 55%;
-    }
-
-    #quickreliable_tab {
-        width: 50%;
+    .home_panel_section .tab_content {
+        height: 65vh;
     }
 
     .home_panel_section .tab_content p {
-        font-size: 1.4vw;
-        line-height: 160%;
-        width: 55%;
+        font-size: 1.3vw;
+        line-height: 150%;
+        width: 75%;
     }
 
     /* Download Panel Styles */
@@ -932,29 +850,20 @@ li {
 
     /* Home Panel Styles */
     .home_panel_section h1 {
-        font-size: 2.7em;
+        font-size: 3em;
         width: 50%;
     }
-    #financial_independence {
-        width: 70%;
-    }
-    
-    #security_tab {
-        margin: 3% 40% 0 0;
-        width: 70%;
-    }
-    
-    #independence_tab {
-        width: 45%;
-    }
-
-    #quickreliable_tab {
-        width: 40%;
-    }
-
+   
     .home_panel_section .tab_content p {
         font-size: 1.2vw;
-        width: 50%;
+    }
+
+    #multisig img {
+        margin-top: 30%;
+    }
+
+    #lockin img {
+        margin-top: 15%;
     }
 
     /* Download Panel Styles */

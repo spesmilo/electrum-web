@@ -149,54 +149,6 @@ function myFunction() {
   }
 }
 
-// SUB_PANEL LOGIC
-// Function to switch between tabs on click (only active for desktop&tablet view)
-function openTab(evt, tabName, sectionName) {
-	var i, tabcontent, tablinks;
-	var desktopMediaSize = window.matchMedia("(min-width: 768px)")
-
-	// Check media size
-	if (checkMediaSize(desktopMediaSize)) {
-		
-		// Get all elements with class="tab_content" in same section and hide
-		tabcontent = document.getElementsByClassName("tab_content");
-
-		for (i = 0; i < tabcontent.length; i++) {
-			if (tabcontent[i].classList.contains(sectionName)) {
-				tabcontent[i].style.display = "none";
-			}
-		}
-
-		// Get all elements with class="tablinks" and remove the underline styling
-		tablinks = document.getElementsByClassName("tablinks");				
-		for (i = 0; i < tablinks.length; i++) {
-			if (tablinks[i].classList.contains(sectionName)){
-				tablinks[i].className = tablinks[i].className.replace(" underline_active", "");						
-			}
-		}
-
-		// Show the current tab, and add underline to the button that opened the tab (handle download tab use case)
-		document.getElementById(tabName).style.display = "flex";
-		var downloadtabs;
-		if (sectionName == 'download') {
-			downloadtabs = document.getElementsByClassName("tablinks");
-			for (i=0; i < downloadtabs.length; i++) {
-				if (downloadtabs[i].classList.contains(tabName)) {
-					downloadtabs[i].className += " underline_active"
-				}
-			}
-		} else {
-			evt.currentTarget.className += " underline_active";		
-		}
-	}
-}
-
-// Get all defaultOpen elements and click to activate
-var defaults = document.getElementsByClassName("defaultOpen");
-for (i = 0; i < defaults.length; i++) {
-		defaults[i].click();
-}
-
 // ** MOBILE VIEW **
 // Expand and collapse hamburger menu
 function hamburgerMenu() {
@@ -208,11 +160,11 @@ function hamburgerMenu() {
 	}
 }
 
-// Function to check for desktop vs. mobile view
-function checkMediaSize(x) {
-	if (x.matches) {
-		return true;
-	} else {
-		return false;
-	}
-}
+// // Function to check for desktop vs. mobile view
+// function checkMediaSize(x) {
+// 	if (x.matches) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
