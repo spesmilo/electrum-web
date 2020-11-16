@@ -12,315 +12,315 @@
 		<link rel="icon" href="logo/electrum_logo.svg" type="image/svg" />
 		<link rel="stylesheet" href="css/electrum.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap">
 		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="js/jquery.client.js"></script>
 		<script type="text/javascript" src="js/jquery.socialbutton-1.8.0.js"></script>
 		<script type="text/javascript" src="js/qrcode.js"></script>
 		<script type="text/javascript" src="js/electrum.js"></script>
 
-		<style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');</style>
     </head>
     <body>
 		<div id="headerWrapper">
 			<a href="https://electrum.org/">
 				<img src="logo/electrum_logo.png" alt="Electrum" id="electrum_logo" />
 			</a>
-			<nav>
-				<ul id="nav_links">
-					<li><a href="#panel-home">Home</a></li>
-					<li><a href="#panel-download">Download</a></li>
-					<li><a href="#panel-documentation">Documentation</a></li>
-					<li><a href="#panel-community">Community</a></li>
-					<li><a href="#panel-about">About</a></li>
-				</ul>
-			</nav>
+			<ul class='navigation' id="nav_links">
+				<li><a href="#home" >Home</a></li>
+				<li><a href="#download" >Download</a></li>
+				<li><a href="#documentation" >Documentation</a></li>
+				<li><a href="#community" >Community</a></li>
+				<li><a href="#about">About</a></li>
+			</ul>
 			<a href="javascript:void(0);" id="hamburger_icon" onclick="hamburgerMenu()">
 				<i class="fa fa-bars"></i>
 			</a>
 		</div>
 		<div id="content">
-			<div class="panel" id="panel-home">
-				<div id="Electrum_title">
-					<img src="logo/electrum_blue_text.svg" alt="Electrum text only blue" id="electrum_blue_logo_text" class="animate-flicker">
-					<div class="title_subtext">
-						<h1>LIGHTWEIGHT BITCOIN WALLET</h1>
-						<h2>Securing Bitcoin payments since 2011</h2>
-						<div id="download_buttons_set">
-							<a href="#download" onclick="openTab(event, 'Mobile', 'download')"><button class="btn" id="mobile">MOBILE</button> </a>
-							<a href="#download" onclick="openTab(event, 'Desktop', 'download')"><button class="btn" id="desktop">DESKTOP</button></a>
-							<a href="#download" onclick="openTab(event, 'CLI', 'download')"><button class="btn" id="cli">CLI</button></a>
-							<a href="#download" onclick="openTab(event, 'Mobile', 'download')"><button class="btn" id="download_mobile">DOWNLOAD</button></a>
-						</div>
-					</div>	
-				</div>													
-				<div class="warning_text">
-					<p>
-						Electrum versions older than 3.3.4 are susceptible to 
-						<a href="https://github.com/spesmilo/electrum/issues/4968" target="__blank">phishing</a>. 
-						<br/>
-						<Br/>Do not download Electrum from another source than
-						electrum.org, and learn to verify GPG signatures.
-					</p>
-				</div>
-				<div class="panel_wrapper">
-					<div class="home_panel_section">
-						<h1>Keep your bitcoins <span style="color: #0679FF">secure </span> with ELECTRUM</h1>
-						<div id="security_tab" class="tab_navigator">
-							<a class="tablinks security defaultOpen" onclick="openTab(event, 'ColdStorage', 'security')">COLD STORAGE</a>
-							<a class="tablinks security" onclick="openTab(event, 'tfa', 'security')">TWO FACTOR AUTH</a>
-							<a class="tablinks security" onclick="openTab(event, 'multisig', 'security')">MULTISIG</a>
-							<a class="tablinks security" onclick="openTab(event, 'hardware', 'security')">HARDWARE WALLETS</a>
-						</div>
-						<!-- Tab content -->
-						<div id="ColdStorage" class="tab_content security">
-							<h2 class="feature_header_for_mobile">COLD STORAGE</h2>
-							<p>
-								Sign transactions from a computer that
-								is always offline. Broadcast them from
-								a machine that does not have your keys.
-								<br/><br/>
-								Keep your private keys offline, and go online with a watching-only wallet.
-							</p>
-							<img src="./images/cold_storage.svg" alt="bitcoin igloo"/>
-						</div>
-						<div id="tfa" class="tab_content security">
-							<h2 class="feature_header_for_mobile">TWO FACTOR AUTHENTICATION</h2>
-							<p>
-								Be safe from malware.
-								<br/><br/>
-								Use two-factor authentication 
-								by Electrum and Trustedcoin.
-							</p>
-							<img src="./images/tfa.svg" alt="two factor authentication"/>
-
+			<div class="wrapper">
+				<div class="panel" id="home">
+					<div id="Electrum_title">
+						<img src="logo/electrum_blue_text.svg" alt="Electrum text only blue" id="electrum_blue_logo_text" class="animate-flicker">
+						<div class="title_subtext">
+							<h1>LIGHTWEIGHT BITCOIN WALLET</h1>
+							<h2>Securing Bitcoin payments since 2011</h2>
+							<div id="download_buttons_set">
+								<a href="#download" onclick="openTab(event, 'Mobile', 'download')"><button class="btn" id="mobile">MOBILE</button> </a>
+								<a href="#download" onclick="openTab(event, 'Desktop', 'download')"><button class="btn" id="desktop">DESKTOP</button></a>
+								<a href="#download" onclick="openTab(event, 'CLI', 'download')"><button class="btn" id="cli">CLI</button></a>
+								<a href="#download" onclick="openTab(event, 'Mobile', 'download')"><button class="btn" id="download_mobile">DOWNLOAD</button></a>
+							</div>
 						</div>	
-						<div id="multisig" class="tab_content security">
-							<h2 class="feature_header_for_mobile">MULTISIG</h2>
-							<p>
-								Split the permission 
-								to spend your bitcoins <br/>
-								between several wallets.
-							</p>
-							<img src="./images/multisig.svg" alt="multisig"/>
-						</div>	
-						<div id="hardware" class="tab_content security">
-							<h2 class="feature_header_for_mobile">HARDWARE WALLETS</h2>
-							<p>
-								Electrum supports hardware wallets: <br/> <br/>
-								Ledger, Trezor, Keepkey
-
-								<br/><br/>
-
-								<a href="https://www.ledger.com/" target="__blank">More information</a>
-							</p>
-							<img src="./images/hardware.svg" alt="hardware wallets"/>
-						</div>																		
-					</div>						
-					<div class="home_panel_section">
-						<h1 id="financial_independence">Become financially <span style="color: #0679FF">independent</span> with ELECTRUM</h1>
-						<div id="independence_tab" class="tab_navigator">
-							<a class="tablinks independence defaultOpen" onclick="openTab(event, 'decentralized', 'independence')">FREE & DECENTRALIZED</a>
-							<a class="tablinks independence" onclick="openTab(event, 'verifiable', 'independence')">VERIFIABLE</a>
-							<a class="tablinks independence" onclick="openTab(event, 'lockin', 'independence')">NO LOCK-IN</a>
-						</div>
-						<!-- Tab content -->
-						<div id="decentralized" class="tab_content independence">
-							<h2 class="feature_header_for_mobile">DECENTRALIZED</h2>
-							<p>
-								Electrum is free software released under the MIT License.
-								<br/> <br/>
-								Anyone can run an Electrum server. <br/>
-								No single entity controls the network.
-							</p>
-							<img src="./images/decentralized.svg" alt="decentralized and free"/>
-						</div>
-						<div id="verifiable" class="tab_content independence">
-							<h2 class="feature_header_for_mobile">VERIFIABLE</h2>
-							<p>
-								Electrum verifies that your transactions
-								are in the Bitcoin blockchain.
-								Because Bitcoin is not about trust.
-								It is about freedom and independence.
-								<br/> <br/>
-								Electrum Wallet verifies all the
-								transactions in your history using SPV.
-								<br/><br/>	
-								<a href="https://electrum.readthedocs.io/en/latest/spv.html" target="__blank">More information</a>
-							</p>
-							<img src="./images/verifiable.svg" alt="verifiable"/>
-						</div>	
-						<div id="lockin" class="tab_content independence">
-							<h2 class="feature_header_for_mobile">NO LOCK-IIN</h2>
-							<p>
-								You can export your private keys and <br/>
-								use them in other Bitcoin clients.
-							</p>
-							<img src="./images/no_lockin.svg" alt="no lock-ins"/>
-						</div>		
-					</div>					
-					<div class="home_panel_section">
-						<h1>Enjoy <span style="color: #0679FF">quick and reliable</span> access with ELECTRUM</h1>
-						<div id="quickreliable_tab" class="tab_navigator">
-							<a class="tablinks quickreliable defaultOpen" onclick="openTab(event, 'downtime', 'quickreliable')">DOWNTIME RESISTANT</a>
-							<a class="tablinks quickreliable" onclick="openTab(event, 'fast', 'quickreliable')">FAST</a>
-							<a class="tablinks quickreliable" onclick="openTab(event, 'recoverable', 'quickreliable')">RECOVERABLE</a>
-						</div>
-						<!-- Tab content -->
-						<div id="downtime" class="tab_content quickreliable">
-							<h2 class="feature_header_for_mobile">DOWNTIME RESISTANT</h2>
-							<p>
-								Electrum servers are decentralized and redundant. <br/> <br/>
-								Your wallet is never down.
-							</p>
-							<img src="./images/24hours.svg" alt="redundant and never down"/>
-						</div>
-						<div id="fast" class="tab_content quickreliable">
-							<h2 class="feature_header_for_mobile">FAST</h2>
-							<p>
-								Electrum is fast, because it uses servers that index the Bitcoin blockchain.
-							</p>
-							<img src="./images/fast.svg" alt="servers never down"/>
-						</div>	
-						<div id="recoverable" class="tab_content quickreliable">
-							<h2 class="feature_header_for_mobile">RECOVERABLE</h2>
-							<p>
-								Your funds can be recovered from a secret phrase.
-							</p>
-							<img src="./images/forgiving.svg" alt="forgiving wallet seeds"/>
-						</div>
-					</div>
-				</div>
-			</div> <!-- end of panel home-->
-
-			<div class="panel" id="panel-documentation">
-				<div class="warning_text">
-					<p>
-						Electrum versions older than 3.3.4 are susceptible to 
-						<a href="https://github.com/spesmilo/electrum/issues/4968" target="__blank">phishing</a>. 
-						<Br/>Do not download Electrum from another source than
-						electrum.org, and learn to verify GPG signatures.
-					</p>
-				</div>						
-				<div class="panel_wrapper">
-					<h1 class="panel_title">Documentation</h1>
-					<div id="documentation_buttons_set"> 
-						<a href="https://electrum.readthedocs.io/" target="__blank"><button class="btn">OFFICIAL DOCUMENTATION</button></a>
-						<a href="https://bitcoinelectrum.com" target="__blank"><button class="btn">UNOFFICIAL GUIDE</button></a>
-					</div>
-				</div>				
-			</div> <!-- end of panel documentation-->
-
-			<div class="panel" id="panel-community">
-				<div class="warning_text">
-					<p>
-						Electrum versions older than 3.3.4 are susceptible to 
-						<a href="https://github.com/spesmilo/electrum/issues/4968" target="__blank">phishing</a>. 
-						<Br/>Do not download Electrum from another source than
-						electrum.org, and learn to verify GPG signatures.
-					</p>
-				</div>					
-				<div class="panel_wrapper">
-					<h1 class="panel_title">Community</h1>
-					<div class="panel_subsection">
-						<h2 class="panel_subtitle">SUPPORT</h2>
-						<ul>
-							<li>Documentation: <a href="https://electrum.readthedocs.io/" target="__blank">http://electrum.readthedocs.io</a></li>
-							<li>Official announcements are made on <a href="https://twitter.com/ElectrumWallet" target="__blank">Twitter</a></li>
-							<li>You can ask questions on <a href="https://bitcointalk.org/index.php?board=98.0" target="__blank">bitcointalk.org</a> as well as on <a href="https://www.reddit.com/r/Electrum/" target="__blank">Reddit</a></li>
-						</ul>
-					</div>
-					<div class="panel_subsection">
-						<h2 class="panel_subtitle">DEVELOPMENT</h2>
-						<ul>
-							<li>IRC channel: <a href="irc://irc.freenode.net/electrum" target="__blank">#electrum</a> channel on Freenode</li>
-							<li>Bug reports: <a href="https://github.com/spesmilo/electrum" target="__blank">electrum page on GitHub</a></li>
-							<li>Localization: <a href="https://crowdin.net/project/electrum" target="__blank">https://crowdin.net/project/electrum</a></li>
-						</ul>
-					</div>
-					<div class="panel_subsection">
-						<h2 class="panel_subtitle">ELECTRUM SERVERS</h2>
-						<ul>
-							<li>Server source code: <a href="https://github.com/spesmilo/electrumx" target="__blank">ElectrumX</a> (new, faster implementation)</li>
-							<li>How to run your own Electrum server: <a href="https://github.com/spesmilo/electrumx/blob/master/docs/HOWTO.rst" target="__blank">Install Guide</a></li>
-							<li><a href="https://1209k.com/bitcoin-eye/ele.php" target="__blank">Servers list and status</a> (Lists only Bitcoin Electrum servers)</li>
-							<li><a href="https://bohol.petrkr.net/electrum-stats.php" target="__blank">Statistics from Petrkr's server</a>
-						</ul>
-					</div>
-				</div>							
-			</div> <!-- end of panel  community-->
-
-			<div class="panel" id="panel-about">
-				<div class="warning_text">
-					<p>
-						Electrum versions older than 3.3.4 are susceptible to 
-						<a href="https://github.com/spesmilo/electrum/issues/4968" target="__blank">phishing</a>. 
-						<Br/>Do not download Electrum from another source than
-						electrum.org, and learn to verify GPG signatures.
-					</p>
-				</div>					
-				<div class="panel_wrapper">
-					<h1 class="panel_title">About</h1>
-					<div class="panel_subsection">
-						<h2 class="panel_subtitle">BACKGROUND</h2>
+					</div>													
+					<div class="warning_text">
 						<p>
-							Electrum was created by Thomas Voegtlin in
-							November 2011.<br/>
-							Since then,
-							<a href="https://github.com/spesmilo/electrum/graphs/contributors" target="__blank">
-							various developers</a> have contributed to its
-							source code.
+							Electrum versions older than 3.3.4 are susceptible to 
+							<a href="https://github.com/spesmilo/electrum/issues/4968" target="__blank">phishing</a>. 
+							<br/>
+							<Br/>Do not download Electrum from another source than
+							electrum.org, and learn to verify GPG signatures.
+						</p>
+					</div>
+					<div class="panel_wrapper">
+						<div class="home_panel_section">
+							<h1>Keep your bitcoins <span style="color: #0679FF">secure </span> with ELECTRUM</h1>
+							<div id="security_tab" class="tab_navigator">
+								<a class="tablinks security defaultOpen" onclick="openTab(event, 'ColdStorage', 'security')">COLD STORAGE</a>
+								<a class="tablinks security" onclick="openTab(event, 'tfa', 'security')">TWO FACTOR AUTH</a>
+								<a class="tablinks security" onclick="openTab(event, 'multisig', 'security')">MULTISIG</a>
+								<a class="tablinks security" onclick="openTab(event, 'hardware', 'security')">HARDWARE WALLETS</a>
+							</div>
+							<!-- Tab content -->
+							<div id="ColdStorage" class="tab_content security">
+								<h2 class="feature_header_for_mobile">COLD STORAGE</h2>
+								<p>
+									Sign transactions from a computer that
+									is always offline. Broadcast them from
+									a machine that does not have your keys.
+									<br/><br/>
+									Keep your private keys offline, and go online with a watching-only wallet.
+								</p>
+								<img src="./images/cold_storage.svg" alt="bitcoin igloo"/>
+							</div>
+							<div id="tfa" class="tab_content security">
+								<h2 class="feature_header_for_mobile">TWO FACTOR AUTHENTICATION</h2>
+								<p>
+									Be safe from malware.
+									<br/><br/>
+									Use two-factor authentication 
+									by Electrum and Trustedcoin.
+								</p>
+								<img src="./images/tfa.svg" alt="two factor authentication"/>
+
+							</div>	
+							<div id="multisig" class="tab_content security">
+								<h2 class="feature_header_for_mobile">MULTISIG</h2>
+								<p>
+									Split the permission 
+									to spend your bitcoins <br/>
+									between several wallets.
+								</p>
+								<img src="./images/multisig.svg" alt="multisig"/>
+							</div>	
+							<div id="hardware" class="tab_content security">
+								<h2 class="feature_header_for_mobile">HARDWARE WALLETS</h2>
+								<p>
+									Electrum supports hardware wallets: <br/> <br/>
+									Ledger, Trezor, Keepkey
+
+									<br/><br/>
+
+									<a href="https://www.ledger.com/" target="__blank">More information</a>
+								</p>
+								<img src="./images/hardware.svg" alt="hardware wallets"/>
+							</div>																		
+						</div>						
+						<div class="home_panel_section">
+							<h1 id="financial_independence">Become financially <span style="color: #0679FF">independent</span> with ELECTRUM</h1>
+							<div id="independence_tab" class="tab_navigator">
+								<a class="tablinks independence defaultOpen" onclick="openTab(event, 'decentralized', 'independence')">FREE & DECENTRALIZED</a>
+								<a class="tablinks independence" onclick="openTab(event, 'verifiable', 'independence')">VERIFIABLE</a>
+								<a class="tablinks independence" onclick="openTab(event, 'lockin', 'independence')">NO LOCK-IN</a>
+							</div>
+							<!-- Tab content -->
+							<div id="decentralized" class="tab_content independence">
+								<h2 class="feature_header_for_mobile">DECENTRALIZED</h2>
+								<p>
+									Electrum is free software released under the MIT License.
+									<br/> <br/>
+									Anyone can run an Electrum server. <br/>
+									No single entity controls the network.
+								</p>
+								<img src="./images/decentralized.svg" alt="decentralized and free"/>
+							</div>
+							<div id="verifiable" class="tab_content independence">
+								<h2 class="feature_header_for_mobile">VERIFIABLE</h2>
+								<p>
+									Electrum verifies that your transactions
+									are in the Bitcoin blockchain.
+									Because Bitcoin is not about trust.
+									It is about freedom and independence.
+									<br/> <br/>
+									Electrum Wallet verifies all the
+									transactions in your history using SPV.
+									<br/><br/>	
+									<a href="https://electrum.readthedocs.io/en/latest/spv.html" target="__blank">More information</a>
+								</p>
+								<img src="./images/verifiable.svg" alt="verifiable"/>
+							</div>	
+							<div id="lockin" class="tab_content independence">
+								<h2 class="feature_header_for_mobile">NO LOCK-IIN</h2>
+								<p>
+									You can export your private keys and <br/>
+									use them in other Bitcoin clients.
+								</p>
+								<img src="./images/no_lockin.svg" alt="no lock-ins"/>
+							</div>		
+						</div>					
+						<div class="home_panel_section">
+							<h1>Enjoy <span style="color: #0679FF">quick and reliable</span> access with ELECTRUM</h1>
+							<div id="quickreliable_tab" class="tab_navigator">
+								<a class="tablinks quickreliable defaultOpen" onclick="openTab(event, 'downtime', 'quickreliable')">DOWNTIME RESISTANT</a>
+								<a class="tablinks quickreliable" onclick="openTab(event, 'fast', 'quickreliable')">FAST</a>
+								<a class="tablinks quickreliable" onclick="openTab(event, 'recoverable', 'quickreliable')">RECOVERABLE</a>
+							</div>
+							<!-- Tab content -->
+							<div id="downtime" class="tab_content quickreliable">
+								<h2 class="feature_header_for_mobile">DOWNTIME RESISTANT</h2>
+								<p>
+									Electrum servers are decentralized and redundant. <br/> <br/>
+									Your wallet is never down.
+								</p>
+								<img src="./images/24hours.svg" alt="redundant and never down"/>
+							</div>
+							<div id="fast" class="tab_content quickreliable">
+								<h2 class="feature_header_for_mobile">FAST</h2>
+								<p>
+									Electrum is fast, because it uses servers that index the Bitcoin blockchain.
+								</p>
+								<img src="./images/fast.svg" alt="servers never down"/>
+							</div>	
+							<div id="recoverable" class="tab_content quickreliable">
+								<h2 class="feature_header_for_mobile">RECOVERABLE</h2>
+								<p>
+									Your funds can be recovered from a secret phrase.
+								</p>
+								<img src="./images/forgiving.svg" alt="forgiving wallet seeds"/>
+							</div>
+						</div>
+					</div>
+				</div> <!-- end of panel home-->
+
+				<div class="panel" id="documentation">
+					<div class="warning_text">
+						<p>
+							Electrum versions older than 3.3.4 are susceptible to 
+							<a href="https://github.com/spesmilo/electrum/issues/4968" target="__blank">phishing</a>. 
+							<Br/>Do not download Electrum from another source than
+							electrum.org, and learn to verify GPG signatures.
 						</p>
 					</div>						
-					<div class="panel_subsection">
-						<h2 class="panel_subtitle">DEVELOPERS WITH WRITE ACCESS</h2>
-						<ul>
-							<li>
-								Thomas Voegtlin
-								<a href="https://github.com/ecdsa" target="__blank">[github]</a>
-								<a href="http://keys.gnupg.net/pks/lookup?search=0x6694D8DE7BE8EE5631BED9502BD5824B7F9470E6&fingerprint=on&op=index" target="__blank">[gpg]</a></li>
-							</li>
-							<li>
-								SomberNight
-								<a href="https://github.com/SomberNight" target="__blank">[github]</a>
-								<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight.asc" target="__blank">[pgp]</a>
-							</li>
-							<li>
-								EagleTM
-								<a href="https://github.com/EagleTM" target="__blank">[github]</a>
-							</li>
-							<br/>
-							<br/>
-							<br/>
-						</ul>
-					</div>						
-				</div>					
-			</div> <!-- end of panel about-->
+					<div class="panel_wrapper">
+						<h1 class="panel_title">Documentation</h1>
+						<div id="documentation_buttons_set"> 
+							<a href="https://electrum.readthedocs.io/" target="__blank"><button class="btn">OFFICIAL DOCUMENTATION</button></a>
+							<a href="https://bitcoinelectrum.com" target="__blank"><button class="btn">UNOFFICIAL GUIDE</button></a>
+						</div>
+					</div>				
+				</div> <!-- end of panel documentation-->
 
-			<div class="panel" id="panel-impressum">
-				<div class="panel_wrapper">
-					<h4>Impressum</h4> 
-					<p>
-						This website is hosted by
-						Electrum Technologies GmbH<br/> Electrum Technologies was founded by Thomas
-						Voegtlin in 2013.<br/> Its mission is to develop,
-						package and distribute Electrum software, and to
-						provide services to Bitcoin users and businesses.
-					</p>
-					<h4>Address</h4>
-					<p>
-						Electrum Technologies GmbH<br/>
-						Paul-Lincke-Ufer 8d<br/>
-						10999 Berlin - Germany<br/>
-					</p>
-				</div>
-			</div> <!-- end of panel impressum-->
+				<div class="panel" id="community">
+					<div class="warning_text">
+						<p>
+							Electrum versions older than 3.3.4 are susceptible to 
+							<a href="https://github.com/spesmilo/electrum/issues/4968" target="__blank">phishing</a>. 
+							<Br/>Do not download Electrum from another source than
+							electrum.org, and learn to verify GPG signatures.
+						</p>
+					</div>					
+					<div class="panel_wrapper">
+						<h1 class="panel_title">Community</h1>
+						<div class="panel_subsection">
+							<h2 class="panel_subtitle">SUPPORT</h2>
+							<ul>
+								<li>Documentation: <a href="https://electrum.readthedocs.io/" target="__blank">http://electrum.readthedocs.io</a></li>
+								<li>Official announcements are made on <a href="https://twitter.com/ElectrumWallet" target="__blank">Twitter</a></li>
+								<li>You can ask questions on <a href="https://bitcointalk.org/index.php?board=98.0" target="__blank">bitcointalk.org</a> as well as on <a href="https://www.reddit.com/r/Electrum/" target="__blank">Reddit</a></li>
+							</ul>
+						</div>
+						<div class="panel_subsection">
+							<h2 class="panel_subtitle">DEVELOPMENT</h2>
+							<ul>
+								<li>IRC channel: <a href="irc://irc.freenode.net/electrum" target="__blank">#electrum</a> channel on Freenode</li>
+								<li>Bug reports: <a href="https://github.com/spesmilo/electrum" target="__blank">electrum page on GitHub</a></li>
+								<li>Localization: <a href="https://crowdin.net/project/electrum" target="__blank">https://crowdin.net/project/electrum</a></li>
+							</ul>
+						</div>
+						<div class="panel_subsection">
+							<h2 class="panel_subtitle">ELECTRUM SERVERS</h2>
+							<ul>
+								<li>Server source code: <a href="https://github.com/spesmilo/electrumx" target="__blank">ElectrumX</a> (new, faster implementation)</li>
+								<li>How to run your own Electrum server: <a href="https://github.com/spesmilo/electrumx/blob/master/docs/HOWTO.rst" target="__blank">Install Guide</a></li>
+								<li><a href="https://1209k.com/bitcoin-eye/ele.php" target="__blank">Servers list and status</a> (Lists only Bitcoin Electrum servers)</li>
+								<li><a href="https://bohol.petrkr.net/electrum-stats.php" target="__blank">Statistics from Petrkr's server</a>
+							</ul>
+						</div>
+					</div>							
+				</div> <!-- end of panel  community-->
 
-			<div class="panel" id="panel-disclaimer">
-				<div class="panel_wrapper"> 
-					<h3>Disclaimer</h3>
-					Electrum is Free Software, released under the MIT Licence.
-				</div>
-			</div> 
+				<div class="panel" id="about">
+					<div class="warning_text">
+						<p>
+							Electrum versions older than 3.3.4 are susceptible to 
+							<a href="https://github.com/spesmilo/electrum/issues/4968" target="__blank">phishing</a>. 
+							<Br/>Do not download Electrum from another source than
+							electrum.org, and learn to verify GPG signatures.
+						</p>
+					</div>					
+					<div class="panel_wrapper">
+						<h1 class="panel_title">About</h1>
+						<div class="panel_subsection">
+							<h2 class="panel_subtitle">BACKGROUND</h2>
+							<p>
+								Electrum was created by Thomas Voegtlin in
+								November 2011.<br/>
+								Since then,
+								<a href="https://github.com/spesmilo/electrum/graphs/contributors" target="__blank">
+								various developers</a> have contributed to its
+								source code.
+							</p>
+						</div>						
+						<div class="panel_subsection">
+							<h2 class="panel_subtitle">DEVELOPERS WITH WRITE ACCESS</h2>
+							<ul>
+								<li>
+									Thomas Voegtlin
+									<a href="https://github.com/ecdsa" target="__blank">[github]</a>
+									<a href="http://keys.gnupg.net/pks/lookup?search=0x6694D8DE7BE8EE5631BED9502BD5824B7F9470E6&fingerprint=on&op=index" target="__blank">[gpg]</a></li>
+								</li>
+								<li>
+									SomberNight
+									<a href="https://github.com/SomberNight" target="__blank">[github]</a>
+									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight.asc" target="__blank">[pgp]</a>
+								</li>
+								<li>
+									EagleTM
+									<a href="https://github.com/EagleTM" target="__blank">[github]</a>
+								</li>
+								<br/>
+								<br/>
+								<br/>
+							</ul>
+						</div>						
+					</div>					
+				</div> <!-- end of panel about-->
+
+				<div class="panel" id="impressum">
+					<div class="panel_wrapper">
+						<h4>Impressum</h4> 
+						<p>
+							This website is hosted by
+							Electrum Technologies GmbH<br/> Electrum Technologies was founded by Thomas
+							Voegtlin in 2013.<br/> Its mission is to develop,
+							package and distribute Electrum software, and to
+							provide services to Bitcoin users and businesses.
+						</p>
+						<h4>Address</h4>
+						<p>
+							Electrum Technologies GmbH<br/>
+							Paul-Lincke-Ufer 8d<br/>
+							10999 Berlin - Germany<br/>
+						</p>
+					</div>
+				</div> <!-- end of panel impressum-->
+
+				<div class="panel" id="disclaimer">
+					<div class="panel_wrapper"> 
+						<h3>Disclaimer</h3>
+						Electrum is Free Software, released under the MIT Licence.
+					</div>
+				</div> 
+			</div>
 		</div> <!-- end of content -->
 
 		<div id="footer">
@@ -365,75 +365,7 @@
 
 		<!-- Import sticky header script -->
 		<script type="text/javascript" src="js/electrum.js"></script>
-
 		<script type="text/javascript" charset="utf-8">		
-
-			// Expand and collapse hamburger menu
-			function hamburgerMenu() {
-				var x = document.getElementById("nav_links");
-				if (x.style.display === "block") {
-					x.style.display = "none";
-				} else {
-					x.style.display = "block";
-				}
-			}
-
-			// Function to check for desktop vs. mobile view
-			function checkMediaSize(x) {
-				if (x.matches) {
-					return true;
-				} else {
-					return false;
-				}
-			}
-
-			// Function to switch between tabs on click (only active for desktop&tablet view)
-			function openTab(evt, tabName, sectionName) {
-				var i, tabcontent, tablinks;
-				var desktopMediaSize = window.matchMedia("(min-width: 768px)")
-
-				// Check media size
-				if (checkMediaSize(desktopMediaSize)) {
-					
-					// Get all elements with class="tab_content" in same section and hide
-					tabcontent = document.getElementsByClassName("tab_content");
-
-					for (i = 0; i < tabcontent.length; i++) {
-						if (tabcontent[i].classList.contains(sectionName)) {
-							tabcontent[i].style.display = "none";
-						}
-					}
-
-					// Get all elements with class="tablinks" and remove the underline styling
-					tablinks = document.getElementsByClassName("tablinks");				
-					for (i = 0; i < tablinks.length; i++) {
-						if (tablinks[i].classList.contains(sectionName)){
-							tablinks[i].className = tablinks[i].className.replace(" underline_active", "");						
-						}
-					}
-
-					// Show the current tab, and add underline to the button that opened the tab (handle download tab use case)
-					document.getElementById(tabName).style.display = "flex";
-					var downloadtabs;
-					if (sectionName == 'download') {
-						downloadtabs = document.getElementsByClassName("tablinks");
-						for (i=0; i < downloadtabs.length; i++) {
-							if (downloadtabs[i].classList.contains(tabName)) {
-								downloadtabs[i].className += " underline_active"
-							}
-						}
-					} else {
-						evt.currentTarget.className += " underline_active";		
-					}
-				}
-			}
-
-			// Get all defaultOpen elements and click to activate
-			var defaults = document.getElementsByClassName("defaultOpen");
-			for (i = 0; i < defaults.length; i++) {
-					defaults[i].click();
-			}
-
-		</script>
+		</script>		
     </body>
 </html>

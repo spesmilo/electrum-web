@@ -1,3 +1,4 @@
+// NAV PANEL LOGIC
 // select panel
 
 var lastpanel = null;
@@ -14,21 +15,8 @@ function checkPanelNavigation() {
 
 function selectPanel(name) {
     var panelname = 'panel-' + name;
-    var panelid = '#' + panelname;
+	var panelid = '#' + name;
 
-/*
-	if ( name == 'home' ) {
-		$('.slideshow-shadow').show();
-		$('#header').css({
-				'height': '440px'
-		});
-	} else {
-		$('.slideshow-shadow').hide();
-		$('#header').css({
-				'height': '120px'
-		});
-	}
-*/
     if ( $(panelid).exists() ) {
 	$(panelid).show();
 	$('div.panel:not('+panelid+')').hide();
@@ -142,7 +130,7 @@ $(document).ready(function () {
 	checkPanelNavigation();
 });
 
-
+// STICKY HEADER LOGIC
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
@@ -150,7 +138,7 @@ window.onscroll = function() {myFunction()};
 var navbar = document.getElementById("headerWrapper");
 
 // Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+if (navbar) { var sticky = navbar.offsetTop; }
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
@@ -159,4 +147,72 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
+}
+
+// SUB_PANEL LOGIC
+// Function to switch between tabs on click (only active for desktop&tablet view)
+function openTab(evt, tabName, sectionName) {
+	var i, tabcontent, tablinks;
+	var desktopMediaSize = window.matchMedia("(min-width: 768px)")
+
+	// Check media size
+	if (checkMediaSize(desktopMediaSize)) {
+		
+		// Get all elements with class="tab_content" in same section and hide
+		tabcontent = document.getElementsByClassName("tab_content");
+
+		for (i = 0; i < tabcontent.length; i++) {
+			if (tabcontent[i].classList.contains(sectionName)) {
+				tabcontent[i].style.display = "none";
+			}
+		}
+
+		// Get all elements with class="tablinks" and remove the underline styling
+		tablinks = document.getElementsByClassName("tablinks");				
+		for (i = 0; i < tablinks.length; i++) {
+			if (tablinks[i].classList.contains(sectionName)){
+				tablinks[i].className = tablinks[i].className.replace(" underline_active", "");						
+			}
+		}
+
+		// Show the current tab, and add underline to the button that opened the tab (handle download tab use case)
+		document.getElementById(tabName).style.display = "flex";
+		var downloadtabs;
+		if (sectionName == 'download') {
+			downloadtabs = document.getElementsByClassName("tablinks");
+			for (i=0; i < downloadtabs.length; i++) {
+				if (downloadtabs[i].classList.contains(tabName)) {
+					downloadtabs[i].className += " underline_active"
+				}
+			}
+		} else {
+			evt.currentTarget.className += " underline_active";		
+		}
+	}
+}
+
+// Get all defaultOpen elements and click to activate
+var defaults = document.getElementsByClassName("defaultOpen");
+for (i = 0; i < defaults.length; i++) {
+		defaults[i].click();
+}
+
+// ** MOBILE VIEW **
+// Expand and collapse hamburger menu
+function hamburgerMenu() {
+	var x = document.getElementById("nav_links");
+	if (x.style.display === "block") {
+		x.style.display = "none";
+	} else {
+		x.style.display = "block";
+	}
+}
+
+// Function to check for desktop vs. mobile view
+function checkMediaSize(x) {
+	if (x.matches) {
+		return true;
+	} else {
+		return false;
+	}
 }

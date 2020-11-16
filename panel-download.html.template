@@ -1,4 +1,4 @@
-<div class="panel" id="panel-download">
+<div class="panel" id="download">
     <div class="warning_text">
         <p>
             Electrum versions older than 3.3.4 are susceptible to 
