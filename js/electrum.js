@@ -1,3 +1,4 @@
+// NAV PANEL LOGIC
 // select panel
 
 var lastpanel = null;
@@ -14,21 +15,8 @@ function checkPanelNavigation() {
 
 function selectPanel(name) {
     var panelname = 'panel-' + name;
-    var panelid = '#' + panelname;
+	var panelid = '#' + name;
 
-/*
-	if ( name == 'home' ) {
-		$('.slideshow-shadow').show();
-		$('#header').css({
-				'height': '440px'
-		});
-	} else {
-		$('.slideshow-shadow').hide();
-		$('#header').css({
-				'height': '120px'
-		});
-	}
-*/
     if ( $(panelid).exists() ) {
 	$(panelid).show();
 	$('div.panel:not('+panelid+')').hide();
@@ -141,3 +129,42 @@ $(document).ready(function () {
 
 	checkPanelNavigation();
 });
+
+// STICKY HEADER LOGIC
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("headerWrapper");
+
+// Get the offset position of the navbar
+if (navbar) { var sticky = navbar.offsetTop; }
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+// ** MOBILE VIEW **
+// Expand and collapse hamburger menu
+function hamburgerMenu() {
+	var x = document.getElementById("nav_links");
+	if (x.style.display === "block") {
+		x.style.display = "none";
+	} else {
+		x.style.display = "block";
+	}
+}
+
+// // Function to check for desktop vs. mobile view
+// function checkMediaSize(x) {
+// 	if (x.matches) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }

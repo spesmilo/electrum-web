@@ -1,718 +1,831 @@
-@font-face {
-    font-family: 'Nobile';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Nobile'), url('nobile.ttf') format('truetype');
+/* General Styles */
+html {
+    scroll-padding-top: 6em; 
 }
 
 body { 
     margin: 0;
     padding: 0; 
     font-size: 100%;
-    background: #222222;
-    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-    line-height:1.5;
+    background: #000000;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    position: relative;
 }
-
-/*
-table {
-    font-family: 'Nobile', Arial, sans-serif;
-    font-size: 13px;
-}*/
 
 a img {
     border: none;
 }
+
 a {
+    cursor: pointer;
     text-decoration: none;
     outline: 0;
-    color: #0099ff;
-}
-a:focus {
-    color: #77ccff;
-}
-a:hover {
-    color: #77ccff;
-}
-a:active {
-    color: #77ccff;
+    color: #0679FF;
 }
 
-a.selected{
-    text-decoration:underline !important;
-}
-
-
-.downloads a {
-    color:#112277;
-}
-.downloads a:focus {
-    color: #0099ff;
-}
-.downloads a:hover {
-    color: #0099ff;
-}
-
-
-/** Layout
- */
-#content {
-    background: #113344;
-    color: #dddddd;
-}
-
-.features a{
-    color: #ffffff;
-}
-
-
-.wrapper {
-    margin: 0 auto;
-    width: 940px;
-    clear: left;
-}
-
-.clear {
-    clear: both;
-}
-
-
-pre, code, tt {
-    /*font: 1em "andale mono", "lucida console", monospace;*/
-    /*line-height: 1.5;*/
-    //background: #fff;
-    //color: #00000;
-}
-
-
-/** Header
- */
-#header { 
-    height: 100px;
-    background: #222222;
-    color:#ffffff;
-    background: -webkit-linear-gradient(#555555, #000000, #000000); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#555555, #000000, #000000); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#555555, #000000, #000000); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#555555, #222222, #222222);
-}
-
-
-#logo {
-    padding: 15px 0px;
-    float: left;
-    width: 380px;
-    line-height:1.5;
-}
-
-#electrum_text {
-    width:300px;
-    height:45px;
-    display:block;
-    background:url(../logo/electrum_text.png) no-repeat 0 0;
-    background-image: -webkit-image-set( url(../logo/electrum_text.png) 1x, url(../logo/electrum_text.png) 2x);
-    background-size:300px 42px;
-}
-
-#electrum_text span, #electrum_logo img { position:absolute; top:100%; left:-99999px; }
-	
-#logo_subtitle {
-    font-weight:300;
-    font-size:100%;
-    color: #5588ff;
-
-}
-	
-#electrum_logo {
-    width:70px;
-    height:66px;
-    display:block;
-    float:right;
-    background:url(../logo/electrum_logo.png) no-repeat 0 0;
-    background-image: -webkit-image-set( url(../logo/electrum_logo.png) 1x, url(../logo/electrum_logo.png) 2x);
-    background-size:70px 66px;
-}
-
-
-
-#menu {
-    font-size: 90%;
-    float:right;
-    //margin-bottom:-20px;
-}
-
-
-
-ul.navigation {
-    //margin-top: 55px;
-    //margin-bottom:2px;
-    float: right;
-    list-style-type: none;
-}
-
-ul.navigation li {
-    float: left;
-    list-style-type: none;
-    line-height: 30px;
-    height: 30px;
-}
-
-ul.navigation li a {
-    float: left;
-    margin-left: 20px;
-}
-
-
-
-/** Social toolbar
- */
-#social-icons { 
+.warning_text {
+    background: #001630;
+    font-weight: 500;
     margin-top: 10px;
-    float:right;
+    line-height: 130%;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 2% 2% 2% 2%;
 }
 
-#social a, #social img {
-    border: 0;
+#content {
+    color: #ffffff;
+    margin: 0 5% 5% 5%;
 }
 
-
-/*
-h1, h2, h3, h4, h5 {
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 300;
-		font-size: 26px;
-		color: #333;
-}
-*/
-
-
-h2 {
-    font-size: 1.5em;
-    line-height: 1;
-    margin-bottom: 1.00em;
-    font-weight:normal;
-}
-h3 {
-    font-size: 1.2em;
-    line-height: 1;
-    margin-bottom: 1.00em;
-    font-weight:normal;
+.btn {
+    border: 2px solid #0679FF;
+    background-color: #000000;
+    color: #0679FF;
+    padding: 10px 28px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 100px;
+    letter-spacing: 0.1em;
+    margin: 5% 0 5% 0;
+    outline:none;
 }
 
+.btn:hover {
+    background-color:rgba(6, 121, 255, 0.08);
+}
+
+li {
+    padding-top: 10px;
+}
+
+/* Header Styles */
+#headerWrapper {
+    overflow: hidden;
+    position: sticky;
+    background: #000000;
+}
+
+#headerWrapper #nav_links {
+    display: none;
+}
+
+#nav_links a {
+    color: white;
+    font-weight: 300;
+}
+
+#nav_links li {
+    padding-top: 10%;
+}
+
+#electrum_logo {
+    height: 3em;
+    margin: 5% 0 0 8%;
+}
+
+#hamburger_icon {
+    display: block;
+    font-size: 2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    margin: 6% 8% 0 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* General tab styles  */
+.tablinks {
+    font-size: 0.3em;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.underline_active {
+    border-bottom: 2px solid #0679FF;
+    width: fit-content;
+}
+
+.tab_content {
+    margin: 0;
+    flex-direction: column;
+}
+
+/* General Panel Styles */
+.panel_wrapper {
+    margin: 1% 5% 0% 5%;
+    min-height: 50vh;
+}
+
+.panel, :target ~ .default {
+    display: none;
+}
+
+.default, :target {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.panel_title {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* Home Panel Styles */
+#electrum_blue_logo_text {
+    width: 80vw;
+    z-index: -1;
+}
+
+#Electrum_title {
+    display: flex;
+    flex-direction: column;
+    margin: 20% 0 20% 0;
+    align-items: center;
+}
+
+.title_subtext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.title_subtext h1 {
+    font-weight: 600;
+    font-size: 4vw;
+    
+}
+
+.title_subtext h2 {
+    font-weight: 200;
+    font-size: 3.5vw;
+}
+
+#download_button {
+    width: 50vw;
+}
+
+.feature_header {
+    margin: 0;
+    padding: 10% 0 0 0;
+    font-size: 5vw;
+    font-weight: 600;
+    color: #0679ff;
+}
+
+.home_panel_section {
+    margin: 0 5% 20% 0;
+}
+
+.home_panel_section h1 {
+    line-height: 140%;
+    font-size: 9vw;
+    font-weight: 600;
+}
+
+.home_panel_section img {
+    width: 70vw;
+}
+
+/* Title Flicker Animation Styles */
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0.6; }
+    100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0.6; }
+    100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0.6; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0.6; }
+    100% { opacity:1; }
+}
+
+.animate-flicker {
+    -webkit-animation: flickerAnimation 0.3s linear infinite;
+    -moz-animation: flickerAnimation 0.3s linear infinite;;
+    -o-animation: flickerAnimation 0.3s linear infinite;;
+    animation: flickerAnimation 0.3s linear infinite;;
+}  
+
+/* Download Panel Styles */
+#download_tab {
+    display: none;
+}
+
+#mobile_view_download {
+    display: flex;
+    flex-direction: column;
+    margin: 10% 0 10% 0;
+}
+
+#mobile_view_download_set {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0 0 0;
+}
+
+#signature {
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+#latest_release{
+    margin: 0;
+    font-size: 1em;
+}
+
+#release_links {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    font-size: 0.9em;
+}
+
+#Mobile, #Desktop, #CLI {
+    display: none;
+}
+
+#faq_note_wrapper {
+    margin: 1% 5% 0% 5%;
+}
+
+#faq_note_wrapper p {
+    font-weight: 300;
+    line-height: 150%;
+    font-size: 0.8em;
+}
+
+#note_wrapper p {
+    font-weight: 300;
+    line-height: 150%;
+    font-size: 0.8em;
+} */
+
+
+/* Documentation Panel Styles */
+#documentation_buttons_set {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 52vw;
+}
+
+#documentation_buttons_set button {
+    width: 100%;
+    font-size: 0.7em;
+}
+
+/* Community & About Panel Styles */
+.panel_subtitle {
+    font-size: 1em;
+    font-weight: 400;
+    border-bottom: 2px solid #0679FF;
+    padding-bottom: 5px;
+    width: fit-content;
+}
+
+.panel_subsection {
+    margin: 10% 0 15% 0;
+    font-size: 0.8em;
+}
+
+.panel_subsection ul {
+    padding: 0 0 0 10%;
+}
+
+/* Footer Styles */
 #footer {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #ddd;
-    font-size: 90%;
+    position: relative;
+    bottom: 0;
+    padding: 0px 0px 20px 0px;
+    width: 100%;
+    text-align: center;  
+    left: 0;
+    color: #ffffff;
+    font-size: 10%;
 }
 
 #footer a,
 #header a {
     text-decoration: none;
     color:#ffffff;
-    visited-color:#cccccc;
 }
 
-#footer a:hover,
-#header a:hover {
-    color: #ddd;
+.footer_subwrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10% 8% 0% 8%;
 }
 
-#footer p {
-    margin: 0 5px;
+.internal_links {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 1%;
 }
 
-#footer .col1 {
-    width: 470px;
-    float: left;
-}
-#footer .col2 {
-    width: 470px;
-    text-align: right;
-    float: left;
+.internal_links a {
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 6em;
+    padding-top: 7%;
 }
 
-.hl {
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.bigger {
-    font-size: 120%;
-}
-
-hr {
-    height: 1px;
-    border: 0;
-    background-color: #aaa;
-}
-
-/** contest 2014
- */
-
-.partners,
-.sponsors {
-	float: right;
-	width: 250px;
-	margin-left: 20px;
-	clear: both;
-}
-
-.partners img,
-.sponsors img {
-	width: 100%;
-}
-
-.contest {
-	margin-right: 280px;
-}
-
-/** lightbox
- */
-.pp_social {
-		display: None;
-}
-
-/** Slideshow
- */
-
-.slideshow {
-		width: 940px;
-		height: 400px;
-		overflow: hidden;
-		margin-top: 47px;
-		background-color: black;
-		//position: absolute;
-}
-
-
-.slideshow .caption {
-    position: absolute;
-    margin-left: 50px;
-    margin-top: 50px;
-    padding: 10px 20px;
-    color: #f8f8f8;
-    background-color: #101010;
-    opacity: 0.8;
-}
-
-.slideshow .caption h3 {
-    color: #f8f8f8;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 22px;
-    margin: 0;
-    padding: 0;
-}
-
-.slideshow .caption p {
-    font-family: Nobile, Arial, sans-serif;
-}
-
-.slideshow .caption a {
-    text-decoration: none;
-    color: #b0b0b0;
-}
-
-.slideshow .caption a:hover {
-    color: #ffffff;
-}
-
-/** Panel
- */
-.panel {
-    padding: 1px 0 30px 0;
+#company_info {
     display: none;
 }
 
-/** Home page
- */
-
-.description{
-    text-align:center;
+.footer_wrapper h5 {
+    margin: 0 0 6% 0;
+    font-size: 5em;
+}
+
+.social_link {
+    display: flex;
+    align-items: center;
+}
+
+.social_link img {
+    width: 4vw;
+}
+
+.social_link p {
+    margin: 0;
+}
+
+#external_links {
+    font-size: 5em;
+    font-weight: 400;
+}
+
+
+/* TABLET VIEW */
+@media only screen and (min-width: 768px) {
+    /* General Styles */
+    .warning_text {
+        padding: 5px 20px 5px 20px;
+        margin-top: 20px;
+        font-size: 1.8vw;
+    }
+
+    #content {
+        margin: 0;
+    }
+
+    li {
+        padding: 0 0 1% 0;
+    }
+
+    /* Header Styles */
+    #headerWrapper {
+        display: flex;
+        background: #000000;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 6% 0 6%;
+        height: 6em;
+        position: sticky;
+        width: 87%;
+    }
+
+    #electrum_logo {
+        height: 4em;
+        margin-top: 15%;
+    }
+
+    #headerWrapper #nav_links {
+        display: flex;
+        margin-top: 3%;
+    } 
+
+    #nav_links a {
+        font-weight: 500;
+        font-size: 1.7vw;
+    }
+
+    #nav_links li {
+        display: inline-block;
+        padding: 25px;
+    }
+
+    #hamburger_icon {
+        display: none;
+    }
+
+    /* General Tab & Panel styles  */
+    .panel_title {
+        font-size: 3em;
+        font-weight: 600;
+    }
+
+    .panel_wrapper {
+        margin: 0% 0% 0% 7%;
+    }
+
+    /* Home Panel Styles */
+
+    #electrum_blue_logo_text {
+        height: 5em;
+    }
+
+    #Electrum_title {
+        margin: 15% 0 5% 0;
+    }
+    
+    .title_subtext h1 {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+
+    .title_subtext h2 {
+        font-size: 1em;
+    }
+
+    .home_panel_section {
+        margin: 10% 8% 20% 0%;
+    }
+
+    .home_panel_section h1 {
+        font-size: 2.5em;
+        width: 80%;
+        margin-bottom: 10%;
+    }
+    .home_panel_section .tab_content {
+        display: flex;
+        align-items: center;
+        height: 50vh;
+        width: 40%;
+    }
+
+    .home_panel_section .tab_content p {
+        font-size: 0.75em;
+        line-height: 130%;
+        font-weight: 400;
+        text-align: center;
+        align-content: center;
+        width: 90%;
+    }
+
+    .tab_content_wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .feature_header {
+        padding: 0;
+        font-size: 1.5vw;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .home_panel_section img {
+        margin: 20% 0 0 0;
+        width: 17vw;
+    }
+
+    /* Download Panel Styles */
+    #download_tab {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 60%;
+    }
+
+    .download_type_header {
+        padding: 0;
+        font-size: 2.5vw;
+        text-align: left;
+        font-weight: 700;
+        color: #0679FF;
+        margin-top: 5%;  
+    }    
+
+    .download_platform_name {
+        margin: 3% 0 0 0;
+    }
+
+    .download_package_name {
+        margin: 0;
+    }
+
+    .download_set {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        text-align: center;
+    }
+    
+    #mobile_view_download {
+        display: none;
+    }
+
+    #Mobile, #Desktop, #CLI {
+        display: flex;
+    }
+
+    #signature {
+        letter-spacing: 0.1em;
+        font-weight: 400;
+        font-size: 0.8em;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 1.4em;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 40px 10px 4px 5px;
+        text-align: left;
+    }
+    #android_header {
+        width: 18%;
+    }
+
+    .caption {
+        font-size: 0.7em;
+        font-weight: 500;
+    }
+
+    #latest_release{
+        margin: 0;
+        font-size: 2vw;
+    }
+
+    #release_links {
+        margin-top: 1%;
+        margin-bottom: 3%;
+        font-size: 2vw;
+    }
+
+    #cli_table {
+        background: #001630;
+        width: 90%;
+    }
+
+    #cli_table th {
+        padding: 20px 10px 4px 25px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    #cli_table td {
+        padding: 35px 10px 20px 0px;
+        font-weight: 200;
+    }
+
+    #faq_note_wrapper {
+        margin: 0 7% 0% 7%;  
+    }
+
+    #faq_note_wrapper p {
+        font-weight: 400;
+        line-height: 150%;
+        font-size: 1.7vw;
+    }
+
+    /* Documentation Panel Styles */
+    #documentation_buttons_set button {
+        width: 70%;
+        font-size: 1.7vw;
+        margin-bottom: 1%;
+    }
+
+    /* Community & About Panel Styles */
+    .panel_subsection {
+        margin: 5% 0 5% 0;
+        font-size: 1em;
+    }
+    
+    .panel_subsection ul {
+        padding: 0 0 0 2%;
+    }
+
+    /* Footer Styles */
+    #footer {
+        font-size: 60%;
+    }
+
+    #footer a,
+    #header a {
+        text-decoration: none;
+        color:#ffffff;
+    }
+
+    .footer_subwrapper {
+        margin: 3% 8% 0% 8%;
+    }
+
+    .internal_links {
+        text-align: left;
+    }
+
+    .internal_links a {
+        font-size: 1em;
+    }
+
+    #company_info {
+        display: block;
+        width: 25%;
+        text-align: left;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    #company_info img {
+        height: 4vh;
+        margin-bottom: 2%;
+    }
+
+    .footer_wrapper h5 {
+        font-size: 0.8em;
+    }
+
+    #external_links {
+        font-size: 0.8em;
+        font-weight: 400;
+    }
+}
+
+/* DESKTOP VIEW (1024) */
+@media only screen and (min-width: 1024px) {
+
+    /* General Styles */
+    .warning_text {
+        padding: 5px 10px 5px 10px;
+        font-size: 1.2vw;
+    }
+
+    /* Header Styles */
+    #nav_links a {
+        font-size: 1vw;
+    }
+
+    /* Home Panel Styles */
+    #Electrum_title {
+        margin: 11% 0 5% 0;
+    }
+
+    .title_subtext {
+        margin-top: 1%;
+    }
+
+    #download_button {
+        width: 20vw;
+    }
+
+    .home_panel_section h1 {
+        font-size: 2.7em;
+        width: 65%;
+    }
+    .home_panel_section .tab_content {
+        height: 65vh;
+    }
+
+    .home_panel_section .tab_content p {
+        font-size: 1.3vw;
+        line-height: 150%;
+        width: 75%;
+    }
+
+    /* Download Panel Styles */
+
+    #download_tab {
+        margin-right: 80%;
+    }
+
+    .download_type_header {
+        font-size: 1.5vw; 
+    }    
+
+    .download_set {
+        width: 90%;
+    }
+        
+    #faq_note_wrapper {
+        margin: 0 10% 0% 10%;  
+    }
+
+    #faq_note_wrapper p {
+        font-weight: 300;
+        font-size: 1.2vw;
+    }
+
+    #latest_release, #release_links {
+        font-size: 1.4vw;
+    }
+
+    /* Documentation Styles */
+    
+    #documentation_buttons_set {
+        display: flex;
+        justify-content: space-between;
+        width: 75vw;
+    }
+
+    #documentation_buttons_set button {
+        width: 35vw;
+        font-size: 1.2vw;
+    }
+
+    /* Community & About Panel Styles */
+    .panel_subsection {
+        font-size: 1.2vw;
+    }
+
+    /* Footer Styles */
+    #footer {
+        font-size: 80%;
+    }
+}
+
+/* DESKTOP VIEW (1330) */
+@media only screen and (min-width: 1300px) {
+    /* General Styles */
+    .warning_text {
+        padding: 5px 200px 5px 200px;
+        font-size: 1vw;
+    }
+
+    /* Header Styles */
+    #nav_links a {
+        font-size: 0.8vw;
+    }
+
+    /* Home Panel Styles */
+    .home_panel_section h1 {
+        font-size: 3.5em;
+        width: 60%;
+    }
+
+    .home_panel_section .tab_content p {
+        font-size: 1.2vw;
+        width: 70%;
+    }
+
+    .home_panel_section img {
+        margin: 20% 0 0 0;
+        width: 15vw;
+    }
+
+    /* Download Panel Styles */
+    
+    #download_tab {
+        margin-right: 80%;
+    }
+
+    .download_set {
+        width: 70%;
+    }
+
+    #latest_release{
+        font-size: 1.5vw;
+    }
+
+    #release_links {
+        font-size: 1.3vw;
+    }
+
+    #faq_note_wrapper p {
+        line-height: 180%;
+        font-size: 1.2vw;
+    }
+
+    /* Community & About Panel Styles */
+    .panel_subsection {
+        font-size: 1vw;
+    }
+
+    /* Footer Styles */
+    #footer {
+        font-size: 90%;
+    }
 }
-
-#subtitle {
-    margin:auto;
-    width:640px;
-    height:30px;
-    display:block;
-    /*background:url(../logo/theway.png) no-repeat 0 0;*/
-    /*background-image: -webkit-image-set( url(../logo/theway.png) 1x, url(../logo/theway.png) 2x);*/
-    background-size:634px 30px;
-    margin-top:60px;
-    margin-bottom:60px;
-}
-
-
-.button {
-    font-size:1.5em;
-    padding: 10px 30px;
-    color:#fff;
-    background-color:#3468bb;
-    font-weight:300;
-    text-decoration:none;
-    border-radius:6px;
-}
-.button:visited { color:#fff; }
-.button:hover, .button:active, .button:focus { color:#fff; text-decoration:underline; }
-.button:active { position:relative; top:1px; }
-	
-
-
-
-div.featured-space {
-    height: 60px;
-}
-
-
-h2.icon {
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    padding-left: 60px;
-    padding-top: 30px;
-    line-height: 24px;
-    height: 64px;
-}
-
-h2.icon-seed {
-    background-image: url('../icons/features/neg_icon_seed.png');
-}
-h2.icon-safe {
-    background-image: url('../icons/features/neg_icon_box.png');
-}
-h2.icon-exit {
-    background-image: url('../icons/features/neg_icon_exit.png');
-}
-h2.icon-clock {
-    background-image: url('../icons/features/neg_icon_clock.png');
-}
-h2.icon-blitz {
-    background-image: url('../icons/features/neg_icon_blitz.png');
-}
-h2.icon-spv {
-    background-image: url('../icons/features/neg_icon_shield.png');
-}
-h2.icon-multisig {
-    background-image: url('../icons/features/neg_icon_multisig.png');
-}
-h2.icon-cold {
-    background-image: url('../icons/features/neg_icon_cold.png');
-}
-h2.icon-plugins {
-    background-image: url('../icons/features/neg_icon_round.png');
-}
-
-/*open source. twofactor. */
-
-.features {
-    clear: both;
-}
-
-
-.features p {
-    margin-top: -50px;
-    //margin-bottom: -30px;
-}
-
-
-.feature-item {
-    width: 300px;
-    line-height: 150%;
-    float: left;
-    margin-right: 20px;
-    //background:green;
-}
-
-.feature-item.item-2-col {
-    width: 610px;
-}
-
-.feature-item.last {
-    margin-right: 0px;
-}
-
-/** Galery page
- */
-.gallery h3 {
-    margin: 0px;
-    padding: 5px 0 0 0;
-    font-size: 20px;
-}
-
-.gallery p {
-    margin: 5px 0 10px 0;
-}
-
-.gallery-item {
-    margin-right: 50px;
-    width: 445px;
-    float: left;
-}
-
-.gallery-item.right {
-    margin-right: 0px;
-}
-
-.gallery-clear {
-    clear: left;
-    height: 40px;
-}
-
-/** Python highlight
- */
-	
-.highlight pre {
-  background-color: #f0f0f0;
-	border: 1px solid #c2c2c2;
-	padding: 10px;
-	font-size: 14px;
-	border-top-left-radius: 15px;
-	border-bottom-right-radius: 15px;
-	-moz-border-radius-topleft: 15px;
-	-moz-border-radius-bottomright: 15px;
-	-webkit-border-radius-topleft: 15px;
-	-webkit-border-radius-topright: 15px;
-}
-
-.highlight .k,
-.highlight .kn {
-    font-weight: bold;
-}
-
-.highlight .nc,
-.highlight .nf {
-    color: #af5600;
-    color: #db6500;
-}
-
-/** Downloads
- */
-.downloads{
-    color:#000000;
-    background-color:#cccccc;
-}
-
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin-bottom: 1.4em;
-    width: 100%;
-}
-
-
-table.striped tr:nth-child(even) td,
-table tr.even td {
-    background: #113355;
-}
-table {
-    border: 0px solid #888888;
-    border-collapse: separate;
-}
-td {
-    border-top: 1px solid #888888;
-    border-left: 1px solid #888888;
-}
-
-th, td, caption {
-    padding: 4px 10px 4px 5px;
-}
-
-
-div .qrcode{
-    border: 10px solid white;
-    display: inline-block;
-}
-
-
-/*
-table.downloads {
-	border-collapse: collapse;
-	border: 1px solid #ccc;
-}
-
-table.downloads td,
-table.downloads th {
-	text-align: left;
-	padding: 15px 20px;
-	border-bottom: 1px solid #ccc;
-}
-
-table.downloads img {
-	vertical-align: middle;
-}
-
-table.downloads th {
-	background-color: #e0e0e0;
-}
-
-table.downloads tr.selected td {
-	background-color: #f0f0f0;
-}
-
-table.downloads tr th.os {
-	width: 250px;
-}
-*/
-
-/** About
- */
-
-.clear {
-    clear: left;
-}
-
-.devprofile {
-    float: left;
-    font-size: 12px;
-    display: block;
-    width: 200px;
-    min-height: 210px;
-    padding: 10px;
-    margin: 20px 40px;
-    border: 1px solid #ccc;
-}
-
-.devprofile .social,
-.devprofile .name {
-    display: block;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.devprofile .name {
-    font-size: 18px;
-}
-
-.devprofile .social {
-    margin-top: 5px;
-}
-
-.devprofile a {
-    color: #ef7600;
-    text-decoration: none;
-}
-
-.devpic {
-    float: left;
-    margin-right: 10px;
-    height: 80px;
-}
-
-dl.aboutus,
-dl.aboutus dd {
-    list-style-type: none;
-}
-
-dl.aboutus dt {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    color: #333;
-}
-
-dl.aboutus dd {
-    margin: 0px;
-    padding: 0px;
-}
-ul.devinfo li {
-    height: 90px;
-}
-
-.devcontact {
-    margin-top: 10px;
-}
-
-.ircnick {
-    font-style: italic;
-}
-
-ul.talks li {
-    margin-bottom: 10px;
-}
-
-.pageright {
-	float: left;
-	width: 350px;
-}
-
-.pageright h2 {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	font-size: 20px;
-	color: #333;
-	margin: 13px 0px;
-	padding: 0px;
-}
-
-.pageleft {
-	width: 550px;
-	float: left;
-	margin-right: 10px;
-	padding-right: 10px;
-	border-right: 1px dotted #888888;
-}
-
-ul.talks {
-	list-style-type: none;
-	padding: 0px;
-	margin: 0px;
-}
-
-ul.talks li {
-	list-style-type: none;
-	padding: 0px;
-	margin: 0px;
-	padding-left: 70px;
-	margin-bottom: 15px;
-}
-
-ul.talks li img.preview {
-	position: absolute;
-	margin-left: -70px;
-}
-
-/** IE fixes
- */
-body {
-	text-align: center;
-}
-
-.wrapper {
-	text-align: left;
-}
-
-/** Changelog
- */
-#panel-changelog h3 {
-	background-color: #eeeeee;
-	border-bottom: 1px solid #cccccc;
-	padding: 10px;
-}
-div.changelog h4 {
-	font-size: 20px;
-	margin: 10px 0px;
-}
-div.changelog h5 {
-	font-size: 16px;
-	margin: 10px 0px;
-}
-
-/** Social panel in frontscreen
- */
-table.social td {
-	width: 90px;
-	line-height: 90px;
-}
-
-/** Logo panel
- */
-table.logolist {
-	width: 100%;
-}
-table.logolist td {
-	text-align: center;
-}
-
-
-
