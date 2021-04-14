@@ -71,7 +71,7 @@
             "media": "http://electrum.org/slides/electrum_gui-featured.jpg",
             "raw_link": "",
             "description": [
-		"Electrum has various user interfaces<br/>",
+		"Electrum has various user interfaces.<br/>",
 		"It can be used on mobile, desktop<br/>",
 		"or with the command line interface."
 	    ]
