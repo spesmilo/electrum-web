@@ -16,12 +16,12 @@ echo "github version: $VERSION "
 sftp -oBatchMode=no -b - pubwww@uploadserver << !
    cd electrum-downloads-airlock
    get website.ThomasV.asc
-   get website.SomberNight.asc
+   #get website.SomberNight.asc
    bye
 !
 
 git rev-parse github/master | gpg --verify website.ThomasV.asc -
-git rev-parse github/master | gpg --verify website.SomberNight.asc -
+#git rev-parse github/master | gpg --verify website.SomberNight.asc -
 
 echo "website signature verified"
 
@@ -56,7 +56,7 @@ win_portable=electrum-$VERSION-portable.exe
 for item in $tgz $appimage $zip $win $win_setup $win_portable
 do
     gpg --verify $item $item.ThomasV.asc
-    gpg --verify $item $item.SomberNight.asc
+    #gpg --verify $item $item.SomberNight.asc
 done
 
 # dmg
