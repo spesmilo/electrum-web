@@ -33,9 +33,9 @@ then
 fi
 
 # 1. read from the airlock directory
-rm -rf airlock
-mkdir airlock
-cd airlock
+rm -rf /tmp/airlock
+mkdir /tmp/airlock
+cd /tmp/airlock
 
 sftp -oBatchMode=no -b - pubwww@uploadserver << !
    cd electrum-downloads-airlock
