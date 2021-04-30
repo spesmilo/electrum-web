@@ -47,20 +47,24 @@ sftp -oBatchMode=no -b - pubwww@uploadserver << !
 # verify signatures
 tgz=Electrum-$VERSION.tar.gz
 appimage=electrum-$VERSION-x86_64.AppImage
-zip=Electrum-$VERSION.zip
 dmg=electrum-$VERSION.dmg
 win=electrum-$VERSION.exe
 win_setup=electrum-$VERSION-setup.exe
 win_portable=electrum-$VERSION-portable.exe
-
-for item in $tgz $appimage $zip $win $win_setup $win_portable
+for item in $tgz $appimage $win $win_setup $win_portable
 do
-    gpg --verify $item $item.ThomasV.asc
-    #gpg --verify $item $item.SomberNight.asc
+    gpg --verify $item.ThomasV.asc $item
+    #gpg --verify $item.SomberNight.asc $item
 done
 
-# dmg
-gpg --verify $dmg $dmg.ThomasV.asc
+# non-reproducible builds
+dmg=electrum-$VERSION.dmg
+arm64=Electrum-$VERSION.0-arm64-v8a-release.apk
+armeabi=Electrum-$VERSION.0-armeabi-v7a-release.apk
+for item in $dmg $arm64 $armeabi
+do
+    gpg --verify $item.ThomasV.asc $item
+done
 
 echo "verification passed"
 
