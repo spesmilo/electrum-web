@@ -5,9 +5,9 @@ cd "$(dirname "$0")"
 
 # fixme: we should not poll github
 git fetch github
+echo "latest website commit $(git rev-parse github/master)"
 
-echo "latest commit $(git rev-parse github/master)"
-LOCAL_VERSION=$(git show master:version|jq '.version'|tr -d '"')
+LOCAL_VERSION=$(cat version|jq '.version'|tr -d '"')
 VERSION=$(git show github/master:version|jq '.version'|tr -d '"')
 
 echo "local version: $LOCAL_VERSION "
@@ -25,17 +25,19 @@ git rev-parse github/master | gpg --verify website.ThomasV.asc -
 
 echo "website signature verified"
 
+# Just updating website; no new release
 if [ $LOCAL_VERSION = $VERSION ];
 then
     echo "updating website and exiting"
-    git pull github master
+    git merge --ff-only FETCH_HEAD
     exit 0
 fi
 
+# As versions mismatched, there is a new release.
 # 1. read from the airlock directory
 rm -rf /tmp/airlock
 mkdir /tmp/airlock
-cd /tmp/airlock
+pushd /tmp/airlock
 
 sftp -oBatchMode=no -b - pubwww@uploadserver << !
    cd electrum-downloads-airlock
@@ -44,26 +46,21 @@ sftp -oBatchMode=no -b - pubwww@uploadserver << !
    bye
 !
 
-# verify signatures
-tgz=Electrum-$VERSION.tar.gz
-appimage=electrum-$VERSION-x86_64.AppImage
+# verify signatures of binaries
 dmg=electrum-$VERSION.dmg
-win=electrum-$VERSION.exe
-win_setup=electrum-$VERSION-setup.exe
-win_portable=electrum-$VERSION-portable.exe
-for item in $tgz $appimage $win $win_setup $win_portable
+for item in ./*
 do
-    gpg --verify $item.ThomasV.asc $item
-    #gpg --verify $item.SomberNight.asc $item
-done
-
-# non-reproducible builds
-dmg=electrum-$VERSION.dmg
-arm64=Electrum-$VERSION.0-arm64-v8a-release.apk
-armeabi=Electrum-$VERSION.0-armeabi-v7a-release.apk
-for item in $dmg $arm64 $armeabi
-do
-    gpg --verify $item.ThomasV.asc $item
+    if [[ "$item" == *".asc" ]]; then
+        :  # skip verifying signature-files
+    elif [[ "$item" == "$dmg" ]]; then
+        # the dmg binary is exceptional as it is not reproducible; only check one sig
+        gpg --verify "$item.ThomasV.asc" "$item"
+    else
+        # All other files should be reproducible binaries; verify two sigs.
+        # In case we upload any other file for whatever reason, both sigs are needed too.
+        gpg --verify "$item.ThomasV.asc" "$item"
+        #gpg --verify "$item.SomberNight.asc" "$item"
+    fi
 done
 
 echo "verification passed"
@@ -78,6 +75,7 @@ sftp -oBatchMode=no -b - pubwww@uploadserver << !
 !
 
 # update website
-git pull github master
+popd
+git merge --ff-only FETCH_HEAD
 
 # todo: clear cloudflare cache
