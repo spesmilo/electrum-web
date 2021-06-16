@@ -1,1 +1,6 @@
+*.swo
+*.swp
+.DS_Store
+._*.*
+talks/
 .idea/
