@@ -4,9 +4,10 @@
 <a href="https://download.electrum.org">Previous releases</a><br/>
 
 <div style="font-size:small">
-  Sources and executables are signed by
-  <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a>.<br/>
-Linux and Windows builds are reproducible, and signed by several developers. See the list <a href="https://github.com/spesmilo/electrum-signatures/tree/master/##VERSION##/">here</a><br/>
+  Almost all our executables are reproducible, and are signed independently by two developers:
+  <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a> and
+  <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/sombernight_releasekey.asc">SomberNight</a>.<br/>
+  MacOS binaries are not reproducible, and are signed by ThomasV only.<br/>
 </div>
 
 
@@ -27,7 +28,9 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_tgz##">Electrum-##VERSION##.tar.gz</a>
     </td>
     <td>
-      <span style="font-size:80%"><a href="##link_tgz##.asc">signature</a></span>
+      <span style="font-size:80%">Signatures:</span><br/>
+      <span style="font-size:80%"><a href="##link_tgz##.ThomasV.asc">ThomasV</a></span>,
+      <span style="font-size:80%"><a href="##link_tgz##.SomberNight.asc">SomberNight</a></span>
     </td>
   </tr>
   <tr>
@@ -38,7 +41,8 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_appimage##">Appimage</a>
     </td>
     <td>
-      <span style="font-size:80%"><a href="##link_appimage##.asc">signature</a></span>
+      <span style="font-size:80%"><a href="##link_appimage##.ThomasV.asc">ThomasV</a></span>,
+      <span style="font-size:80%"><a href="##link_appimage##.SomberNight.asc">SomberNight</a></span>
     </td>
     </tr>
     <tr>
@@ -50,7 +54,8 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
 	<a href="##link_win##">Standalone Executable</a>
       </td>
       <td>
-	<span style="font-size:80%"><a href="##link_win##.asc">signature</a></span>
+	<span style="font-size:80%"><a href="##link_win##.ThomasV.asc">ThomasV</a></span>,
+	<span style="font-size:80%"><a href="##link_win##.SomberNight.asc">SomberNight</a></span>
       </td>
     </tr>
   <tr>
@@ -58,7 +63,8 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_win_setup##">Windows Installer</a>
     </td>
     <td>
-      <span style="font-size:80%"><a href="##link_win_setup##.asc">signature</a></span>
+      <span style="font-size:80%"><a href="##link_win_setup##.ThomasV.asc">ThomasV</a></span>,
+      <span style="font-size:80%"><a href="##link_win_setup##.SomberNight.asc">SomberNight</a></span>
     </td>
   </tr>
   <tr>
@@ -67,7 +73,8 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <span style="font-size:80%">(<a href="https://bitcointalk.org/index.php?topic=154451.0">security advice</a>)</span>
     </td>
     <td>
-      <span style="font-size:80%"><a href="##link_win_portable##.asc">signature</a></span>
+      <span style="font-size:80%"><a href="##link_win_portable##.ThomasV.asc">ThomasV</a></span>,
+      <span style="font-size:80%"><a href="##link_win_portable##.SomberNight.asc">SomberNight</a></span>
     </td>
   </tr>
   <tr>
@@ -80,7 +87,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_mac##">Executable for OS X</a>
     </td>
     <td>
-      <span id="mac" style="font-size:80%"><a href="##link_mac##.asc">signature</a></span>
+      <span id="mac" style="font-size:80%"><a href="##link_mac##.ThomasV.asc">ThomasV</a></span>
     </td>
   </tr>
   <tr>
@@ -90,18 +97,20 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <br/>(available on <a href="https://play.google.com/store/apps/details?id=org.electrum.electrum">Google Play)</a></span>
     </td>
     <td>
-      <a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-arm64-v8a-release.apk">64 bit</a>
+      <a href="##link_apk_arm64##">64 bit</a>
     </td>
     <td>
-      <span style="font-size:80%"><a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-arm64-v8a-release.apk.asc">signature</a></span>
+      <span style="font-size:80%"><a href="##link_apk_arm64##.ThomasV.asc">ThomasV</a></span>,
+      <span style="font-size:80%"><a href="##link_apk_arm64##.SomberNight.asc">SomberNight</a></span>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-armeabi-v7a-release.apk">32 bit</a>
+      <a href="##link_apk_armeabi##">32 bit</a>
     </td>
     <td>
-      <span style="font-size:80%"><a href="https://download.electrum.org/##VERSION_ANDROID##/Electrum-##VERSION_APK##-armeabi-v7a-release.apk.asc">signature</a></span>
+      <span style="font-size:80%"><a href="##link_apk_armeabi##.ThomasV.asc">ThomasV</a></span>,
+      <span style="font-size:80%"><a href="##link_apk_armeabi##.SomberNight.asc">SomberNight</a></span>
     </td>
   </tr>
 </table>
