@@ -30,7 +30,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     <td>
       <span style="font-size:80%">Signatures:</span><br/>
       <span style="font-size:80%"><a href="##link_tgz##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_tgz##.SomberNight.asc">SomberNight</a></span>
+      <span style="font-size:80%"><a href="##link_tgz##.sombernight_releasekey.asc">SomberNight</a></span>
     </td>
   </tr>
   <tr>
@@ -42,7 +42,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </td>
     <td>
       <span style="font-size:80%"><a href="##link_appimage##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_appimage##.SomberNight.asc">SomberNight</a></span>
+      <span style="font-size:80%"><a href="##link_appimage##.sombersight_releasekey.asc">SomberNight</a></span>
     </td>
     </tr>
     <tr>
@@ -55,7 +55,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       </td>
       <td>
 	<span style="font-size:80%"><a href="##link_win##.ThomasV.asc">ThomasV</a></span>,
-	<span style="font-size:80%"><a href="##link_win##.SomberNight.asc">SomberNight</a></span>
+	<span style="font-size:80%"><a href="##link_win##.sombernight_releasekey.asc">SomberNight</a></span>
       </td>
     </tr>
   <tr>
@@ -64,7 +64,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </td>
     <td>
       <span style="font-size:80%"><a href="##link_win_setup##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_win_setup##.SomberNight.asc">SomberNight</a></span>
+      <span style="font-size:80%"><a href="##link_win_setup##.sombernight_releasekey.asc">SomberNight</a></span>
     </td>
   </tr>
   <tr>
@@ -74,7 +74,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </td>
     <td>
       <span style="font-size:80%"><a href="##link_win_portable##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_win_portable##.SomberNight.asc">SomberNight</a></span>
+      <span style="font-size:80%"><a href="##link_win_portable##.sombernight_releasekey.asc">SomberNight</a></span>
     </td>
   </tr>
   <tr>
@@ -101,7 +101,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </td>
     <td>
       <span style="font-size:80%"><a href="##link_apk_arm64##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_apk_arm64##.SomberNight.asc">SomberNight</a></span>
+      <span style="font-size:80%"><a href="##link_apk_arm64##.sombernight_releasekey.asc">SomberNight</a></span>
     </td>
   </tr>
   <tr>
@@ -110,7 +110,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </td>
     <td>
       <span style="font-size:80%"><a href="##link_apk_armeabi##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_apk_armeabi##.SomberNight.asc">SomberNight</a></span>
+      <span style="font-size:80%"><a href="##link_apk_armeabi##.sombernight_releasekey.asc">SomberNight</a></span>
     </td>
   </tr>
 </table>

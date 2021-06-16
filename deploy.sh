@@ -16,12 +16,12 @@ echo "github version: $VERSION "
 sftp -oBatchMode=no -b - pubwww@uploadserver << !
    cd electrum-downloads-airlock
    get website.ThomasV.asc
-   #get website.SomberNight.asc
+   get website.sombernight_releasekey.asc
    bye
 !
 
 git rev-parse github/master | gpg --verify website.ThomasV.asc -
-#git rev-parse github/master | gpg --verify website.SomberNight.asc -
+git rev-parse github/master | gpg --verify website.sombernight_releasekey.asc -
 
 echo "website signature verified"
 
@@ -59,7 +59,7 @@ do
         # All other files should be reproducible binaries; verify two sigs.
         # In case we upload any other file for whatever reason, both sigs are needed too.
         gpg --verify "$item.ThomasV.asc" "$item"
-        #gpg --verify "$item.SomberNight.asc" "$item"
+        gpg --verify "$item.sombernight_releasekey.asc" "$item"
     fi
 done
 
