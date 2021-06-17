@@ -7,7 +7,7 @@
   Almost all our executables are reproducible, and are signed independently by two developers:
   <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a> and
   <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/sombernight_releasekey.asc">SomberNight</a>.<br/>
-  MacOS binaries are not reproducible, and are signed by ThomasV only.<br/>
+  MacOS executables are not reproducible, and are signed by ThomasV only.<br/>
 </div>
 
 
@@ -42,7 +42,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </td>
     <td>
       <span style="font-size:80%"><a href="##link_appimage##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_appimage##.sombersight_releasekey.asc">SomberNight</a></span>
+      <span style="font-size:80%"><a href="##link_appimage##.sombernight_releasekey.asc">SomberNight</a></span>
     </td>
     </tr>
     <tr>
@@ -139,11 +139,13 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </tr>
     <tr>
       <td>
-	Verify signature:
+	Verify signatures:
       </td>
       <td>
-	<code>wget ##link_tgz##.asc</code><br/>
-	<code>gpg --verify Electrum-##VERSION##.tar.gz.asc</code>
+	<code>wget ##link_tgz##.ThomasV.asc</code><br/>
+	<code>gpg --verify Electrum-##VERSION##.tar.gz.ThomasV.asc Electrum-##VERSION##.tar.gz</code>
+	<code>wget ##link_tgz##.sombernight_releasekey.asc</code><br/>
+	<code>gpg --verify Electrum-##VERSION##.tar.gz.sombernight_releasekey.asc Electrum-##VERSION##.tar.gz</code>
       </td>
     </tr>
     <tr>
