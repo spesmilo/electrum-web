@@ -56,7 +56,7 @@ for item in ./*
 do
     if [[ "$item" == *".asc" ]]; then
         :  # skip verifying signature-files
-    elif [[ "$item" == "$dmg" ]]; then
+    elif [[ "$item" == "./$dmg" ]]; then
         # the dmg binary is exceptional as it is not reproducible; only check one sig
         gpg --no-default-keyring --keyring "$REPODIR/gpg/thomasv.gpg" --verify "$item.ThomasV.asc" "$item"
     else
