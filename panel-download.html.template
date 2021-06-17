@@ -143,7 +143,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       </td>
       <td>
 	<code>wget ##link_tgz##.ThomasV.asc</code><br/>
-	<code>gpg --verify Electrum-##VERSION##.tar.gz.ThomasV.asc Electrum-##VERSION##.tar.gz</code>
+	<code>gpg --verify Electrum-##VERSION##.tar.gz.ThomasV.asc Electrum-##VERSION##.tar.gz</code><br/>
 	<code>wget ##link_tgz##.sombernight_releasekey.asc</code><br/>
 	<code>gpg --verify Electrum-##VERSION##.tar.gz.sombernight_releasekey.asc Electrum-##VERSION##.tar.gz</code>
       </td>
