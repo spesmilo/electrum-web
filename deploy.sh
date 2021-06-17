@@ -1,7 +1,11 @@
 #!/bin/bash
 # cron job for the webserver
 set -ex
-cd "$(dirname "$0")"
+
+REPODIR="$(dirname "$(readlink -e "$0")")"
+cd "$REPODIR"
+
+date -u
 
 # fixme: we should not poll github
 git fetch github
@@ -20,8 +24,8 @@ sftp -oBatchMode=no -b - pubwww@uploadserver << !
    bye
 !
 
-git rev-parse github/master | gpg --no-default-keyring --keyring ./gpg/thomasv.gpg --verify website.ThomasV.asc -
-git rev-parse github/master | gpg --no-default-keyring --keyring ./gpg/sombernight_releasekey.gpg --verify website.sombernight_releasekey.asc -
+git rev-parse github/master | gpg --no-default-keyring --keyring "$REPODIR/gpg/thomasv.gpg" --verify website.ThomasV.asc -
+git rev-parse github/master | gpg --no-default-keyring --keyring "$REPODIR/gpg/sombernight_releasekey.gpg" --verify website.sombernight_releasekey.asc -
 
 echo "website signature verified"
 
@@ -54,12 +58,12 @@ do
         :  # skip verifying signature-files
     elif [[ "$item" == "$dmg" ]]; then
         # the dmg binary is exceptional as it is not reproducible; only check one sig
-        gpg --no-default-keyring --keyring ./gpg/thomasv.gpg --verify "$item.ThomasV.asc" "$item"
+        gpg --no-default-keyring --keyring "$REPODIR/gpg/thomasv.gpg" --verify "$item.ThomasV.asc" "$item"
     else
         # All other files should be reproducible binaries; verify two sigs.
         # In case we upload any other file for whatever reason, both sigs are needed too.
-        gpg --no-default-keyring --keyring ./gpg/thomasv.gpg --verify "$item.ThomasV.asc" "$item"
-        gpg --no-default-keyring --keyring ./gpg/sombernight_releasekey.gpg --verify "$item.sombernight_releasekey.asc" "$item"
+        gpg --no-default-keyring --keyring "$REPODIR/gpg/thomasv.gpg" --verify "$item.ThomasV.asc" "$item"
+        gpg --no-default-keyring --keyring "$REPODIR/gpg/sombernight_releasekey.gpg" --verify "$item.sombernight_releasekey.asc" "$item"
     fi
 done
 
