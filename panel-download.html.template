@@ -87,7 +87,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_mac##">Executable for OS X</a>
     </td>
     <td>
-      <span id="mac" style="font-size:80%"><a href="##link_mac##.ThomasV.asc">ThomasV</a></span>
+      <span id="mac" style="font-size:80%"><a href="##link_mac##.ThomasV.asc">ThomasV</a></span>,
       <span id="mac" style="font-size:80%"><a href="##link_mac##.sombernight_releasekey.asc">SomberNight</a></span>
     </td>
   </tr>
