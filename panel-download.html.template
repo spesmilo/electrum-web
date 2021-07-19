@@ -4,7 +4,7 @@
 <a href="https://download.electrum.org">Previous releases</a><br/>
 
 <div style="font-size:small">
-  Almost all our executables are reproducible, and are signed independently by two developers:
+  Our executables are reproducible, and are signed independently by two developers:
   <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a> and
   <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/sombernight_releasekey.asc">SomberNight</a>.<br/>
   MacOS executables are not reproducible, and are signed by ThomasV only.<br/>
@@ -88,6 +88,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </td>
     <td>
       <span id="mac" style="font-size:80%"><a href="##link_mac##.ThomasV.asc">ThomasV</a></span>
+      <span id="mac" style="font-size:80%"><a href="##link_mac##.sombernight_releasekey.asc">SomberNight</a></span>
     </td>
   </tr>
   <tr>
