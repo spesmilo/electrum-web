@@ -30,8 +30,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </td>
     <td>
       <span style="font-size:80%">Signatures:</span><br/>
-      <span style="font-size:80%"><a href="##link_tgz##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_tgz##.sombernight_releasekey.asc">SomberNight</a></span>
+      <span style="font-size:80%">##sigs_tgz##</span>
     </td>
   </tr>
   <tr>
@@ -42,8 +41,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_appimage##">Appimage</a>
     </td>
     <td>
-      <span style="font-size:80%"><a href="##link_appimage##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_appimage##.sombernight_releasekey.asc">SomberNight</a></span>
+      <span style="font-size:80%">##sigs_appimage##</span>
     </td>
     </tr>
     <tr>
@@ -55,8 +53,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
 	<a href="##link_win##">Standalone Executable</a>
       </td>
       <td>
-	<span style="font-size:80%"><a href="##link_win##.ThomasV.asc">ThomasV</a></span>,
-	<span style="font-size:80%"><a href="##link_win##.sombernight_releasekey.asc">SomberNight</a></span>
+	<span style="font-size:80%">##sigs_win##</span>
       </td>
     </tr>
   <tr>
@@ -64,8 +61,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_win_setup##">Windows Installer</a>
     </td>
     <td>
-      <span style="font-size:80%"><a href="##link_win_setup##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_win_setup##.sombernight_releasekey.asc">SomberNight</a></span>
+      <span style="font-size:80%">##sigs_win_setup##</span>
     </td>
   </tr>
   <tr>
@@ -74,8 +70,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <span style="font-size:80%">(<a href="https://bitcointalk.org/index.php?topic=154451.0">security advice</a>)</span>
     </td>
     <td>
-      <span style="font-size:80%"><a href="##link_win_portable##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_win_portable##.sombernight_releasekey.asc">SomberNight</a></span>
+      <span style="font-size:80%">##sigs_win_portable##</span>
     </td>
   </tr>
   <tr>
@@ -88,8 +83,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_mac##">Executable for OS X</a>
     </td>
     <td>
-      <span id="mac" style="font-size:80%"><a href="##link_mac##.ThomasV.asc">ThomasV</a></span>,
-      <span id="mac" style="font-size:80%"><a href="##link_mac##.sombernight_releasekey.asc">SomberNight</a></span>
+      <span style="font-size:80%">##sigs_mac##</span>
     </td>
   </tr>
   <tr>
@@ -102,8 +96,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_apk_arm64##">64 bit</a>
     </td>
     <td>
-      <span style="font-size:80%"><a href="##link_apk_arm64##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_apk_arm64##.sombernight_releasekey.asc">SomberNight</a></span>
+      <span style="font-size:80%">##sigs_apk_arm64##</span>
     </td>
   </tr>
   <tr>
@@ -111,8 +104,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_apk_armeabi##">32 bit</a>
     </td>
     <td>
-      <span style="font-size:80%"><a href="##link_apk_armeabi##.ThomasV.asc">ThomasV</a></span>,
-      <span style="font-size:80%"><a href="##link_apk_armeabi##.sombernight_releasekey.asc">SomberNight</a></span>
+      <span style="font-size:80%">##sigs_apk_armeabi##</span>
     </td>
   </tr>
 </table>
