@@ -165,7 +165,7 @@
                     <h2>Community</h2>
                     <h4>Support</h4>
                     <ul>
-                        <li>Documentation: <a href="https://electrum.readthedocs.io/">http://electrum.readthedocs.io</a></li>
+                        <li>Documentation: <a href="https://electrum.readthedocs.io/">https://electrum.readthedocs.io</a></li>
                         <li>Official announcements are made on <a href="https://twitter.com/ElectrumWallet">Twitter</a></li>
                         <li>You can ask questions on <a href="https://bitcointalk.org/index.php?board=98.0">bitcointalk.org</a></li>
                         <li>As well as on <a href="https://www.reddit.com/r/Electrum/">Reddit</a></li>
@@ -188,31 +188,54 @@
 
                 <div class="panel" id="panel-about">
 
-		    <h4>About Electrum</h4>
-		    <p>
-			Electrum was created by Thomas Voegtlin in
-			November 2011.<br/>
-			Since then,
-			<a href="https://github.com/spesmilo/electrum/graphs/contributors">
-			various developers</a> have contributed to its
-			source code.
-		    </p>
-		    <h4>Developers with Github write access</h4>
-                    <ul>
-                        <li>
-			    Thomas Voegtlin
-			    <a href="https://github.com/ecdsa">[github]</a>
-			    <a href="http://keys.gnupg.net/pks/lookup?search=0x6694D8DE7BE8EE5631BED9502BD5824B7F9470E6&fingerprint=on&op=index">[gpg]</a></li>
-                        <li>
-			    SomberNight
-			    <a href="https://github.com/SomberNight">[github]</a>
-			    <a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight.asc">[pgp]</a>
-                        </li>
-                        <li>
-			    EagleTM
-			    <a href="https://github.com/EagleTM">[github]</a>
-                        </li>
-		    </ul>
+					<h4>About Electrum</h4>
+					<p>
+					Electrum was created by Thomas Voegtlin in
+					November 2011.<br/>
+					Since then,
+					<a href="https://github.com/spesmilo/electrum/graphs/contributors">
+					various developers</a> have contributed to its
+					source code.
+					</p>
+					<h4>Developers with Github write access</h4>
+					<ul>
+						<li>
+							Thomas Voegtlin
+							<a href="https://github.com/ecdsa">[github]</a>
+							<ul>
+								<li>
+									<a href="http://keys.gnupg.net/pks/lookup?search=0x6694D8DE7BE8EE5631BED9502BD5824B7F9470E6&fingerprint=on&op=index">[gpg key]</a>
+									<code>6694 D8DE 7BE8 EE56 31BE  D950 2BD5 824B 7F94 70E6</code>
+								</li>
+							</ul>
+						</li>
+						<li>
+							SomberNight
+							<a href="https://github.com/SomberNight">[github]</a>
+							<ul>
+								<li>
+									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight.asc">[gpg key for identity/git commits]</a>
+									<code>4AD6 4339 DFA0 5E20 B3F6  AD51 E7B7 48CD AF5E 5ED9</code>
+								</li>
+								<li>
+									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight_releasekey.asc">[gpg key for releases]</a>
+									<code>0EED CFD5 CAFB 4590 6734  9B23 CA9E EEC4 3DF9 11DC</code>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<h4>Website and release security</h4>
+					<p>
+						Developers do not have direct unilateral write access to this website.
+						Changes must be signed by both
+						<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a> and
+						<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/sombernight_releasekey.asc">SomberNight</a>,
+						automatically checked by a script before made publicly visible.
+						Release distributables are reproducible, and need to be signed by at least the same two keys,
+						before the script exposes them to the webserver.<br/>
+					</p>
+
+
                 </div>
 
                 <div class="panel" id="panel-impressum">
