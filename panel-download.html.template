@@ -4,11 +4,8 @@
 <a href="https://download.electrum.org">Previous releases</a><br/>
 
 <div style="font-size:small">
-  Our executables are reproducible, and are signed independently
-  <a href="https://github.com/spesmilo/electrum/tree/master/pubkeys">by several builders</a>.
-  <br/>
-  We recommend verifying at least two signatures.
-  <br/>
+  Our executables are reproducible, and are signed independently by several builders.<br/>
+  The current executables have been signed by ##signers_list##.<br/>
 </div>
 
 
@@ -29,8 +26,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_tgz##">Electrum-##VERSION##.tar.gz</a>
     </td>
     <td>
-      <span style="font-size:80%">Signatures:</span><br/>
-      <span style="font-size:80%">##sigs_tgz##</span>
+      <span style="font-size:80%"><a href="##sigs_tgz##">Signatures</a></span>
     </td>
   </tr>
   <tr>
@@ -41,7 +37,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_appimage##">Appimage</a>
     </td>
     <td>
-      <span style="font-size:80%">##sigs_appimage##</span>
+      <span style="font-size:80%"><a href="##sigs_appimage##">Signatures</a></span>
     </td>
     </tr>
     <tr>
@@ -53,7 +49,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
 	<a href="##link_win##">Standalone Executable</a>
       </td>
       <td>
-	<span style="font-size:80%">##sigs_win##</span>
+	<span style="font-size:80%"><a href="##sigs_win##">Signatures</a></span>
       </td>
     </tr>
   <tr>
@@ -61,7 +57,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_win_setup##">Windows Installer</a>
     </td>
     <td>
-      <span style="font-size:80%">##sigs_win_setup##</span>
+      <span style="font-size:80%"><a href="##sigs_win_setup##">Signatures</a></span>
     </td>
   </tr>
   <tr>
@@ -70,7 +66,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <span style="font-size:80%">(<a href="https://bitcointalk.org/index.php?topic=154451.0">security advice</a>)</span>
     </td>
     <td>
-      <span style="font-size:80%">##sigs_win_portable##</span>
+      <span style="font-size:80%"><a href="##sigs_win_portable##">Signatures</a></span>
     </td>
   </tr>
   <tr>
@@ -83,7 +79,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_mac##">Executable for OS X</a>
     </td>
     <td>
-      <span style="font-size:80%">##sigs_mac##</span>
+      <span style="font-size:80%"><a href="##sigs_mac##">Signatures</a></span>
     </td>
   </tr>
   <tr>
@@ -96,7 +92,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_apk_arm64##">64 bit</a>
     </td>
     <td>
-      <span style="font-size:80%">##sigs_apk_arm64##</span>
+      <span style="font-size:80%"><a href="##sigs_apk_arm64##">Signatures</a></span>
     </td>
   </tr>
   <tr>
@@ -104,7 +100,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
       <a href="##link_apk_armeabi##">32 bit</a>
     </td>
     <td>
-      <span style="font-size:80%">##sigs_apk_armeabi##</span>
+      <span style="font-size:80%"><a href="##sigs_apk_armeabi##">Signatures</a></span>
     </td>
   </tr>
 </table>
@@ -136,10 +132,8 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
 	Verify signatures:
       </td>
       <td>
-	<code>wget ##link_tgz##.ThomasV.asc</code><br/>
-	<code>gpg --verify Electrum-##VERSION##.tar.gz.ThomasV.asc Electrum-##VERSION##.tar.gz</code><br/>
-	<code>wget ##link_tgz##.sombernight_releasekey.asc</code><br/>
-	<code>gpg --verify Electrum-##VERSION##.tar.gz.sombernight_releasekey.asc Electrum-##VERSION##.tar.gz</code>
+	<code>wget ##link_tgz##.asc</code><br/>
+	<code>gpg --verify Electrum-##VERSION##.tar.gz.asc</code><br/>
       </td>
     </tr>
     <tr>
