@@ -20,7 +20,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
   <tr>
     <td>
       <img src="icons/tar-gz.png" width=32/>Python
-      <span style="font-size:80%">(3.6.1 and higher)</span>
+      <span style="font-size:80%">(3.8 and higher)</span>
     </td>
     <td>
       <a href="##link_tgz##">Electrum-##VERSION##.tar.gz</a>
