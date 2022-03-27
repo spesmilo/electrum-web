@@ -52,7 +52,6 @@ sftp -oBatchMode=no -b - pubwww@uploadserver << !
 !
 
 # verify signatures of binaries
-dmg=electrum-$VERSION.dmg
 for item in ./*
 do
     if [[ "$item" == *".asc" ]]; then
