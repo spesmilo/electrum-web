@@ -22,6 +22,7 @@ elif [ $GPGUSER == "sombernight_releasekey" ]; then
 fi
 git rev-parse master | gpg --sign --armor --detach $PUBKEY > website.$GPGUSER.asc
 
+touch trigger_website
 sftp -oBatchMode=no -b - ${SSHUSER}@uploadserver << !
    cd electrum-downloads-airlock
    mput website.$GPGUSER.asc
