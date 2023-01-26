@@ -1,3 +1,4 @@
+#!/bin/bash
 # sign website commit and publish it
 # uploadserver needs to be defined in /etc/hosts
 
@@ -24,5 +25,6 @@ git rev-parse master | gpg --sign --armor --detach $PUBKEY > website.$GPGUSER.as
 sftp -oBatchMode=no -b - ${SSHUSER}@uploadserver << !
    cd electrum-downloads-airlock
    mput website.$GPGUSER.asc
+   mput trigger_website
    bye
 !
