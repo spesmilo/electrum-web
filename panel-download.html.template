@@ -82,13 +82,13 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </td>
   </tr>
   <tr>
-    <td rowspan="2">
+    <td rowspan="3">
       <img src="icons/android_icon.png" width=30/>Android
       <span style="font-size:80%">(5.0 and higher)
       <br/>(available on <a href="https://play.google.com/store/apps/details?id=org.electrum.electrum">Google Play)</a></span>
     </td>
     <td>
-      <a href="##link_apk_arm64##">64 bit</a>
+      <a href="##link_apk_arm64##">arm 64-bit</a> (arm64-v8a, recommended)
     </td>
     <td>
       <span style="font-size:80%"><a href="##sigs_apk_arm64##">Signatures</a></span>
@@ -96,10 +96,18 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
   </tr>
   <tr>
     <td>
-      <a href="##link_apk_armeabi##">32 bit</a>
+      <a href="##link_apk_armeabi##">arm 32-bit</a> (armeabi-v7a)
     </td>
     <td>
       <span style="font-size:80%"><a href="##sigs_apk_armeabi##">Signatures</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="##link_apk_x86_64##">x86_64</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="##sigs_apk_x86_64##">Signatures</a></span>
     </td>
   </tr>
 </table>
