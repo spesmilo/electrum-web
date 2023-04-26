@@ -123,7 +123,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
 	Install dependencies:
       </td>
       <td>
-	<code>sudo apt-get install python3-pyqt5 libsecp256k1-0 python3-cryptography</code>
+	<code>sudo apt-get install python3-pyqt5 libsecp256k1-dev python3-cryptography</code>
       </td>
     </tr>
     <tr>
