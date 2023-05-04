@@ -19,6 +19,9 @@ if [ $GPGUSER == "ThomasV" ]; then
 elif [ $GPGUSER == "sombernight_releasekey" ]; then
     PUBKEY="--local-user 0EEDCFD5CAFB459067349B23CA9EEEC43DF911DC"
     export SSHUSER=sombernight
+else
+    echo "ERROR! unexpected GPGUSER=$GPGUSER"
+    exit 1
 fi
 git rev-parse master | gpg --sign --armor --detach $PUBKEY > website.$GPGUSER.asc
 
