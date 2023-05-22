@@ -21,7 +21,6 @@
 	<script type="text/javascript" src="js/jquery.client.js"></script>
 	<script type="text/javascript" src="js/jquery.socialbutton-1.8.0.js"></script>
 	<script type="text/javascript" src="js/qrcode.js"></script>
-	<script type="text/javascript" src="js/electrum.js"></script>
     </head>
     <body>
 	<div id="header">
@@ -41,14 +40,16 @@
 		    <div class="clear"></div>
 		    <div id="menu">
 			<ul class="navigation">
-			    <li><a href="#home">Home</a></li>
-			    <li><a href="#download">Download</a></li>
-			    <!-- <li><a href="#android">Android</a></li> -->
-			    <!-- <li><a href="#faq">FAQ</a></li> -->
-			    <!--<li><a href="#gallery">Gallery</a></li>-->
-			    <li><a href="#documentation">Documentation</a></li>
-			    <li><a href="#community">Community</a></li>
-			    <li><a href="#about">About</a></li>
+				<!-- Note: If js is disabled, the nav links work simply via "href".
+							 The page jumps around a bit because the anchors are not at the very top.
+						   If js is enabled, "onclick" runs first, and it prevents "href" running by returning false.
+						     The page does not jump around (instead it instant-scrolls to the top) due to window.scrollTo(0,0).
+				  -->
+			    <li><a href="#home" onclick="location.hash='#home'; window.scrollTo(0,0); return false;">Home</a></li>
+			    <li><a href="#download" onclick="location.hash='#download'; window.scrollTo(0,0); return false;">Download</a></li>
+			    <li><a href="#documentation" onclick="location.hash='#documentation'; window.scrollTo(0,0); return false;">Documentation</a></li>
+			    <li><a href="#community" onclick="location.hash='#community'; window.scrollTo(0,0); return false;">Community</a></li>
+			    <li><a href="#about" onclick="location.hash='#about'; window.scrollTo(0,0); return false;">About</a></li>
 			</ul>
 		    </div>
 		</div>
@@ -60,7 +61,111 @@
             <p>Warning: Do not download Electrum from another source
             than electrum.org. Verify GPG signatures.
 	    </p>
-	    <div class="panel" id="panel-home">
+	    
+                <div class="page" id="documentation">
+                    <h2>Documentation</h2>
+                    <ul>
+		      <li>Official documentation: <a href="https://electrum.readthedocs.io/">electrum.readthedocs.io</a></li>
+		      <li>Unofficial guide: <a href="https://bitcoinelectrum.com/"></a>bitcoinelectrum.com</li>
+		    </ul>
+		</div>
+
+                <div class="page" id="community">
+                    <h2>Community</h2>
+                    <h4>Support</h4>
+                    <ul>
+                        <li>Documentation: <a href="https://electrum.readthedocs.io/">https://electrum.readthedocs.io</a></li>
+                        <li>Official announcements are made on <a href="https://twitter.com/ElectrumWallet">Twitter</a></li>
+                        <li>You can ask questions on <a href="https://bitcointalk.org/index.php?board=98.0">bitcointalk.org</a></li>
+                        <li>As well as on <a href="https://www.reddit.com/r/Electrum/">Reddit</a></li>
+                    </ul>
+                    <h4>Development</h4>
+                    <ul>
+                        <li>IRC channel: <a href="ircs://irc.libera.chat:6697/electrum">#electrum</a> channel on Libera</li>
+                        <li>Bug reports: <a href="https://github.com/spesmilo/electrum">electrum page on GitHub</a></li>
+                        <li>Localization: <a href="https://crowdin.net/project/electrum">https://crowdin.net/project/electrum</a></li>
+                    </ul>
+                    <h4>Electrum Servers</h4>
+                    <ul>
+			<li>Server source code: <a href="https://github.com/spesmilo/electrumx">ElectrumX</a> (new, faster implementation)</li>
+                        <li>How to run your own Electrum server: <a href="https://github.com/spesmilo/electrumx/blob/master/docs/HOWTO.rst">Install Guide</a></li>
+			<li><a href="https://1209k.com/bitcoin-eye/ele.php">Servers list and status</a> (Lists only Bitcoin Electrum servers)</li>
+			<li><a href="https://bohol.petrkr.net/electrum-stats.php">Statistics from Petrkr's server</a>
+                    </ul>
+
+                </div>
+
+                <div class="page" id="about">
+
+					<h4>About Electrum</h4>
+					<p>
+					Electrum was created by Thomas Voegtlin in
+					November 2011.<br/>
+					Since then,
+					<a href="https://github.com/spesmilo/electrum/graphs/contributors">
+					various developers</a> have contributed to its
+					source code.
+					</p>
+					<h4>Developers with Github write access</h4>
+					<ul>
+						<li>
+							Thomas Voegtlin
+							<a href="https://github.com/ecdsa">[github]</a>
+							<ul>
+								<li>
+									<a href="http://keys.gnupg.net/pks/lookup?search=0x6694D8DE7BE8EE5631BED9502BD5824B7F9470E6&fingerprint=on&op=index">[gpg key]</a>
+									<code>6694 D8DE 7BE8 EE56 31BE  D950 2BD5 824B 7F94 70E6</code>
+								</li>
+							</ul>
+						</li>
+						<li>
+							SomberNight
+							<a href="https://github.com/SomberNight">[github]</a>
+							<ul>
+								<li>
+									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight.asc">[gpg key for identity/git commits]</a>
+									<code>4AD6 4339 DFA0 5E20 B3F6  AD51 E7B7 48CD AF5E 5ED9</code>
+								</li>
+								<li>
+									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight_releasekey.asc">[gpg key for releases]</a>
+									<code>0EED CFD5 CAFB 4590 6734  9B23 CA9E EEC4 3DF9 11DC</code>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<h4>Website and release security</h4>
+					<p>
+						Developers do not have direct unilateral write access to this website.
+						Changes must be signed by both
+						<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a> and
+						<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/sombernight_releasekey.asc">SomberNight</a>,
+						automatically checked by a script before made publicly visible.
+						Release distributables are reproducible, and need to be signed by at least the same two keys,
+						before the script exposes them to the webserver.<br/>
+					</p>
+
+
+                </div>
+
+                <div class="page" id="impressum">
+		    <h4>Impressum</h4> This website is hosted by
+		    Electrum Technologies GmbH<br/> Electrum Technologies was founded by Thomas
+		    Voegtlin in 2013.<br/> Its mission is to develop,
+		    package and distribute Electrum software, and to
+		    provide services to Bitcoin users and businesses.
+		    </p>
+		    <h4>Address</h4>
+		    Electrum Technologies GmbH<br/>
+		    Paul-Lincke-Ufer 8d<br/>
+		    10999 Berlin - Germany<br/>
+		</div>
+                <div class="page" id="disclaimer">
+		    <h3>Disclaimer</h3>
+		    Electrum is Free Software, released under the MIT Licence.
+		</div>
+		
+		<!-- The default page has to come last, due to how the CSS works. -->
+		<div class="page default" id="home">
 
 		    <div id="slides" class="slideshow"></div>
 
@@ -149,109 +254,7 @@
 		    <p style="text-align:center;">
 			<a href="#download" class="button" >Download Electrum</a>
 		    </p>
-                </div>
-
-                <div class="panel" id="panel-documentation">
-                    <h2>Documentation</h2>
-                    <ul>
-		      <li>Official documentation: <a href="https://electrum.readthedocs.io/">electrum.readthedocs.io</a></li>
-		      <li>Unofficial guide: <a href="https://bitcoinelectrum.com/"></a>bitcoinelectrum.com</li>
-		    </ul>
-		</div>
-
-                <div class="panel" id="panel-community">
-                    <h2>Community</h2>
-                    <h4>Support</h4>
-                    <ul>
-                        <li>Documentation: <a href="https://electrum.readthedocs.io/">https://electrum.readthedocs.io</a></li>
-                        <li>Official announcements are made on <a href="https://twitter.com/ElectrumWallet">Twitter</a></li>
-                        <li>You can ask questions on <a href="https://bitcointalk.org/index.php?board=98.0">bitcointalk.org</a></li>
-                        <li>As well as on <a href="https://www.reddit.com/r/Electrum/">Reddit</a></li>
-                    </ul>
-                    <h4>Development</h4>
-                    <ul>
-                        <li>IRC channel: <a href="ircs://irc.libera.chat:6697/electrum">#electrum</a> channel on Libera</li>
-                        <li>Bug reports: <a href="https://github.com/spesmilo/electrum">electrum page on GitHub</a></li>
-                        <li>Localization: <a href="https://crowdin.net/project/electrum">https://crowdin.net/project/electrum</a></li>
-                    </ul>
-                    <h4>Electrum Servers</h4>
-                    <ul>
-			<li>Server source code: <a href="https://github.com/spesmilo/electrumx">ElectrumX</a> (new, faster implementation)</li>
-                        <li>How to run your own Electrum server: <a href="https://github.com/spesmilo/electrumx/blob/master/docs/HOWTO.rst">Install Guide</a></li>
-			<li><a href="https://1209k.com/bitcoin-eye/ele.php">Servers list and status</a> (Lists only Bitcoin Electrum servers)</li>
-			<li><a href="https://bohol.petrkr.net/electrum-stats.php">Statistics from Petrkr's server</a>
-                    </ul>
-
-                </div>
-
-                <div class="panel" id="panel-about">
-
-					<h4>About Electrum</h4>
-					<p>
-					Electrum was created by Thomas Voegtlin in
-					November 2011.<br/>
-					Since then,
-					<a href="https://github.com/spesmilo/electrum/graphs/contributors">
-					various developers</a> have contributed to its
-					source code.
-					</p>
-					<h4>Developers with Github write access</h4>
-					<ul>
-						<li>
-							Thomas Voegtlin
-							<a href="https://github.com/ecdsa">[github]</a>
-							<ul>
-								<li>
-									<a href="http://keys.gnupg.net/pks/lookup?search=0x6694D8DE7BE8EE5631BED9502BD5824B7F9470E6&fingerprint=on&op=index">[gpg key]</a>
-									<code>6694 D8DE 7BE8 EE56 31BE  D950 2BD5 824B 7F94 70E6</code>
-								</li>
-							</ul>
-						</li>
-						<li>
-							SomberNight
-							<a href="https://github.com/SomberNight">[github]</a>
-							<ul>
-								<li>
-									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight.asc">[gpg key for identity/git commits]</a>
-									<code>4AD6 4339 DFA0 5E20 B3F6  AD51 E7B7 48CD AF5E 5ED9</code>
-								</li>
-								<li>
-									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight_releasekey.asc">[gpg key for releases]</a>
-									<code>0EED CFD5 CAFB 4590 6734  9B23 CA9E EEC4 3DF9 11DC</code>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<h4>Website and release security</h4>
-					<p>
-						Developers do not have direct unilateral write access to this website.
-						Changes must be signed by both
-						<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a> and
-						<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/sombernight_releasekey.asc">SomberNight</a>,
-						automatically checked by a script before made publicly visible.
-						Release distributables are reproducible, and need to be signed by at least the same two keys,
-						before the script exposes them to the webserver.<br/>
-					</p>
-
-
-                </div>
-
-                <div class="panel" id="panel-impressum">
-		    <h4>Impressum</h4> This website is hosted by
-		    Electrum Technologies GmbH<br/> Electrum Technologies was founded by Thomas
-		    Voegtlin in 2013.<br/> Its mission is to develop,
-		    package and distribute Electrum software, and to
-		    provide services to Bitcoin users and businesses.
-		    </p>
-		    <h4>Address</h4>
-		    Electrum Technologies GmbH<br/>
-		    Paul-Lincke-Ufer 8d<br/>
-		    10999 Berlin - Germany<br/>
-		</div>
-                <div class="panel" id="panel-disclaimer">
-		    <h3>Disclaimer</h3>
-		    Electrum is Free Software, released under the MIT Licence.
-		</div>
+		</div> <!-- end of #home -->
 
 	    </div> <!-- end of wrapper -->
 	</div> <!-- end of content -->
@@ -259,8 +262,8 @@
 	<div id="footer">
 	    <div class="wrapper">
                 <div class="col1">
-                    <p><a href="#impressum" rel="panel">Impressum</a></p>
-                    <p><a href="#disclaimer" rel="panel">Disclaimer</a><p>
+                    <p><a href="#impressum" onclick="location.hash='#impressum'; window.scrollTo(0,0); return false;">Impressum</a></p>
+                    <p><a href="#disclaimer" onclick="location.hash='#disclaimer'; window.scrollTo(0,0); return false;">Disclaimer</a><p>
                 </div>
                 <div class="col2">
 		    <p>Released under the <a href="https://github.com/spesmilo/electrum/blob/master/LICENCE">MIT Licence</a></p>
@@ -295,8 +298,6 @@
             var item = $('<div></div>').html(html);
             $('#slides').append(item);
             });
-
-            $("a[rel^='panelg']").click(selectNav);
 
             $("a[rel^='prettyPhoto']").prettyPhoto({
             overlay_gallery: false,

@@ -319,7 +319,7 @@ hr {
 
 /** Panel
  */
-.panel {
+.page {
     padding: 1px 0 30px 0;
     display: none;
 }
@@ -714,5 +714,31 @@ table.logolist td {
 	text-align: center;
 }
 
+
+
+/** Navigation between panels --> START
+    see https://dev.to/hakash/100-pure-htmlcss-page-navigation---no-javascript-required-2em5
+ */
+/* This hides all pages */
+.page {
+    display: none;
+}
+
+/* This displays the first page */
+.default {
+    display: block;
+}
+
+/* This displays the page corresponding to the one you clicked on */
+:target {
+    display: block;
+}
+
+/* This hides the default page when another page is clicked */
+:target ~ .default {
+    display: none;
+}
+/** Navigation between panels <-- END
+ */
 
 
