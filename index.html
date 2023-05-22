@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+	<title>Electrum Bitcoin Wallet</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="index, follow"/>
+	<meta name="description" content="Electrum Bitcoin Wallet."/>
+	<meta name="twitter:site" content="@ElectrumWallet"/>
+
+	<link rel="icon" href="images/favicon.png" type="image/png" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/electrum.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<link rel="stylesheet" href="css/sprites.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.lite.js"></script>
+	<script type="text/javascript" src="js/jquery.client.js"></script>
+	<script type="text/javascript" src="js/jquery.socialbutton-1.8.0.js"></script>
+	<script type="text/javascript" src="js/qrcode.js"></script>
+    </head>
+    <body>
+	<div id="header">
+	    <div class="wrapper">
+		<div id="logo">
+		    <a href="https://electrum.org/">
+			<div id="electrum_logo"><img src="logo/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></div>
+			<div id="electrum_text"></div>
+			<span id="logo_subtitle">Bitcoin Wallet</span>
+		    </a>
+		</div>
+		<div style="float:right">
+		    <div id="social-icons">
+			<a href="https://github.com/spesmilo/electrum" class="icon-github"></a>
+			<a href="https://twitter.com/ElectrumWallet" class="icon-twitter"></a>
+		    </div>
+		    <div class="clear"></div>
+		    <div id="menu">
+			<ul class="navigation">
+				<!-- Note: If js is disabled, the nav links work simply via "href".
+							 The page jumps around a bit because the anchors are not at the very top.
+						   If js is enabled, "onclick" runs first, and it prevents "href" running by returning false.
+						     The page does not jump around (instead it instant-scrolls to the top) due to window.scrollTo(0,0).
+				  -->
+			    <li><a href="#home" onclick="location.hash='#home'; window.scrollTo(0,0); return false;">Home</a></li>
+			    <li><a href="#download" onclick="location.hash='#download'; window.scrollTo(0,0); return false;">Download</a></li>
+			    <li><a href="#documentation" onclick="location.hash='#documentation'; window.scrollTo(0,0); return false;">Documentation</a></li>
+			    <li><a href="#community" onclick="location.hash='#community'; window.scrollTo(0,0); return false;">Community</a></li>
+			    <li><a href="#about" onclick="location.hash='#about'; window.scrollTo(0,0); return false;">About</a></li>
+			</ul>
+		    </div>
+		</div>
+		
+	    </div>
+	</div>
+	<div id="content">
+	  <div class="wrapper">
+            <p>Warning: Do not download Electrum from another source
+            than electrum.org. Verify GPG signatures.
+	    </p>
+		
+		<!-- "download page" starts -->
+		<div class="page" id="download">
+			<h2>Latest release: Electrum-4.4.3</h2>
+
+<a href="https://github.com/spesmilo/electrum/blob/master/RELEASE-NOTES">Release notes</a> - 
+<a href="https://download.electrum.org">Previous releases</a><br/>
+
+<div style="font-size:small">
+  Our executables are reproducible, and are signed independently by several builders.<br/>
+  The current executables have been signed by <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a>, <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/sombernight_releasekey.asc">SomberNight</a>, <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/Emzy.asc">Emzy</a>.<br/>
+</div>
+
+
+<h3>Sources and Binaries</h3>
+
+<!--
+<div style="font-size:small">
+Note: All the files can be downloaded via <a href="https://download.electrum.org/Electrum-2.0.torrent">Bittorrent</a>
+</div>
+-->
+<table class="downloads">
+  <tr>
+    <td>
+      <img src="icons/tar-gz.png" width=32/>Python
+      <span style="font-size:80%">(3.8 and higher)</span>
+    </td>
+    <td>
+      <a href="https://download.electrum.org/4.4.3/Electrum-4.4.3.tar.gz">Electrum-4.4.3.tar.gz</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="https://download.electrum.org/4.4.3/Electrum-4.4.3.tar.gz.asc">Signatures</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="icons/os_linux.gif" class="os-linux"/>Linux
+    </td>
+    <td>
+      <a href="https://download.electrum.org/4.4.3/electrum-4.4.3-x86_64.AppImage">Appimage</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="https://download.electrum.org/4.4.3/electrum-4.4.3-x86_64.AppImage.asc">Signatures</a></span>
+    </td>
+    </tr>
+    <tr>
+      <td rowspan="3">
+	<img src="icons/os_windows.gif"/>Windows
+      <span style="font-size:80%">(8.1 and higher)</span>
+      </td>
+      <td>
+	<a href="https://download.electrum.org/4.4.3/electrum-4.4.3.exe">Standalone Executable</a>
+      </td>
+      <td>
+	<span style="font-size:80%"><a href="https://download.electrum.org/4.4.3/electrum-4.4.3.exe.asc">Signatures</a></span>
+      </td>
+    </tr>
+  <tr>
+    <td>
+      <a href="https://download.electrum.org/4.4.3/electrum-4.4.3-setup.exe">Windows Installer</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="https://download.electrum.org/4.4.3/electrum-4.4.3-setup.exe.asc">Signatures</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://download.electrum.org/4.4.3/electrum-4.4.3-portable.exe">Portable version</a>
+      <span style="font-size:80%">(<a href="https://bitcointalk.org/index.php?topic=154451.0">security advice</a>)</span>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="https://download.electrum.org/4.4.3/electrum-4.4.3-portable.exe.asc">Signatures</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="icons/os_apple.png"/>macOS
+      <span style="font-size:80%">(10.13 and higher)</span>
+    </td>
+    <td>
+      <a href="https://download.electrum.org/4.4.3/electrum-4.4.3.dmg">Executable for macOS</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="https://download.electrum.org/4.4.3/electrum-4.4.3.dmg.asc">Signatures</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="3">
+      <img src="icons/android_icon.png" width=30/>Android
+      <span style="font-size:80%">(5.0 and higher)
+      <br/>(available on <a href="https://play.google.com/store/apps/details?id=org.electrum.electrum">Google Play)</a></span>
+    </td>
+    <td>
+      <a href="https://download.electrum.org/4.4.3/Electrum-4.4.3.0-arm64-v8a-release.apk">arm 64-bit</a> (arm64-v8a, recommended)
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="https://download.electrum.org/4.4.3/Electrum-4.4.3.0-arm64-v8a-release.apk.asc">Signatures</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://download.electrum.org/4.4.3/Electrum-4.4.3.0-armeabi-v7a-release.apk">arm 32-bit</a> (armeabi-v7a)
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="https://download.electrum.org/4.4.3/Electrum-4.4.3.0-armeabi-v7a-release.apk.asc">Signatures</a></span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://download.electrum.org/4.4.3/Electrum-4.4.3.0-x86_64-release.apk">x86_64</a>
+    </td>
+    <td>
+      <span style="font-size:80%"><a href="https://download.electrum.org/4.4.3/Electrum-4.4.3.0-x86_64-release.apk.asc">Signatures</a></span>
+    </td>
+  </tr>
+</table>
+
+
+<h3>Installation from Python sources</h3>
+<table class="downloads">
+    <tr>
+      <td rowspan="5">
+	<img src="icons/os_linux.gif"/>Linux
+      </td>
+      <td>
+	Install dependencies:
+      </td>
+      <td>
+	<code>sudo apt-get install python3-pyqt5 libsecp256k1-dev python3-cryptography</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	Download package:
+      </td>
+      <td>
+	<code>wget https://download.electrum.org/4.4.3/Electrum-4.4.3.tar.gz</code><br/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	Verify signatures:
+      </td>
+      <td>
+	<code>wget https://download.electrum.org/4.4.3/Electrum-4.4.3.tar.gz.asc</code><br/>
+	<code>gpg --verify Electrum-4.4.3.tar.gz.asc</code><br/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	Run without installing:
+      </td>
+      <td>
+	<code>tar -xvf Electrum-4.4.3.tar.gz</code><br/>
+	<code>python3 Electrum-4.4.3/run_electrum</code></br>
+      </td>
+    </tr>
+    <tr>
+      <td>
+	Install with PIP:
+      </td>
+      <td>
+	<code>sudo apt-get install python3-setuptools python3-pip</code><br/>
+	<code>python3 -m pip install --user Electrum-4.4.3.tar.gz</code>
+      </td>
+    </tr>
+</table>
+
+<h3>How to verify GPG signatures</h3>
+
+<div class="downloads" style="padding:5px">
+  <p>
+    GPG signatures are a proof that distributed files have been signed
+    by the owner of the signing key. For example, if this website was
+    compromised and the original Electrum files had been replaced,
+    signature verification would fail, because the attacker would not
+    be able to create valid signatures. (Note that an attacker would be
+    able to create valid hashes, this is why we do not publish hashes
+    of our binaries here, it does not bring any security).
+  </p>
+  <p>
+    In order to be able to verify GPG signatures, you need to import
+    the public key of the signer. Electrum binaries are signed with
+    ThomasV's <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">public
+    key</a>. On Linux, you can import that key using the following
+    command: <code>gpg --import ThomasV.asc</code>. Here are tutorials for
+    <a href="https://bitzuma.com/posts/how-to-verify-an-electrum-download-on-windows/">Windows</a>
+    and <a href="https://bitzuma.com/posts/how-to-verify-an-electrum-download-on-mac/">macOS</a>.
+    When you import a key, you should check its fingerprint using
+    independent sources, such
+    as <a href="https://www.youtube.com/watch?v=hjYCXOyDy7Y">here</a>,
+    or use
+    the <a href="https://en.wikipedia.org/wiki/Web_of_trust">Web of
+    Trust</a>.
+  </p>
+</div>
+
+<h3>Notes for Windows users</h3>
+
+<div class="downloads" style="padding:5px">
+  <p>
+    Electrum binaries are often flagged by various anti-virus
+    software. There is nothing we can do about it, so please stop
+    reporting that to us. Anti-virus software uses heuristics in order
+    to determine if a program is malware, and that often results in
+    false positives. If you trust the developers of the project, you
+    can verify the GPG signature of Electrum binaries, and safely
+    ignore any anti-virus warnings. If you do not trust the developers
+    of the project, you should build the binaries yourself, or run the
+    software from source. Finally, if you are really concerned about
+    malware, you should not use an operating system that relies on
+    anti-virus software.
+  </p>
+  <p>
+    Old versions of Windows might need to install the KB2999226 Windows update.
+  </p>
+</div>
+
+		</div>
+		<!-- "download page" ends -->
+		
+	    
+                <div class="page" id="documentation">
+                    <h2>Documentation</h2>
+                    <ul>
+		      <li>Official documentation: <a href="https://electrum.readthedocs.io/">electrum.readthedocs.io</a></li>
+		      <li>Unofficial guide: <a href="https://bitcoinelectrum.com/"></a>bitcoinelectrum.com</li>
+		    </ul>
+		</div>
+
+                <div class="page" id="community">
+                    <h2>Community</h2>
+                    <h4>Support</h4>
+                    <ul>
+                        <li>Documentation: <a href="https://electrum.readthedocs.io/">https://electrum.readthedocs.io</a></li>
+                        <li>Official announcements are made on <a href="https://twitter.com/ElectrumWallet">Twitter</a></li>
+                        <li>You can ask questions on <a href="https://bitcointalk.org/index.php?board=98.0">bitcointalk.org</a></li>
+                        <li>As well as on <a href="https://www.reddit.com/r/Electrum/">Reddit</a></li>
+                    </ul>
+                    <h4>Development</h4>
+                    <ul>
+                        <li>IRC channel: <a href="ircs://irc.libera.chat:6697/electrum">#electrum</a> channel on Libera</li>
+                        <li>Bug reports: <a href="https://github.com/spesmilo/electrum">electrum page on GitHub</a></li>
+                        <li>Localization: <a href="https://crowdin.net/project/electrum">https://crowdin.net/project/electrum</a></li>
+                    </ul>
+                    <h4>Electrum Servers</h4>
+                    <ul>
+			<li>Server source code: <a href="https://github.com/spesmilo/electrumx">ElectrumX</a> (new, faster implementation)</li>
+                        <li>How to run your own Electrum server: <a href="https://github.com/spesmilo/electrumx/blob/master/docs/HOWTO.rst">Install Guide</a></li>
+			<li><a href="https://1209k.com/bitcoin-eye/ele.php">Servers list and status</a> (Lists only Bitcoin Electrum servers)</li>
+			<li><a href="https://bohol.petrkr.net/electrum-stats.php">Statistics from Petrkr's server</a>
+                    </ul>
+
+                </div>
+
+                <div class="page" id="about">
+
+					<h4>About Electrum</h4>
+					<p>
+					Electrum was created by Thomas Voegtlin in
+					November 2011.<br/>
+					Since then,
+					<a href="https://github.com/spesmilo/electrum/graphs/contributors">
+					various developers</a> have contributed to its
+					source code.
+					</p>
+					<h4>Developers with Github write access</h4>
+					<ul>
+						<li>
+							Thomas Voegtlin
+							<a href="https://github.com/ecdsa">[github]</a>
+							<ul>
+								<li>
+									<a href="http://keys.gnupg.net/pks/lookup?search=0x6694D8DE7BE8EE5631BED9502BD5824B7F9470E6&fingerprint=on&op=index">[gpg key]</a>
+									<code>6694 D8DE 7BE8 EE56 31BE  D950 2BD5 824B 7F94 70E6</code>
+								</li>
+							</ul>
+						</li>
+						<li>
+							SomberNight
+							<a href="https://github.com/SomberNight">[github]</a>
+							<ul>
+								<li>
+									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight.asc">[gpg key for identity/git commits]</a>
+									<code>4AD6 4339 DFA0 5E20 B3F6  AD51 E7B7 48CD AF5E 5ED9</code>
+								</li>
+								<li>
+									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight_releasekey.asc">[gpg key for releases]</a>
+									<code>0EED CFD5 CAFB 4590 6734  9B23 CA9E EEC4 3DF9 11DC</code>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<h4>Website and release security</h4>
+					<p>
+						Developers do not have direct unilateral write access to this website.
+						Changes must be signed by both
+						<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a> and
+						<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/sombernight_releasekey.asc">SomberNight</a>,
+						automatically checked by a script before made publicly visible.
+						Release distributables are reproducible, and need to be signed by at least the same two keys,
+						before the script exposes them to the webserver.<br/>
+					</p>
+
+
+                </div>
+
+                <div class="page" id="impressum">
+		    <h4>Impressum</h4> This website is hosted by
+		    Electrum Technologies GmbH<br/> Electrum Technologies was founded by Thomas
+		    Voegtlin in 2013.<br/> Its mission is to develop,
+		    package and distribute Electrum software, and to
+		    provide services to Bitcoin users and businesses.
+		    </p>
+		    <h4>Address</h4>
+		    Electrum Technologies GmbH<br/>
+		    Paul-Lincke-Ufer 8d<br/>
+		    10999 Berlin - Germany<br/>
+		</div>
+                <div class="page" id="disclaimer">
+		    <h3>Disclaimer</h3>
+		    Electrum is Free Software, released under the MIT Licence.
+		</div>
+		
+		<!-- The default page has to come last, due to how the CSS works. -->
+		<div class="page default" id="home">
+
+		    <div id="slides" class="slideshow"></div>
+
+		    <div class="clear"></div>
+		    <div class="featured-space"></div>
+
+		    <div class="clear"></div>
+
+		    <div class="features">
+
+			<div class="feature-item">
+			    <h2 class="icon icon-safe">Safe</h2>
+			    <p>
+				Your private keys are encrypted and
+				never leave your computer.
+			    </p>
+			</div>
+			<div class="feature-item">
+			    <h2 class ="icon icon-seed">Forgiving</h2>
+			    <p>
+				Your funds can be recovered from
+				a secret phrase.
+			    </p>
+			</div>
+			<div class="feature-item last">
+			    <h2 class="icon icon-clock">Instant On</h2>
+			    <p>
+				Electrum is fast, because it uses
+				servers that index the Bitcoin blockchain.
+			    </p>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="feature-item">
+			    <h2 class="icon icon-exit">No Lock-In</h2>
+			    <p>
+				You can export your private keys and
+				use them in other Bitcoin clients.
+			    </p>
+			</div>
+			<div class="feature-item">
+			    <h2 class="icon icon-blitz">No Downtimes</h2>
+			    <p>
+				Electrum servers are decentralized and
+				redundant. Your wallet is never down.
+			    </p>
+			</div>
+			<div class="feature-item last">
+			    <h2 class="icon icon-spv">Proof Checking</h2>
+			    <p>
+				Electrum Wallet verifies all the
+				transactions in your history using
+				<a href="http://docs.electrum.org/en/latest/spv.html">SPV</a>. 
+			    </p>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="feature-item">
+			    <h2 class="icon icon-cold">Cold Storage</h2>
+			    <p>
+				Keep your private keys offline, and go
+				online with a watching-only wallet.
+			    </p>
+			</div>
+			<div class="feature-item">
+			    <h2 class="icon icon-multisig">Multisig</h2>
+			    <p>
+				Split the permission to spend your
+				coins between several wallets.
+			    </p>
+			</div>
+			<div class="feature-item last">
+			    <h2 class="icon icon-plugins">Add-ons</h2>
+			    <p>
+				Electrum supports third-party plugins:
+				Multisig services, Hardware wallets, etc.
+			    </p>
+			</div>
+		    </div>
+		    
+                    <div style="clear: both;"></div>
+		    <br/>
+
+		    <p style="text-align:center;">
+			<a href="#download" class="button" >Download Electrum</a>
+		    </p>
+		</div> <!-- end of #home -->
+
+	    </div> <!-- end of wrapper -->
+	</div> <!-- end of content -->
+
+	<div id="footer">
+	    <div class="wrapper">
+                <div class="col1">
+                    <p><a href="#impressum" onclick="location.hash='#impressum'; window.scrollTo(0,0); return false;">Impressum</a></p>
+                    <p><a href="#disclaimer" onclick="location.hash='#disclaimer'; window.scrollTo(0,0); return false;">Disclaimer</a><p>
+                </div>
+                <div class="col2">
+		    <p>Released under the <a href="https://github.com/spesmilo/electrum/blob/master/LICENCE">MIT Licence</a></p>
+		    <p><a href="https://github.com/spesmilo/electrum-web">Website source<a/></p>
+                </div>
+            </div>
+            <div class="clear"></div>
+	</div>
+
+
+	<script type="text/javascript" charset="utf-8">
+	    $(document).ready(function(){
+            $.getJSON('projects.json', function(data) {
+	    
+            // format all projects
+            $(data).each(function (index, element) {
+            var text_more = element['raw_link'];
+            if ( element['featured'] != 1 )
+            return;
+            text_more = element['raw_link'];
+            if ( text_more == undefined )
+            text_more = '';
+            var html = [
+            '<div class="caption"><h3>', element['title'], '</h3>',
+                '<p>', element['description'].join(''), '</p>',
+                text_more,
+                '</div>',
+            <!-- '<a href="', element['media'], '" rel="prettyPhoto[featured]">', -->
+                '<img src="slides/', element['id'], '.png" alt="', element['title'], '"/>'
+            <!-- '</a>' -->
+            ].join('');
+            var item = $('<div></div>').html(html);
+            $('#slides').append(item);
+            });
+
+            $("a[rel^='prettyPhoto']").prettyPhoto({
+            overlay_gallery: false,
+            deeplinking: false
+            });
+
+            $(".slideshow").cycle({
+            timeout: 8000,
+            speed: 1000
+            });
+
+            });
+	    });
+	</script>
+
+    </body>
+</html>
