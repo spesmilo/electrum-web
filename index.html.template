@@ -61,6 +61,13 @@
             <p>Warning: Do not download Electrum from another source
             than electrum.org. Verify GPG signatures.
 	    </p>
+		
+		<!-- "download page" starts -->
+		<div class="page" id="download">
+			##DOWNLOAD_PAGE##
+		</div>
+		<!-- "download page" ends -->
+		
 	    
                 <div class="page" id="documentation">
                     <h2>Documentation</h2>
