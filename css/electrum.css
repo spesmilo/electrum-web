@@ -525,6 +525,12 @@ div .qrcode{
 }
 
 
+#panel-download > table > tbody > tr > td > img {
+    padding-right: 0.5em;
+    width: 30px;
+}
+
+
 /*
 table.downloads {
 	border-collapse: collapse;
