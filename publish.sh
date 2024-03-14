@@ -29,6 +29,6 @@ touch trigger_website
 sftp -oBatchMode=no -b - ${SSHUSER}@uploadserver << !
    cd electrum-downloads-airlock
    mput website.$GPGUSER.asc
-   mput trigger_website
+   -mput trigger_website
    bye
 !
