@@ -223,7 +223,7 @@
 							<a href="https://github.com/ecdsa">[github]</a>
 							<ul>
 								<li>
-									<a href="http://keys.gnupg.net/pks/lookup?search=0x6694D8DE7BE8EE5631BED9502BD5824B7F9470E6&fingerprint=on&op=index">[gpg key]</a>
+									<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">[gpg key]</a>
 									<code>6694 D8DE 7BE8 EE56 31BE  D950 2BD5 824B 7F94 70E6</code>
 								</li>
 							</ul>
