@@ -180,11 +180,9 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     the public key of the signer. Electrum binaries are signed with
     ThomasV's <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">public
     key</a>. On Linux, you can import that key using the following
-    command: <code>gpg --import ThomasV.asc</code>. Here are tutorials for
-    <a href="https://bitzuma.com/posts/how-to-verify-an-electrum-download-on-windows/">Windows</a>
-    and <a href="https://bitzuma.com/posts/how-to-verify-an-electrum-download-on-mac/">macOS</a>.
-    When you import a key, you should check its fingerprint using
-    independent sources, such
+    command: <code>gpg --import ThomasV.asc</code>.  When you import a
+    key, you should check its fingerprint using independent sources,
+    such
     as <a href="https://www.youtube.com/watch?v=hjYCXOyDy7Y">here</a>,
     or use
     the <a href="https://en.wikipedia.org/wiki/Web_of_trust">Web of
