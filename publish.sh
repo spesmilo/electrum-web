@@ -27,8 +27,8 @@ git rev-parse master | gpg --sign --armor --detach $PUBKEY > website.$GPGUSER.as
 
 touch trigger_website
 sftp -oBatchMode=no -b - ${SSHUSER}@uploadserver << !
-   cd electrum-downloads-airlock
-   mput website.$GPGUSER.asc
-   -mput trigger_website
-   bye
+    cd electrum-downloads-airlock
+    mput website.$GPGUSER.asc
+    -mput trigger_website
+    bye
 !

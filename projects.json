@@ -1,103 +1,102 @@
 [
     {
-            "id": "darkbg",
-            "title": "Improve your Bitcoin Experience",
-            "featured": 1,
-            "media": "",
-            "raw_link": "",
-            "description": [
-		"Securing Bitcoin payments since 2011,<br/>",
-		"Electrum is one of the most popular Bitcoin wallets.<br/>",
-		"<br/>",
-		"Electrum is fast, secure and easy to use.<br/>",
-		"It suits the needs of a wide spectrum of users.<br/>",
-		""
-            ]
+        "id": "darkbg",
+        "title": "Improve your Bitcoin Experience",
+        "featured": 1,
+        "media": "",
+        "raw_link": "",
+        "description": [
+            "Securing Bitcoin payments since 2011,<br/>",
+            "Electrum is one of the most popular Bitcoin wallets.<br/>",
+            "<br/>",
+            "Electrum is fast, secure and easy to use.<br/>",
+            "It suits the needs of a wide spectrum of users.<br/>",
+            ""
+        ]
     },
     {
-            "id": "spv",
-            "title": "Do not trust. Verify.",
-            "featured": 1,
-            "media": "https://electrum.orain.org/wiki/Simple_Payment_Verification",
-            "raw_link": "<a href='http://docs.electrum.org/en/latest/spv.html'>More information</a>",
-            "description": [
-		"Electrum verifies that your transactions<br/>",
-		"are in the Bitcoin blockchain.<br/><br/>",
-		"Because Bitcoin is not about trust,<br/>",
-		"It is about freedom and independence."
-            ]
+        "id": "spv",
+        "title": "Do not trust. Verify.",
+        "featured": 1,
+        "media": "https://electrum.orain.org/wiki/Simple_Payment_Verification",
+        "raw_link": "<a href='http://docs.electrum.org/en/latest/spv.html'>More information</a>",
+        "description": [
+            "Electrum verifies that your transactions<br/>",
+            "are in the Bitcoin blockchain.<br/><br/>",
+            "Because Bitcoin is not about trust,<br/>",
+            "It is about freedom and independence."
+        ]
     },
     {
-            "id": "coldstorage",
-            "title": "Cold Storage",
-            "featured": 1,
-            "media": "",
-            "raw_link": "",
-            "description": [ 
-		"Sign transactions from a computer that<br/>",
-		"is always offline. Broadcast them from<br/>",
-		"a machine that does not have your keys"
-            ]
+        "id": "coldstorage",
+        "title": "Cold Storage",
+        "featured": 1,
+        "media": "",
+        "raw_link": "",
+        "description": [
+            "Sign transactions from a computer that<br/>",
+            "is always offline. Broadcast them from<br/>",
+            "a machine that does not have your keys"
+        ]
     },
     {
-            "id": "twofactor",
-            "title": "Two Factor Authentication",
-            "featured": 1,
-            "media": "",
-            "raw_link": "",
-            "description": [ 
-		"Be safe from malware<br/>",
-		"Use two-factor authentication<br/>",
-		"by Electrum and Trustedcoin"
-            ]
+        "id": "twofactor",
+        "title": "Two Factor Authentication",
+        "featured": 1,
+        "media": "",
+        "raw_link": "",
+        "description": [
+            "Be safe from malware<br/>",
+            "Use two-factor authentication<br/>",
+            "by Electrum and Trustedcoin"
+        ]
     },
     {
-            "id": "decentralized",
-            "title": "Free and Decentralized",
-            "featured": 1,
-            "media": "",
-            "raw_link": "",
-            "description": [ 
-		"Electrum is free software.<br/>",
-		"Released under the MIT License.<br/><br/>",
-		"Anyone can run an Electrum server.<br/>",
-		"No single entity controls the network."
-            ]
+        "id": "decentralized",
+        "title": "Free and Decentralized",
+        "featured": 1,
+        "media": "",
+        "raw_link": "",
+        "description": [
+            "Electrum is free software.<br/>",
+            "Released under the MIT License.<br/><br/>",
+            "Anyone can run an Electrum server.<br/>",
+            "No single entity controls the network."
+        ]
     },
     {
-            "id": "textmode",
-            "title": "Multi-Platform",
-            "featured": 1,
-            "media": "http://electrum.org/slides/electrum_gui-featured.jpg",
-            "raw_link": "",
-            "description": [
-		"Electrum has various user interfaces.<br/>",
-		"It can be used on mobile, desktop<br/>",
-		"or with the command line interface."
-	    ]
+        "id": "textmode",
+        "title": "Multi-Platform",
+        "featured": 1,
+        "media": "http://electrum.org/slides/electrum_gui-featured.jpg",
+        "raw_link": "",
+        "description": [
+            "Electrum has various user interfaces.<br/>",
+            "It can be used on mobile, desktop<br/>",
+            "or with the command line interface."
+        ]
     },
     {
-            "id": "hardware",
-            "title": "Hardware wallets",
-            "featured": 1,
-            "media": "",
-            "raw_link": "<a href=http://ledgerwallet.com>More information</a>",
-            "description": [
-		"Electrum supports hardware wallets:<br/>",
-		"Ledger, Trezor, Keepkey"
-            ]
+        "id": "hardware",
+        "title": "Hardware wallets",
+        "featured": 1,
+        "media": "",
+        "raw_link": "<a href=http://ledgerwallet.com>More information</a>",
+        "description": [
+            "Electrum supports hardware wallets:<br/>",
+            "Ledger, Trezor, Keepkey"
+        ]
     },
     {
-            "id": "multisig",
-            "title": "Multisig",
-            "featured": 1,
-            "media": "",
-            "raw_link": "",
-            "description": [
-		"Split the permission<br/>",
-		"to spend your bitcoins<br/>",
-		"between several wallets"
-            ]
-
+        "id": "multisig",
+        "title": "Multisig",
+        "featured": 1,
+        "media": "",
+        "raw_link": "",
+        "description": [
+            "Split the permission<br/>",
+            "to spend your bitcoins<br/>",
+            "between several wallets"
+        ]
     }
 ]
