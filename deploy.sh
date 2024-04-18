@@ -67,10 +67,10 @@ else
     cd /tmp/airlock
 
     sftp -oBatchMode=no -b - pubwww@uploadserver << !
-       cd electrum-downloads-airlock
-       cd "$TRIGGERVERSION"
-       mget *
-       bye
+        cd electrum-downloads-airlock
+        cd "$TRIGGERVERSION"
+        mget *
+        bye
 !
 
     # verify signatures of binaries
@@ -92,11 +92,11 @@ else
 
     # publish files
     sftp -oBatchMode=no -b - pubwww@uploadserver << !
-       cd electrum-downloads
-       -mkdir "$TRIGGERVERSION"
-       cd "$TRIGGERVERSION"
-       -mput *
-       bye
+        cd electrum-downloads
+        -mkdir "$TRIGGERVERSION"
+        cd "$TRIGGERVERSION"
+        -mput *
+        bye
 !
 
 fi

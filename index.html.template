@@ -1,427 +1,445 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-	<title>Electrum Bitcoin Wallet</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="index, follow"/>
-	<meta name="description" content="Electrum Bitcoin Wallet."/>
-	<meta name="twitter:site" content="@ElectrumWallet"/>
+<head>
+    <title>Electrum Bitcoin Wallet</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="description" content="Electrum Bitcoin Wallet."/>
+    <meta name="twitter:site" content="@ElectrumWallet"/>
 
-	<link rel="icon" href="images/favicon.png" type="image/png" />
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" href="css/electrum.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
-	<link rel="stylesheet" href="css/sprites.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
-	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
-	
-	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
-	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-	<script type="text/javascript" src="js/jquery.cycle.lite.js"></script>
-	<script type="text/javascript" src="js/jquery.client.js"></script>
-	<script type="text/javascript" src="js/jquery.socialbutton-1.8.0.js"></script>
-	<script type="text/javascript" src="js/qrcode.js"></script>
-    </head>
-    <body>
-	<div id="header">
-	    <div class="wrapper">
-		<div id="logo">
-		    <a href="https://electrum.org/">
-			<div id="electrum_logo"><img src="logo/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></div>
-			<div id="electrum_text"></div>
-			<span id="logo_subtitle">Bitcoin Wallet</span>
-		    </a>
-		</div>
-		<div style="float:right">
-		    <div id="social-icons">
-			<a href="https://github.com/spesmilo/electrum" class="icon-github"></a>
-			<a href="https://twitter.com/ElectrumWallet" class="icon-twitter"></a>
-		    </div>
-		    <div class="clear"></div>
-		    <div id="menu">
-			<ul class="navigation">
-				<!-- Note: If js is disabled, the nav links work simply via "href".
-							 The page jumps around a bit because the anchors are not at the very top.
-						   If js is enabled, "onclick" runs first, and it prevents "href" running by returning false.
-						     The page does not jump around (instead it instant-scrolls to the top) due to window.scrollTo(0,0).
-				  -->
-			    <li><a href="#home" onclick="location.hash='#home'; window.scrollTo(0,0); return false;">Home</a></li>
-			    <li><a href="#download" onclick="location.hash='#download'; window.scrollTo(0,0); return false;">Download</a></li>
-			    <li><a href="#documentation" onclick="location.hash='#documentation'; window.scrollTo(0,0); return false;">Documentation</a></li>
-			    <li><a href="#community" onclick="location.hash='#community'; window.scrollTo(0,0); return false;">Community</a></li>
-			    <li><a href="#about" onclick="location.hash='#about'; window.scrollTo(0,0); return false;">About</a></li>
-			</ul>
-		    </div>
-		</div>
-		
-	    </div>
-	</div>
-	<div id="content">
-	  <div class="wrapper">
-            <p>Warning: Do not download Electrum from another source
-            than electrum.org. Verify GPG signatures.
-	    </p>
-		
-		<!-- "download page" starts -->
-		<div class="page" id="download">
-			##DOWNLOAD_PAGE##
-		</div>
-		<!-- "download page" ends -->
-		
-	    
-                <div class="page" id="documentation">
-                    <h2>Documentation</h2>
-                    <ul>
-		      <li>Official documentation: <a href="https://electrum.readthedocs.io/">electrum.readthedocs.io</a></li>
-		      <li>Unofficial guide: <a href="https://bitcoinelectrum.com/"></a>bitcoinelectrum.com</li>
-		    </ul>
-		</div>
+    <link rel="icon" href="images/favicon.png" type="image/png"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/electrum.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    <link rel="stylesheet" href="css/sprites.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
 
-                <div class="page" id="community">
-                    <h2>Community</h2>
-                    <h4>Support</h4>
-                    <ul>
-                        <li>Documentation: <a href="https://electrum.readthedocs.io/">https://electrum.readthedocs.io</a></li>
-                        <li>Official announcements are made on <a href="https://twitter.com/ElectrumWallet">Twitter</a></li>
-                        <li>You can ask questions on <a href="https://bitcointalk.org/index.php?board=98.0">bitcointalk.org</a></li>
-                        <li>As well as on <a href="https://www.reddit.com/r/Electrum/">Reddit</a></li>
-                    </ul>
-                    <h4>Development</h4>
-                    <ul>
-                        <li>IRC channel: <a href="ircs://irc.libera.chat:6697/electrum">#electrum</a> channel on Libera</li>
-                        <li>Bug reports: <a href="https://github.com/spesmilo/electrum">electrum page on GitHub</a></li>
-                        <li>Localization: <a href="https://crowdin.net/project/electrum">https://crowdin.net/project/electrum</a></li>
-                    </ul>
-                    <h4>Electrum Servers</h4>
-                    <ul>
-			<li>Server source code: <a href="https://github.com/spesmilo/electrumx">ElectrumX</a> (new, faster implementation)</li>
-                        <li>How to run your own Electrum server: <a href="https://github.com/spesmilo/electrumx/blob/master/docs/HOWTO.rst">Install Guide</a></li>
-			<li><a href="https://1209k.com/bitcoin-eye/ele.php">Servers list and status</a> (Lists only Bitcoin Electrum servers)</li>
-			<li><a href="https://bohol.petrkr.net/electrum-stats.php">Statistics from Petrkr's server</a>
-                    </ul>
-
-                </div>
-
-                <div class="page" id="privacy">
-
-		  <h2>Privacy Policy</h2>
-
-		  Electrum Technologies GmbH built the Electrum Wallet app as an Open
-		  Source app. This SERVICE is provided by Electrum Technologies GmbH at
-		  no cost and is intended for use as is.
-
-		  This page is used to inform website visitors regarding our policies
-		  with the collection, use, and disclosure of Personal Information if
-		  anyone decided to use our Service.
-
-		  If you choose to use our Service, then you agree to the collection and
-		  use of information in relation to this policy. The Personal
-		  Information that we collect is used for providing and improving the
-		  Service. We will not use or share your information with anyone except
-		  as described in this Privacy Policy.
-
-		  The terms used in this Privacy Policy have the same meanings as in our
-		  Terms and Conditions, which is accessible at Electrum Wallet unless
-		  otherwise defined in this Privacy Policy.
-
-		  <h3>Information Collection and Use</h3>
-
-		  For a better experience, while using our Service, we may require you
-		  to provide us with certain personally identifiable information. The
-		  information that we request is will be retained by us and used as
-		  described in this privacy policy.
-
-		  The app does use third party services that may collect information
-		  used to identify you.
-
-		  <h3>Log Data</h3>
-
-		  In a case of a crash in the app, we offer to the
-		  user the option to upload a crash log (Python
-		  traceback) to Github, where it will be public. The
-		  crash log does not contain any private keys nor
-		  private user information. However, the crash log may
-		  contain IP addresses, timestamps, device name and OS
-		  version. The crash log is viewable by the user
-		  before it is uploaded, and its publication is always
-		  opt-in.
-
-		  <h3>Service Providers</h3>
-
-		  We may employ third-party companies and individuals due to the
-		  following reasons:
-
-		  To facilitate our Service;
-		  To provide the Service on our behalf;
-		  To perform Service-related services; or
-		  To assist us in analyzing how our Service is used.
-
-		  We want to inform users of this Service that these third parties have
-		  access to your Personal Information. The reason is to perform the
-		  tasks assigned to them on our behalf. However, they are obligated not
-		  to disclose or use the information for any other purpose.
-
-		  <h3>Security</h3>
-
-		  We value your trust in providing us your Personal Information, thus we
-		  are striving to use commercially acceptable means of protecting
-		  it. But remember that no method of transmission over the internet, or
-		  method of electronic storage is 100% secure and reliable, and we
-		  cannot guarantee its absolute security.
-
-		  <h3>Links to Other Sites</h3>
-
-		  This Service may contain links to other sites. If you click on a
-		  third-party link, you will be directed to that site. Note that these
-		  external sites are not operated by us. Therefore, we strongly advise
-		  you to review the Privacy Policy of these websites. We have no control
-		  over and assume no responsibility for the content, privacy policies,
-		  or practices of any third-party sites or services.
-
-		  <h3>Children’s Privacy</h3>
-
-		  These Services do not address anyone under the age of 13. We do not
-		  knowingly collect personally identifiable information from children
-		  under 13. In the case we discover that a child under 13 has provided
-		  us with personal information, we immediately delete this from our
-		  servers. If you are a parent or guardian and you are aware that your
-		  child has provided us with personal information, please contact us so
-		  that we will be able to do necessary actions.
-
-		  <h3>Changes to This Privacy Policy</h3>
-
-		  We may update our Privacy Policy from time to time. Thus, you are
-		  advised to review this page periodically for any changes. We will
-		  notify you of any changes by posting the new Privacy Policy on this
-		  page. These changes are effective immediately after they are posted on
-		  this page.
-
-		  <h3>Contact Us</h3>
-
-		  If you have any questions or suggestions about our Privacy Policy, do
-		  not hesitate to contact us.
-
-
-
-                </div>
-
-                <div class="page" id="about">
-
-					<h4>About Electrum</h4>
-					<p>
-					Electrum was created by Thomas Voegtlin in
-					November 2011.<br/>
-					Since then,
-					<a href="https://github.com/spesmilo/electrum/graphs/contributors">
-					various developers</a> have contributed to its
-					source code.
-					</p>
-					<h4>Developers with Github write access</h4>
-					<ul>
-						<li>
-							Thomas Voegtlin
-							<a href="https://github.com/ecdsa">[github]</a>
-							<ul>
-								<li>
-									<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">[gpg key]</a>
-									<code>6694 D8DE 7BE8 EE56 31BE  D950 2BD5 824B 7F94 70E6</code>
-								</li>
-							</ul>
-						</li>
-						<li>
-							SomberNight
-							<a href="https://github.com/SomberNight">[github]</a>
-							<ul>
-								<li>
-									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight.asc">[gpg key for identity/git commits]</a>
-									<code>4AD6 4339 DFA0 5E20 B3F6  AD51 E7B7 48CD AF5E 5ED9</code>
-								</li>
-								<li>
-									<a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight_releasekey.asc">[gpg key for releases]</a>
-									<code>0EED CFD5 CAFB 4590 6734  9B23 CA9E EEC4 3DF9 11DC</code>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<h4>Website and release security</h4>
-					<p>
-						Developers do not have direct unilateral write access to this website.
-						Changes must be signed by both
-						<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a> and
-						<a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/sombernight_releasekey.asc">SomberNight</a>,
-						automatically checked by a script before made publicly visible.
-						Release distributables are reproducible, and need to be signed by at least the same two keys,
-						before the script exposes them to the webserver.<br/>
-					</p>
-
-
-                </div>
-
-                <div class="page" id="impressum">
-		    <h4>Impressum</h4> This website is hosted by
-		    Electrum Technologies GmbH<br/> Electrum Technologies was founded by Thomas
-		    Voegtlin in 2013.<br/> Its mission is to develop,
-		    package and distribute Electrum software, and to
-		    provide services to Bitcoin users and businesses.
-		    </p>
-		    <h4>Address</h4>
-		    Electrum Technologies GmbH<br/>
-		    Paul-Lincke-Ufer 8d<br/>
-		    10999 Berlin - Germany<br/>
-		</div>
-                <div class="page" id="disclaimer">
-		    <h3>Disclaimer</h3>
-		    Electrum is Free Software, released under the MIT Licence.
-		</div>
-		
-		<!-- The default page has to come last, due to how the CSS works. -->
-		<div class="page default" id="home">
-
-		    <div id="slides" class="slideshow"></div>
-
-		    <div class="clear"></div>
-		    <div class="featured-space"></div>
-
-		    <div class="clear"></div>
-
-		    <div class="features">
-
-			<div class="feature-item">
-			    <h2 class="icon icon-safe">Safe</h2>
-			    <p>
-				Your private keys are encrypted and
-				never leave your computer.
-			    </p>
-			</div>
-			<div class="feature-item">
-			    <h2 class ="icon icon-seed">Forgiving</h2>
-			    <p>
-				Your funds can be recovered from
-				a secret phrase.
-			    </p>
-			</div>
-			<div class="feature-item last">
-			    <h2 class="icon icon-clock">Instant On</h2>
-			    <p>
-				Electrum is fast, because it uses
-				servers that index the Bitcoin blockchain.
-			    </p>
-			</div>
-
-			<div class="clear"></div>
-
-			<div class="feature-item">
-			    <h2 class="icon icon-exit">No Lock-In</h2>
-			    <p>
-				You can export your private keys and
-				use them in other Bitcoin clients.
-			    </p>
-			</div>
-			<div class="feature-item">
-			    <h2 class="icon icon-blitz">No Downtimes</h2>
-			    <p>
-				Electrum servers are decentralized and
-				redundant. Your wallet is never down.
-			    </p>
-			</div>
-			<div class="feature-item last">
-			    <h2 class="icon icon-spv">Proof Checking</h2>
-			    <p>
-				Electrum Wallet verifies all the
-				transactions in your history using
-				<a href="http://docs.electrum.org/en/latest/spv.html">SPV</a>. 
-			    </p>
-			</div>
-
-			<div class="clear"></div>
-
-			<div class="feature-item">
-			    <h2 class="icon icon-cold">Cold Storage</h2>
-			    <p>
-				Keep your private keys offline, and go
-				online with a watching-only wallet.
-			    </p>
-			</div>
-			<div class="feature-item">
-			    <h2 class="icon icon-multisig">Multisig</h2>
-			    <p>
-				Split the permission to spend your
-				coins between several wallets.
-			    </p>
-			</div>
-			<div class="feature-item last">
-			    <h2 class="icon icon-plugins">Add-ons</h2>
-			    <p>
-				Electrum supports third-party plugins:
-				Multisig services, Hardware wallets, etc.
-			    </p>
-			</div>
-		    </div>
-		    
-                    <div style="clear: both;"></div>
-		    <br/>
-
-		    <p style="text-align:center;">
-			<a href="#download" class="button" >Download Electrum</a>
-		    </p>
-		</div> <!-- end of #home -->
-
-	    </div> <!-- end of wrapper -->
-	</div> <!-- end of content -->
-
-	<div id="footer">
-	    <div class="wrapper">
-                <div class="col1">
-                    <p><a href="#impressum" onclick="location.hash='#impressum'; window.scrollTo(0,0); return false;">Impressum</a></p>
-                    <p><a href="#disclaimer" onclick="location.hash='#disclaimer'; window.scrollTo(0,0); return false;">Disclaimer</a><p>
-                </div>
-                <div class="col2">
-		    <p>Released under the <a href="https://github.com/spesmilo/electrum/blob/master/LICENCE">MIT Licence</a></p>
-		    <p><a href="https://github.com/spesmilo/electrum-web">Website source<a/></p>
-                </div>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.cycle.lite.js"></script>
+    <script type="text/javascript" src="js/jquery.client.js"></script>
+    <script type="text/javascript" src="js/jquery.socialbutton-1.8.0.js"></script>
+    <script type="text/javascript" src="js/qrcode.js"></script>
+</head>
+<body>
+<div id="header">
+    <div class="wrapper">
+        <div id="logo">
+            <a href="https://electrum.org/">
+                <div id="electrum_logo"><img src="logo/electrum_logo.png" alt="Electrum" border="none" width="70"
+                                             align="top"/></div>
+                <div id="electrum_text"></div>
+                <span id="logo_subtitle">Bitcoin Wallet</span>
+            </a>
+        </div>
+        <div style="float:right">
+            <div id="social-icons">
+                <a href="https://github.com/spesmilo/electrum" class="icon-github"></a>
+                <a href="https://twitter.com/ElectrumWallet" class="icon-twitter"></a>
             </div>
             <div class="clear"></div>
-	</div>
+            <div id="menu">
+                <ul class="navigation">
+                    <!-- Note: If js is disabled, the nav links work simply via "href".
+                                 The page jumps around a bit because the anchors are not at the very top.
+                               If js is enabled, "onclick" runs first, and it prevents "href" running by returning false.
+                                 The page does not jump around (instead it instant-scrolls to the top) due to window.scrollTo(0,0).
+                      -->
+                    <li><a href="#home" onclick="location.hash='#home'; window.scrollTo(0,0); return false;">Home</a>
+                    </li>
+                    <li><a href="#download" onclick="location.hash='#download'; window.scrollTo(0,0); return false;">Download</a>
+                    </li>
+                    <li><a href="#documentation"
+                           onclick="location.hash='#documentation'; window.scrollTo(0,0); return false;">Documentation</a>
+                    </li>
+                    <li><a href="#community" onclick="location.hash='#community'; window.scrollTo(0,0); return false;">Community</a>
+                    </li>
+                    <li><a href="#about" onclick="location.hash='#about'; window.scrollTo(0,0); return false;">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="content">
+    <div class="wrapper">
+        <p>Warning: Do not download Electrum from another source
+            than electrum.org. Verify GPG signatures.
+        </p>
+
+        <!-- "download page" starts -->
+        <div class="page" id="download">
+            ##DOWNLOAD_PAGE##
+        </div>
+        <!-- "download page" ends -->
 
 
-	<script type="text/javascript" charset="utf-8">
-	    $(document).ready(function(){
-            $.getJSON('projects.json', function(data) {
-	    
-            // format all projects
-            $(data).each(function (index, element) {
-            var text_more = element['raw_link'];
-            if ( element['featured'] != 1 )
-            return;
-            text_more = element['raw_link'];
-            if ( text_more == undefined )
-            text_more = '';
-            var html = [
-            '<div class="caption"><h3>', element['title'], '</h3>',
-                '<p>', element['description'].join(''), '</p>',
-                text_more,
-                '</div>',
-            <!-- '<a href="', element['media'], '" rel="prettyPhoto[featured]">', -->
-                '<img src="slides/', element['id'], '.png" alt="', element['title'], '"/>'
-            <!-- '</a>' -->
-            ].join('');
-            var item = $('<div></div>').html(html);
-            $('#slides').append(item);
-            });
+        <div class="page" id="documentation">
+            <h2>Documentation</h2>
+            <ul>
+                <li>Official documentation: <a href="https://electrum.readthedocs.io/">electrum.readthedocs.io</a></li>
+                <li>Unofficial guide: <a href="https://bitcoinelectrum.com/"></a>bitcoinelectrum.com</li>
+            </ul>
+        </div>
 
-            $("a[rel^='prettyPhoto']").prettyPhoto({
-            overlay_gallery: false,
-            deeplinking: false
-            });
+        <div class="page" id="community">
+            <h2>Community</h2>
+            <h4>Support</h4>
+            <ul>
+                <li>Documentation: <a href="https://electrum.readthedocs.io/">https://electrum.readthedocs.io</a></li>
+                <li>Official announcements are made on <a href="https://twitter.com/ElectrumWallet">Twitter</a></li>
+                <li>You can ask questions on <a href="https://bitcointalk.org/index.php?board=98.0">bitcointalk.org</a>
+                </li>
+                <li>As well as on <a href="https://www.reddit.com/r/Electrum/">Reddit</a></li>
+            </ul>
+            <h4>Development</h4>
+            <ul>
+                <li>IRC channel: <a href="ircs://irc.libera.chat:6697/electrum">#electrum</a> channel on Libera</li>
+                <li>Bug reports: <a href="https://github.com/spesmilo/electrum">electrum page on GitHub</a></li>
+                <li>Localization: <a
+                    href="https://crowdin.net/project/electrum">https://crowdin.net/project/electrum</a></li>
+            </ul>
+            <h4>Electrum Servers</h4>
+            <ul>
+                <li>Server source code: <a href="https://github.com/spesmilo/electrumx">ElectrumX</a> (new, faster
+                    implementation)
+                </li>
+                <li>How to run your own Electrum server: <a
+                    href="https://github.com/spesmilo/electrumx/blob/master/docs/HOWTO.rst">Install Guide</a></li>
+                <li><a href="https://1209k.com/bitcoin-eye/ele.php">Servers list and status</a> (Lists only Bitcoin
+                    Electrum servers)
+                </li>
+                <li><a href="https://bohol.petrkr.net/electrum-stats.php">Statistics from Petrkr's server</a>
+            </ul>
 
-            $(".slideshow").cycle({
-            timeout: 8000,
-            speed: 1000
-            });
+        </div>
 
-            });
-	    });
-	</script>
+        <div class="page" id="privacy">
 
-    </body>
+            <h2>Privacy Policy</h2>
+
+            Electrum Technologies GmbH built the Electrum Wallet app as an Open
+            Source app. This SERVICE is provided by Electrum Technologies GmbH at
+            no cost and is intended for use as is.
+
+            This page is used to inform website visitors regarding our policies
+            with the collection, use, and disclosure of Personal Information if
+            anyone decided to use our Service.
+
+            If you choose to use our Service, then you agree to the collection and
+            use of information in relation to this policy. The Personal
+            Information that we collect is used for providing and improving the
+            Service. We will not use or share your information with anyone except
+            as described in this Privacy Policy.
+
+            The terms used in this Privacy Policy have the same meanings as in our
+            Terms and Conditions, which is accessible at Electrum Wallet unless
+            otherwise defined in this Privacy Policy.
+
+            <h3>Information Collection and Use</h3>
+
+            For a better experience, while using our Service, we may require you
+            to provide us with certain personally identifiable information. The
+            information that we request is will be retained by us and used as
+            described in this privacy policy.
+
+            The app does use third party services that may collect information
+            used to identify you.
+
+            <h3>Log Data</h3>
+
+            In a case of a crash in the app, we offer to the
+            user the option to upload a crash log (Python
+            traceback) to Github, where it will be public. The
+            crash log does not contain any private keys nor
+            private user information. However, the crash log may
+            contain IP addresses, timestamps, device name and OS
+            version. The crash log is viewable by the user
+            before it is uploaded, and its publication is always
+            opt-in.
+
+            <h3>Service Providers</h3>
+
+            We may employ third-party companies and individuals due to the
+            following reasons:
+
+            To facilitate our Service;
+            To provide the Service on our behalf;
+            To perform Service-related services; or
+            To assist us in analyzing how our Service is used.
+
+            We want to inform users of this Service that these third parties have
+            access to your Personal Information. The reason is to perform the
+            tasks assigned to them on our behalf. However, they are obligated not
+            to disclose or use the information for any other purpose.
+
+            <h3>Security</h3>
+
+            We value your trust in providing us your Personal Information, thus we
+            are striving to use commercially acceptable means of protecting
+            it. But remember that no method of transmission over the internet, or
+            method of electronic storage is 100% secure and reliable, and we
+            cannot guarantee its absolute security.
+
+            <h3>Links to Other Sites</h3>
+
+            This Service may contain links to other sites. If you click on a
+            third-party link, you will be directed to that site. Note that these
+            external sites are not operated by us. Therefore, we strongly advise
+            you to review the Privacy Policy of these websites. We have no control
+            over and assume no responsibility for the content, privacy policies,
+            or practices of any third-party sites or services.
+
+            <h3>Children’s Privacy</h3>
+
+            These Services do not address anyone under the age of 13. We do not
+            knowingly collect personally identifiable information from children
+            under 13. In the case we discover that a child under 13 has provided
+            us with personal information, we immediately delete this from our
+            servers. If you are a parent or guardian and you are aware that your
+            child has provided us with personal information, please contact us so
+            that we will be able to do necessary actions.
+
+            <h3>Changes to This Privacy Policy</h3>
+
+            We may update our Privacy Policy from time to time. Thus, you are
+            advised to review this page periodically for any changes. We will
+            notify you of any changes by posting the new Privacy Policy on this
+            page. These changes are effective immediately after they are posted on
+            this page.
+
+            <h3>Contact Us</h3>
+
+            If you have any questions or suggestions about our Privacy Policy, do
+            not hesitate to contact us.
+
+
+        </div>
+
+        <div class="page" id="about">
+
+            <h4>About Electrum</h4>
+            <p>
+                Electrum was created by Thomas Voegtlin in
+                November 2011.<br/>
+                Since then,
+                <a href="https://github.com/spesmilo/electrum/graphs/contributors">
+                    various developers</a> have contributed to its
+                source code.
+            </p>
+            <h4>Developers with Github write access</h4>
+            <ul>
+                <li>
+                    Thomas Voegtlin
+                    <a href="https://github.com/ecdsa">[github]</a>
+                    <ul>
+                        <li>
+                            <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">[gpg
+                                key]</a>
+                            <code>6694 D8DE 7BE8 EE56 31BE D950 2BD5 824B 7F94 70E6</code>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    SomberNight
+                    <a href="https://github.com/SomberNight">[github]</a>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight.asc">[gpg key
+                                for identity/git commits]</a>
+                            <code>4AD6 4339 DFA0 5E20 B3F6 AD51 E7B7 48CD AF5E 5ED9</code>
+                        </li>
+                        <li>
+                            <a href="https://github.com/spesmilo/electrum/blob/master/pubkeys/sombernight_releasekey.asc">[gpg
+                                key for releases]</a>
+                            <code>0EED CFD5 CAFB 4590 6734 9B23 CA9E EEC4 3DF9 11DC</code>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Website and release security</h4>
+            <p>
+                Developers do not have direct unilateral write access to this website.
+                Changes must be signed by both
+                <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/ThomasV.asc">ThomasV</a> and
+                <a href="https://raw.githubusercontent.com/spesmilo/electrum/master/pubkeys/sombernight_releasekey.asc">SomberNight</a>,
+                automatically checked by a script before made publicly visible.
+                Release distributables are reproducible, and need to be signed by at least the same two keys,
+                before the script exposes them to the webserver.<br/>
+            </p>
+
+
+        </div>
+
+        <div class="page" id="impressum">
+            <h4>Impressum</h4> This website is hosted by
+            Electrum Technologies GmbH<br/> Electrum Technologies was founded by Thomas
+            Voegtlin in 2013.<br/> Its mission is to develop,
+            package and distribute Electrum software, and to
+            provide services to Bitcoin users and businesses.
+            </p>
+            <h4>Address</h4>
+            Electrum Technologies GmbH<br/>
+            Paul-Lincke-Ufer 8d<br/>
+            10999 Berlin - Germany<br/>
+        </div>
+        <div class="page" id="disclaimer">
+            <h3>Disclaimer</h3>
+            Electrum is Free Software, released under the MIT Licence.
+        </div>
+
+        <!-- The default page has to come last, due to how the CSS works. -->
+        <div class="page default" id="home">
+
+            <div id="slides" class="slideshow"></div>
+
+            <div class="clear"></div>
+            <div class="featured-space"></div>
+
+            <div class="clear"></div>
+
+            <div class="features">
+
+                <div class="feature-item">
+                    <h2 class="icon icon-safe">Safe</h2>
+                    <p>
+                        Your private keys are encrypted and
+                        never leave your computer.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h2 class="icon icon-seed">Forgiving</h2>
+                    <p>
+                        Your funds can be recovered from
+                        a secret phrase.
+                    </p>
+                </div>
+                <div class="feature-item last">
+                    <h2 class="icon icon-clock">Instant On</h2>
+                    <p>
+                        Electrum is fast, because it uses
+                        servers that index the Bitcoin blockchain.
+                    </p>
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="feature-item">
+                    <h2 class="icon icon-exit">No Lock-In</h2>
+                    <p>
+                        You can export your private keys and
+                        use them in other Bitcoin clients.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h2 class="icon icon-blitz">No Downtimes</h2>
+                    <p>
+                        Electrum servers are decentralized and
+                        redundant. Your wallet is never down.
+                    </p>
+                </div>
+                <div class="feature-item last">
+                    <h2 class="icon icon-spv">Proof Checking</h2>
+                    <p>
+                        Electrum Wallet verifies all the
+                        transactions in your history using
+                        <a href="http://docs.electrum.org/en/latest/spv.html">SPV</a>.
+                    </p>
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="feature-item">
+                    <h2 class="icon icon-cold">Cold Storage</h2>
+                    <p>
+                        Keep your private keys offline, and go
+                        online with a watching-only wallet.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h2 class="icon icon-multisig">Multisig</h2>
+                    <p>
+                        Split the permission to spend your
+                        coins between several wallets.
+                    </p>
+                </div>
+                <div class="feature-item last">
+                    <h2 class="icon icon-plugins">Add-ons</h2>
+                    <p>
+                        Electrum supports third-party plugins:
+                        Multisig services, Hardware wallets, etc.
+                    </p>
+                </div>
+            </div>
+
+            <div style="clear: both;"></div>
+            <br/>
+
+            <p style="text-align:center;">
+                <a href="#download" class="button">Download Electrum</a>
+            </p>
+        </div> <!-- end of #home -->
+
+    </div> <!-- end of wrapper -->
+</div> <!-- end of content -->
+
+<div id="footer">
+    <div class="wrapper">
+        <div class="col1">
+            <p><a href="#impressum"
+                  onclick="location.hash='#impressum'; window.scrollTo(0,0); return false;">Impressum</a></p>
+            <p><a href="#disclaimer" onclick="location.hash='#disclaimer'; window.scrollTo(0,0); return false;">Disclaimer</a>
+            <p>
+        </div>
+        <div class="col2">
+            <p>Released under the <a href="https://github.com/spesmilo/electrum/blob/master/LICENCE">MIT Licence</a></p>
+            <p><a href="https://github.com/spesmilo/electrum-web">Website source<a/></p>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){
+        $.getJSON('projects.json', function(data) {
+    
+        // format all projects
+        $(data).each(function (index, element) {
+        var text_more = element['raw_link'];
+        if ( element['featured'] != 1 )
+        return;
+        text_more = element['raw_link'];
+        if ( text_more == undefined )
+        text_more = '';
+        var html = [
+        '<div class="caption"><h3>', element['title'], '</h3>',
+            '<p>', element['description'].join(''), '</p>',
+            text_more,
+            '</div>',
+        <!-- '<a href="', element['media'], '" rel="prettyPhoto[featured]">', -->
+            '<img src="slides/', element['id'], '.png" alt="', element['title'], '"/>'
+        <!-- '</a>' -->
+        ].join('');
+        var item = $('<div></div>').html(html);
+        $('#slides').append(item);
+        });
+
+        $("a[rel^='prettyPhoto']").prettyPhoto({
+        overlay_gallery: false,
+        deeplinking: false
+        });
+
+        $(".slideshow").cycle({
+        timeout: 8000,
+        speed: 1000
+        });
+
+        });
+    });
+</script>
+
+</body>
 </html>
