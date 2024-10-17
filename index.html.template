@@ -80,7 +80,7 @@
             <h2>Documentation</h2>
             <ul>
                 <li>Official documentation: <a href="https://electrum.readthedocs.io/">electrum.readthedocs.io</a></li>
-                <li>Unofficial guide: <a href="https://bitcoinelectrum.com/"></a>bitcoinelectrum.com</li>
+                <li>Unofficial guide: <a href="https://bitcoinelectrum.com/">bitcoinelectrum.com</a></li>
             </ul>
         </div>
 
@@ -405,7 +405,7 @@
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function(){
         $.getJSON('projects.json', function(data) {
-    
+
         // format all projects
         $(data).each(function (index, element) {
         var text_more = element['raw_link'];
