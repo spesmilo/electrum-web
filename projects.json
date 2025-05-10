@@ -36,7 +36,7 @@
         "description": [
             "Sign transactions from a computer that<br/>",
             "is always offline. Broadcast them from<br/>",
-            "a machine that does not have your keys"
+            "a machine that does not have your keys."
         ]
     },
     {
@@ -48,7 +48,7 @@
         "description": [
             "Be safe from malware<br/>",
             "Use two-factor authentication<br/>",
-            "by Electrum and Trustedcoin"
+            "by Electrum and Trustedcoin."
         ]
     },
     {
@@ -72,7 +72,7 @@
         "raw_link": "",
         "description": [
             "Electrum has various user interfaces.<br/>",
-            "It can be used on mobile, desktop<br/>",
+            "It can be used on mobile, desktop,<br/>",
             "or with the command line interface."
         ]
     },
@@ -95,8 +95,8 @@
         "raw_link": "",
         "description": [
             "Split the permission<br/>",
-            "to spend your bitcoins<br/>",
-            "between several wallets"
+            "to spend your bitcoin<br/>",
+            "between several wallets."
         ]
     }
 ]
