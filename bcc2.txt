@@ -23,7 +23,7 @@ the responsability of the person who signs.
 The person who distributes the Electron Cash binaries has decided to
 remain anonymous, and uses the fake name "Jonald Fyookball" in order
 to sign Electron Cash binaries. Thus, if these binaries contain code
-that is designed to steal your bitcoins, the author of the theft will
+that is designed to steal your bitcoin, the author of the theft will
 be anonymous and walk away safely with your funds.
 
 This danger is exacerbated by the fact that the default behaviour of
@@ -31,7 +31,7 @@ Electron Cash is to silently copy all your Electrum wallets into its
 own directory. Thus, if you run Electron Cash on a machine where you
 previously used Electrum, all your pre-existing wallets will be
 available in Electron Cash, and you will only need to enter your
-password in order to expose your bitcoins to potential theft.
+password in order to expose your bitcoin to potential theft.
 
 Therefore, users who want to run the Electron Cash binaries should do
 it on a separate machine, that does not have their Bitcoin wallet. We
