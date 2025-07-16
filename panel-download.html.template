@@ -34,7 +34,8 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
             <img src="icons/os_linux.gif" class="os-linux"/>Linux
         </td>
         <td>
-            <a href="##link_appimage##">Appimage</a>
+            <a href="##link_appimage##">AppImage</a>
+            <span style="font-size:80%">(x86_64, glibc 2.31+)</span>
         </td>
         <td>
             <span style="font-size:80%"><a href="##sigs_appimage##">Signatures</a></span>
@@ -43,7 +44,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     <tr>
         <td rowspan="3">
             <img src="icons/os_windows.gif"/>Windows
-            <span style="font-size:80%">(8.1 and higher)</span>
+            <span style="font-size:80%">(10 (1809) and higher, x86_64))</span>
         </td>
         <td>
             <a href="##link_win##">Standalone Executable</a>
@@ -72,7 +73,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     <tr>
         <td>
             <img src="icons/os_apple.png"/>macOS
-            <span style="font-size:80%">(10.13 and higher)</span>
+            <span style="font-size:80%">(11 and higher)</span>
         </td>
         <td>
             <a href="##link_mac##">Executable for macOS</a>
@@ -126,7 +127,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
             Install dependencies:
         </td>
         <td>
-            <code>sudo apt-get install python3-pyqt5 libsecp256k1-dev python3-cryptography</code>
+            <code>sudo apt-get install python3-pyqt6 libsecp256k1-dev python3-cryptography</code>
         </td>
     </tr>
     <tr>
