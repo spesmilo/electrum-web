@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="robots" content="index, follow"/>
     <meta name="description" content="Electrum Bitcoin Wallet."/>
-    <meta name="twitter:site" content="@ElectrumWallet"/>
+    <meta name="x:site" content="@ElectrumWallet"/>
 
     <link rel="icon" href="images/favicon.png" type="image/png"/>
     <link rel="shortcut icon" href="favicon.ico"/>
@@ -36,7 +36,7 @@
         <div style="float:right">
             <div id="social-icons">
                 <a href="https://github.com/spesmilo/electrum" class="icon-github"></a>
-                <a href="https://twitter.com/ElectrumWallet" class="icon-twitter"></a>
+                <a href="https://x.com/ElectrumWallet" class="icon-twitter"></a>
             </div>
             <div class="clear"></div>
             <div id="menu">
@@ -49,9 +49,6 @@
                     <li><a href="#home" onclick="location.hash='#home'; window.scrollTo(0,0); return false;">Home</a>
                     </li>
                     <li><a href="#download" onclick="location.hash='#download'; window.scrollTo(0,0); return false;">Download</a>
-                    </li>
-                    <li><a href="#documentation"
-                           onclick="location.hash='#documentation'; window.scrollTo(0,0); return false;">Documentation</a>
                     </li>
                     <li><a href="#community" onclick="location.hash='#community'; window.scrollTo(0,0); return false;">Community</a>
                     </li>
@@ -291,23 +288,27 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
         <!-- "download page" ends -->
 
 
-        <div class="page" id="documentation">
-            <h2>Documentation</h2>
+        <div class="page" id="community">
+            <h2>Community Links</h2>
+            <h4>Documentation</h4>
             <ul>
                 <li>Official documentation: <a href="https://electrum.readthedocs.io/">electrum.readthedocs.io</a></li>
                 <li>Unofficial guide: <a href="https://bitcoinelectrum.com/">bitcoinelectrum.com</a></li>
             </ul>
-        </div>
-
-        <div class="page" id="community">
-            <h2>Community</h2>
-            <h4>Support</h4>
+            <h4>Forums and social media</h4>
             <ul>
-                <li>Documentation: <a href="https://electrum.readthedocs.io/">https://electrum.readthedocs.io</a></li>
-                <li>Official announcements are made on <a href="https://twitter.com/ElectrumWallet">Twitter</a></li>
-                <li>You can ask questions on <a href="https://bitcointalk.org/index.php?board=98.0">bitcointalk.org</a>
-                </li>
-                <li>As well as on <a href="https://www.reddit.com/r/Electrum/">Reddit</a></li>
+                <li>Official announcements are made
+                on <a href="https://x.com/ElectrumWallet">X (twitter)</a>
+                and <a href="nostr:npub1zqnl6k7rkhjsexqq6j9u3t8mc2gd3xu9037wz4tj54cy33xq2k8qpqv2pm">nostr</a>.</li>
+                <li>You can ask questions
+                on <a href="https://bitcointalk.org/index.php?board=98.0">bitcointalk.org</a>,
+                as well as
+                on <a href="https://www.reddit.com/r/Electrum/">Reddit</a></li>
+            </ul>
+            <h4>Plugins</h4>
+            <ul>
+              <li>List of Electrum plugins: <a href="https://plugins.electrum.org">plugins.electrum.org</a></li>
+	      <li><a href="https://bitcointalk.org/index.php?topic=5577365.0">Electrum plugins thread on bitcointalk</a></li>
             </ul>
             <h4>Development</h4>
             <ul>
@@ -318,15 +319,13 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
             </ul>
             <h4>Electrum Servers</h4>
             <ul>
-                <li>Server source code: <a href="https://github.com/spesmilo/electrumx">ElectrumX</a> (new, faster
-                    implementation)
-                </li>
+              <li>Official Python implementation: <a href="https://github.com/spesmilo/electrumx">ElectrumX</a></li>
+	      <li>Alternative implementation (in Rust): <a href="https://github.com/romanz/electrs">Electrs</a></li>
                 <li>How to run your own Electrum server: <a
                     href="https://github.com/spesmilo/electrumx/blob/master/docs/HOWTO.rst">Install Guide</a></li>
                 <li><a href="https://1209k.com/bitcoin-eye/ele.php">Servers list and status</a> (Lists only Bitcoin
                     Electrum servers)
                 </li>
-                <li><a href="https://bohol.petrkr.net/electrum-stats.php">Statistics from Petrkr's server</a>
             </ul>
 
         </div>
