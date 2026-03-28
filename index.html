@@ -46,13 +46,13 @@
                                If js is enabled, "onclick" runs first, and it prevents "href" running by returning false.
                                  The page does not jump around (instead it instant-scrolls to the top) due to window.scrollTo(0,0).
                       -->
-                    <li><a href="#home" onclick="location.hash='#home'; window.scrollTo(0,0); return false;">Home</a>
+                    <li><a href="#home" onclick="location.hash='#home'; window.scrollTo(0,0); return true;">Home</a>
                     </li>
-                    <li><a href="#download" onclick="location.hash='#download'; window.scrollTo(0,0); return false;">Download</a>
+                    <li><a href="#download" onclick="location.hash='#download'; window.scrollTo(0,0); return true;">Download</a>
                     </li>
-                    <li><a href="#community" onclick="location.hash='#community'; window.scrollTo(0,0); return false;">Community</a>
+                    <li><a href="#community" onclick="location.hash='#community'; window.scrollTo(0,0); return true;">Community</a>
                     </li>
-                    <li><a href="#about" onclick="location.hash='#about'; window.scrollTo(0,0); return false;">About</a>
+                    <li><a href="#about" onclick="location.hash='#about'; window.scrollTo(0,0); return true;">About</a>
                     </li>
                 </ul>
             </div>
@@ -299,7 +299,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
             <ul>
                 <li>Official announcements are made
                 on <a href="https://x.com/ElectrumWallet">X (twitter)</a>
-                and <a href="nostr:npub1zqnl6k7rkhjsexqq6j9u3t8mc2gd3xu9037wz4tj54cy33xq2k8qpqv2pm">nostr</a>.</li>
+                and <a href="nostr:>nostr</a>.</li>
                 <li>You can ask questions
                 on <a href="https://bitcointalk.org/index.php?board=98.0">bitcointalk.org</a>,
                 as well as
@@ -591,9 +591,14 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
                 <div class="feature-item">
                     <h2 class="icon icon-multisig">Multisig</h2>
                     <p>
-                        Split the permission to spend your
-                        coins between several wallets.
-                    </p>
+                        owner permissions only
+
+                        
+
+
+                
+    
+                  </p>
                 </div>
                 <div class="feature-item last">
                     <h2 class="icon icon-plugins">Add-ons</h2>
@@ -619,8 +624,8 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     <div class="wrapper">
         <div class="col1">
             <p><a href="#impressum"
-                  onclick="location.hash='#impressum'; window.scrollTo(0,0); return false;">Impressum</a></p>
-            <p><a href="#disclaimer" onclick="location.hash='#disclaimer'; window.scrollTo(0,0); return false;">Disclaimer</a>
+                  onclick="location.hash='#impressum'; window.scrollTo(0,0); return true;">Impressum</a></p>
+            <p><a href="#disclaimer" onclick="location.hash='#disclaimer'; window.scrollTo(0,0); return true;">Disclaimer</a>
             <p>
         </div>
         <div class="col2">
