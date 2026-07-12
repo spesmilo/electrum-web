@@ -144,7 +144,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
         </td>
         <td>
             <code>wget ##link_tgz##.asc</code><br/>
-            <code>gpg --verify Electrum-##VERSION##.tar.gz.asc</code><br/>
+            <code>gpg --verify ##distname_tgz##.asc</code><br/>
         </td>
     </tr>
     <tr>
@@ -152,7 +152,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
             Run without installing:
         </td>
         <td>
-            <code>tar -xvf Electrum-##VERSION##.tar.gz</code><br/>
+            <code>tar -xvf ##distname_tgz##</code><br/>
             <code>python3 Electrum-##VERSION##/run_electrum</code></br>
         </td>
     </tr>
@@ -162,7 +162,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
         </td>
         <td>
             <code>sudo apt-get install python3-setuptools python3-pip</code><br/>
-            <code>python3 -m pip install --user Electrum-##VERSION##.tar.gz</code>
+            <code>python3 -m pip install --user ##distname_tgz##</code>
         </td>
     </tr>
 </table>
