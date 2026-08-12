@@ -1,7 +1,7 @@
 {
-    "version": "4.8.0",
-    "signatures": {"1Nxgk6NTooV4qZsX5fdqQwrLjYcsQZAfTg": "ICaSF5fHwpPyAI9Nzz366hKi+/gSJHgl531mGedgb0vAfplSRDrdNxCuoKameRGnPKf1AUgtrH5pRUNMH1lnX3Q="},
+    "version": "4.8.1",
+    "signatures": {"13xjmVAB1EATPP8RshTE8S8sNwwSUM9p1P": "H1GAMdD2SoPCniAMYUD06iRkVd2I/OWJ61Q4JvGqdrajT8RIdK3fB73qRHKGKnHKTg67GTxvGpYKjctYq8wHBC0="},
     "extradata": {
-        "android_versioncode_nullarch": 45408000
+        "android_versioncode_nullarch": 45408010
     }
 }
