@@ -1,7 +1,7 @@
 <h2>Latest release: Electrum-##VERSION##</h2>
 
 <a href="https://github.com/spesmilo/electrum/blob/master/RELEASE-NOTES">Release notes</a> -
-<a href="https://download.electrum.org">Previous releases</a><br/>
+<a href="https://download.electrum.org?C=M;O=D">Previous releases</a><br/>
 
 <div style="font-size:small">
     Our executables are reproducible, and are signed independently by several builders.<br/>

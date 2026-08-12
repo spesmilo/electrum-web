@@ -432,7 +432,6 @@
             <p><a href="#impressum"
                   onclick="location.hash='#impressum'; window.scrollTo(0,0); return false;">Impressum</a></p>
             <p><a href="#disclaimer" onclick="location.hash='#disclaimer'; window.scrollTo(0,0); return false;">Disclaimer</a></p>
-            <p><a href="#privacy" onclick="location.hash='#privacy'; window.scrollTo(0,0); return false;">Privacy Policy</a></p>
         </div>
         <div class="col2">
             <p>Released under the <a href="https://github.com/spesmilo/electrum/blob/master/LICENCE">MIT Licence</a></p>
