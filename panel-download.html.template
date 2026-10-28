@@ -129,7 +129,9 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
             Install dependencies:
         </td>
         <td>
-            <code>sudo apt-get install python3-pyqt6 libsecp256k1-dev python3-cryptography</code>
+            <code>sudo apt-get install python3-pyqt6 libsecp256k1-dev python3-cryptography</code><br/>
+            <code>sudo apt-get install python3-pyqt6.qtmultimedia libzxing3</code>
+            <span style="font-size:80%; white-space:nowrap">(optional QR code scanning)</span><br/>
         </td>
     </tr>
     <tr>
