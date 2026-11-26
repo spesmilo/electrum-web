@@ -49,7 +49,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
             <span style="font-size:80%">(10 (1809) and higher, x86_64)</span>
         </td>
         <td>
-            <a href="##link_win##">Standalone Executable</a>
+            <a href="##link_win##">Standalone executable</a>
         </td>
         <td>
             <span style="font-size:80%"><a href="##sigs_win##">Signatures</a></span>
@@ -57,7 +57,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     </tr>
     <tr>
         <td>
-            <a href="##link_win_setup##">Windows Installer</a>
+            <a href="##link_win_setup##">Windows installer</a>
         </td>
         <td>
             <span style="font-size:80%"><a href="##sigs_win_setup##">Signatures</a></span>
