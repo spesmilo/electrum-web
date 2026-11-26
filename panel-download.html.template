@@ -20,7 +20,7 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
     <tr>
         <td>
             <img src="icons/python.svg" width="32" height="32" alt=""/>Python
-            <span style="font-size:80%">(3.10 and higher)</span>
+            <span style="font-size:80%">(3.11 and higher)</span>
         </td>
         <td>
             <!-- the <wbr> lets the filename wrap on narrow phones instead of
