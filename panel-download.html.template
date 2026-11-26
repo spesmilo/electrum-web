@@ -73,12 +73,22 @@ Note: All the files can be downloaded via <a href="https://download.electrum.org
         </td>
     </tr>
     <tr>
-        <td>
+        <td rowspan="2">
             <img src="icons/apple.svg" width="32" height="32" alt=""/>macOS
-            <span style="font-size:80%">(11 and higher)</span>
+            <span style="font-size:80%">(12 and higher)</span>
         </td>
         <td>
-            <a href="##link_mac##">Executable for macOS</a>
+            <a href="##link_mac_arm64##">Apple silicon</a>
+            <span style="font-size:80%">(arm64, M1 and newer, recommended)</span>
+        </td>
+        <td>
+            <span style="font-size:80%"><a href="##sigs_mac_arm64##">Signatures</a></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="##link_mac##">Intel</a>
+            <span style="font-size:80%">(x86_64)</span>
         </td>
         <td>
             <span style="font-size:80%"><a href="##sigs_mac##">Signatures</a></span>
